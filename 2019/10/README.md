@@ -17,3 +17,30 @@
 * [Spring Guide - Domain](https://cheese10yun.github.io/spring-guide-domain/)
     * 객체지향에서 중요한 것들이 많겠지만 그중에 하나가 객체 본인의 책임을 다하는 것입니다. 여러번 반복해서 언급하지만, 객체가 자기 자신의 책임을 다하지 않으면 그 책임은 다른 객체에게 넘어가게 됩니다.
 * [Effective Java3/E - 람다와 스트림](https://brunch.co.kr/@oemilk/207)
+* [스프링 애플리케이션이 시작, 종료될 때 수행할 메서드 지정하는 방법 + 스프링 빈(Bean)이 생성, 소멸될 때 수행할 메서드 지정하는 방법(graceful 종료, CommandLineRunner, ApplicationListener, InitializingBea..](https://jeong-pro.tistory.com/179)
+```
+@Service
+public class TestService implements CommandLineRunner, ApplicationListener<ContextClosedEvent>, InitializingBean, DisposableBean {
+    @PostConstruct
+    private void init() {
+        System.err.println("PostConstruct annotation으로 빈이 완전히 생성된 후에 한 번 수행될 메서드에 붙입니다.");
+    }
+    @Override
+    public void run(String... args) throws Exception {
+        System.err.println("commandLineRunner 인터페이스 구현 메서드입니다. '애플리케이션'이 실행될 때 '한 번' 실행됩니다.");
+    }
+    @Override
+    public void onApplicationEvent(ContextClosedEvent event) {
+        System.err.println("ApplicationListener<ContextClosedEvent> 인터페이스 구현 메서드 입니다. '애플리케이션'이 죽었을 때 '한 번' 실행됩니다.");
+        System.err.println("이벤트 발생 시간(timestamp) : " + event.getTimestamp());
+    }
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        System.err.println("InitializingBean 인터페이스 구현 메서드입니다. TestService 'Bean'이 생성될 때 마다 호출되는 메서드 입니다.");
+    }
+    @Override
+    public void destroy() throws Exception {
+        System.err.println("DisposableBean 인터페이스 구현 메서드입니다. TestService 'Bean'이 소멸될 때 마다 호출되는 메서드입니다");
+    }
+}
+```
