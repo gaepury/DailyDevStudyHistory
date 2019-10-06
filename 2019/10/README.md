@@ -71,7 +71,7 @@ public class TestService implements CommandLineRunner, ApplicationListener<Conte
 * [LINE Manga 데이터베이스 샤딩 – 데이터베이스 엔지니어 편](https://engineering.linecorp.com/ko/blog/line-manga-database/)
 * [gRPC](https://ssup2.github.io/theory_analysis/gRPC/)
    * 아키텍처
-      * ![image](https://user-images.githubusercontent.com/20143765/66271273-069a6c00-e897-11e9-8e54-12f18c56e78b.png)
+      * ![image](https://user-images.githubusercontent.com/20143765/66271895-4749b380-e89e-11e9-9f86-a5c21266218b.png)
    * Protobuf 이용
       * ![image](https://user-images.githubusercontent.com/20143765/66271890-313bf300-e89e-11e9-8559-1d619d59fe60.png)
    * vs HTTP/1.1 + JSON
