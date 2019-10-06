@@ -129,8 +129,6 @@
 * 알아두면 좋은 MySQL 설정들
 * AWS 서비스를 활용한 Kubernetes 클러스터 구축
     * 서비스를 외부에 노출: NGINX Ingress Controller + NLB
-    * 
-
     * Pod에 IAM 역할 부여: kube2iam¶
     * 로그 수집: fluentd + CloudWatch Logs¶
     * 모니터링: Prometheus¶
@@ -166,13 +164,11 @@
 * 최신 브라우저의 내부 살펴보기 4 - 컴포지터가 사용자 입력을 받았을 때
 * [Java] Jsoup 크롤링 및 파싱 - text 줄바꿈 사라짐
 * Redux-Saga 소개
-    * 
-
-        * 특정 END시점에 호출(연결)되게 할수도 있다. 신박하다
-    * select
-        * 
-
-            *  인자로 셀렉터(함수)를 줄 수 있다.
+   * ![image](https://user-images.githubusercontent.com/20143765/66271262-f3879c00-e896-11e9-8cad-8dccb9267e89.png)
+      * 특정 END시점에 호출(연결)되게 할수도 있다. 신박하다
+   * select
+      * ![image](https://user-images.githubusercontent.com/20143765/66271273-069a6c00-e897-11e9-8e54-12f18c56e78b.png)
+         *  인자로 셀렉터(함수)를 줄 수 있다.
 * Springboot hystrix 사용기 (hystrix로 마이크로 서비스 간의 서비스 호출 실패를 방지해보자)
 * 11번가 Spring Cloud 기반 MSA로의 전환 - 발표정리
     * CommandKey 단위로 통계를 내고 동작한다. 그렇다면 같은 한 CommandKey에서 서킷 오픈되면 같은 ComandKey를 가진 모들 메서드들은 서킷 오픈되는거아냐?
