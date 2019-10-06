@@ -49,7 +49,7 @@ public class TestService implements CommandLineRunner, ApplicationListener<Conte
 ```
 * [테스트 코드 없이 레거시 코드를 다 감수하시겠습니까?](http://woowabros.github.io/experience/2019/02/27/Working_Effectively_with_Legacy_Code.html)
 * [aop를 이용한 oauth2 캐시 적용하기](http://woowabros.github.io/experience/2019/03/05/aop-oauth2-redis.html)
-* 테크니컬 라이팅 컨퍼런스: API the Docs Chicago 2019 방문기(https://engineering.linecorp.com/ko/blog/api-the-docs-chicago-2019-recap/)
+* [테크니컬 라이팅 컨퍼런스: API the Docs Chicago 2019 방문기](https://engineering.linecorp.com/ko/blog/api-the-docs-chicago-2019-recap/)
     * Docsops
     * 포드는 DocOps를 통해 분산되어 있는 API 접근 채널을 단일화
     * 리퀘스트 바디(body) 파라미터는 적어도 문단 하나 정도의 분량은 있어야 하며, 파라미터 예제 값과 엔드포인트를 호출하는 예제 코드도 함께 있는게 좋다.
