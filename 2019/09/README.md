@@ -111,86 +111,85 @@
 * [번역] 파이썬 매직 메소드 (Python's Magic Methods)
 
 ### 2019.09.15
-    * tcpdump
-    * [docker] 도커 네트워크(bridge)를 생성하는 예시
-    * 05 - Flex Panel Gallery
-    * [번역] Redis partitioning        
-        * redis의 경우 싱글 스레드로 돌아가기 때문에 작업이 오래 발생되는 keys나 flushall은 사용하지 말아라. 1만건 이하에 데이터를 조작하는 경우에는 사용해도 되는데 그 이상 사용하는 경우에는 주의하라는 뜻.
-    * 디자인 패턴3 - 데코레이터 패턴
-    * 디자인 패턴4 - 템플릿 메소드 패턴이란(Template method pattern)
-    * 디자인패턴5 - 컴포지트 패턴 (Composite pattern )
-    * 디자인 패턴6 - 옵저버 패턴(Observer pattern)
-    * 스프링 프록시 패턴 - Proxy Pattern
-    * Let’s talk about data structures in Python
-    * How to Test Your Vue Project with Jest and Nightwatch
-        * nightwatch 약간 푸피터와 비슷한 느낌인데?
-    * Understanding Python slices
-    * Enforcing Single Responsibility Principle in Python
-    * 알아두면 좋은 MySQL 설정들
-    * AWS 서비스를 활용한 Kubernetes 클러스터 구축
-        * 서비스를 외부에 노출: NGINX Ingress Controller + NLB
+* tcpdump
+* [docker] 도커 네트워크(bridge)를 생성하는 예시
+* 05 - Flex Panel Gallery
+* [번역] Redis partitioning        
+    * redis의 경우 싱글 스레드로 돌아가기 때문에 작업이 오래 발생되는 keys나 flushall은 사용하지 말아라. 1만건 이하에 데이터를 조작하는 경우에는 사용해도 되는데 그 이상 사용하는 경우에는 주의하라는 뜻.
+* 디자인 패턴3 - 데코레이터 패턴
+* 디자인 패턴4 - 템플릿 메소드 패턴이란(Template method pattern)
+* 디자인패턴5 - 컴포지트 패턴 (Composite pattern )
+* 디자인 패턴6 - 옵저버 패턴(Observer pattern)
+* 스프링 프록시 패턴 - Proxy Pattern
+* Let’s talk about data structures in Python
+* How to Test Your Vue Project with Jest and Nightwatch
+    * nightwatch 약간 푸피터와 비슷한 느낌인데?
+* Understanding Python slices
+* Enforcing Single Responsibility Principle in Python
+* 알아두면 좋은 MySQL 설정들
+* AWS 서비스를 활용한 Kubernetes 클러스터 구축
+    * 서비스를 외부에 노출: NGINX Ingress Controller + NLB
+    * 
+
+    * Pod에 IAM 역할 부여: kube2iam¶
+    * 로그 수집: fluentd + CloudWatch Logs¶
+    * 모니터링: Prometheus¶
+    * 자동 처리량 확장: Cluster Autoscaler¶
+* progressive react
+    * Measure component-level rendering performance with either of the following:
+        * Chrome DevTools Performance panel
+        * React DevTools profiler
+    * Minimize unecessary component re-renders
+        * Override shouldComponentUpdate where applicable
+        * Use PureComponent for class components
+        * Use React.memo for functional components
+        * Memoize Redux selectors (with reselect for example)
+        * Virtualize super long lists (with react-window for example)
+    * Measure app-level performance with Lighthouse
+    * Improve app-level performance
+        * If you are not server-side rendering, split components with React.lazy
+        * If you are server-side rendering, split components with a library like loadable-components
+        * Use a service worker to cache files that are worth caching. Workbox will make your life easier.
+        * If you are server-side rendering, use streams instead of strings (with renderToNodeStream and renderToStaticNodeStream)
+        * Can't SSR? Pre-render instead. Libraries like react-snap can help.
+        * Extract critical styles if you are using a CSS-in-JS library.
+        * Make sure your application is accessible. Consider using libraries like React A11y and react-axe.
+        * Add a web app manifest if you think users would like to access your site through their device homescreen.
+* 쿠버네티스 pod 구성 패턴
+    * 사이드카 패턴(Sidecar)
+    * 앰배서더 패턴(Ambassador)
+    * 어댑터 패턴(Adapter)
+* NodeJS에서 async_hooks을 이용해 요청의 고유한 context 사용하기
+* 최신 브라우저의 내부 살펴보기 1 - CPU, GPU, 메모리 그리고 다중 프로세스 아키텍처
+* 최신 브라우저의 내부 살펴보기 2 - 내비게이션 과정에서 일어나는 일
+* 최신 브라우저의 내부 살펴보기 3 - 렌더러 프로세스의 내부 동작
+* 최신 브라우저의 내부 살펴보기 4 - 컴포지터가 사용자 입력을 받았을 때
+* [Java] Jsoup 크롤링 및 파싱 - text 줄바꿈 사라짐
+* Redux-Saga 소개
+    * 
+
+        * 특정 END시점에 호출(연결)되게 할수도 있다. 신박하다
+    * select
         * 
 
-        * Pod에 IAM 역할 부여: kube2iam¶
-        * 로그 수집: fluentd + CloudWatch Logs¶
-        * 모니터링: Prometheus¶
-        * 자동 처리량 확장: Cluster Autoscaler¶
-    * progressive react
-        * Measure component-level rendering performance with either of the following:
-            * Chrome DevTools Performance panel
-            * React DevTools profiler
-        * Minimize unecessary component re-renders
-            * Override shouldComponentUpdate where applicable
-            * Use PureComponent for class components
-            * Use React.memo for functional components
-            * Memoize Redux selectors (with reselect for example)
-            * Virtualize super long lists (with react-window for example)
-        * Measure app-level performance with Lighthouse
-        * Improve app-level performance
-            * If you are not server-side rendering, split components with React.lazy
-            * If you are server-side rendering, split components with a library like loadable-components
-            * Use a service worker to cache files that are worth caching. Workbox will make your life easier.
-            * If you are server-side rendering, use streams instead of strings (with renderToNodeStream and renderToStaticNodeStream)
-            * Can't SSR? Pre-render instead. Libraries like react-snap can help.
-            * Extract critical styles if you are using a CSS-in-JS library.
-            * Make sure your application is accessible. Consider using libraries like React A11y and react-axe.
-            * Add a web app manifest if you think users would like to access your site through their device homescreen.
-    * 쿠버네티스 pod 구성 패턴
-        * 사이드카 패턴(Sidecar)
-        * 앰배서더 패턴(Ambassador)
-        * 어댑터 패턴(Adapter)
-    * NodeJS에서 async_hooks을 이용해 요청의 고유한 context 사용하기
-    * 최신 브라우저의 내부 살펴보기 1 - CPU, GPU, 메모리 그리고 다중 프로세스 아키텍처
-    * 최신 브라우저의 내부 살펴보기 2 - 내비게이션 과정에서 일어나는 일
-    * 최신 브라우저의 내부 살펴보기 3 - 렌더러 프로세스의 내부 동작
-    * 최신 브라우저의 내부 살펴보기 4 - 컴포지터가 사용자 입력을 받았을 때
-    * [Java] Jsoup 크롤링 및 파싱 - text 줄바꿈 사라짐
-    * Redux-Saga 소개
-        * 
-
-            * 특정 END시점에 호출(연결)되게 할수도 있다. 신박하다
-        * select
-            * 
-
-                *  인자로 셀렉터(함수)를 줄 수 있다.
-    * Springboot hystrix 사용기 (hystrix로 마이크로 서비스 간의 서비스 호출 실패를 방지해보자)
-    * 11번가 Spring Cloud 기반 MSA로의 전환 - 발표정리
-        * CommandKey 단위로 통계를 내고 동작한다. 그렇다면 같은 한 CommandKey에서 서킷 오픈되면 같은 ComandKey를 가진 모들 메서드들은 서킷 오픈되는거아냐?
-    * 172. [Kubernetes] Admission Controller의 이해 및 Python으로 Mutate Webhook 작성 예제
-    * 정적 사이트 생성기 Gatsby
-    * 도커 & 쿠버네티스 8,9주차 스터디
-    * HTTP 요청에 body를 붙여서 보내면 어떤 일이 벌어질까? part 2
-    * 시스템 행 현상이 발생되었을 때 NMI를 이용한 덤프 분석
-    * 만화로 나누는 자유/오픈소스 소30. 리눅스 이야기: 리눅스 vs. 미닉스 1,2부
-    * Spring Boot에서 6.4 Elasticsearch 연결 및 간단 CRUD
-    * React - React Concurrent Mode
-    * [번역] shared message queues와 publish-subscribe 방식에 Custom Group 방식을 더한 Kafka 소개
-    * RabbitMQ에 대해
-
+            *  인자로 셀렉터(함수)를 줄 수 있다.
+* Springboot hystrix 사용기 (hystrix로 마이크로 서비스 간의 서비스 호출 실패를 방지해보자)
+* 11번가 Spring Cloud 기반 MSA로의 전환 - 발표정리
+    * CommandKey 단위로 통계를 내고 동작한다. 그렇다면 같은 한 CommandKey에서 서킷 오픈되면 같은 ComandKey를 가진 모들 메서드들은 서킷 오픈되는거아냐?
+* 172. [Kubernetes] Admission Controller의 이해 및 Python으로 Mutate Webhook 작성 예제
+* 정적 사이트 생성기 Gatsby
+* 도커 & 쿠버네티스 8,9주차 스터디
+* HTTP 요청에 body를 붙여서 보내면 어떤 일이 벌어질까? part 2
+* 시스템 행 현상이 발생되었을 때 NMI를 이용한 덤프 분석
+* 만화로 나누는 자유/오픈소스 소30. 리눅스 이야기: 리눅스 vs. 미닉스 1,2부
+* Spring Boot에서 6.4 Elasticsearch 연결 및 간단 CRUD
+* React - React Concurrent Mode
+* [번역] shared message queues와 publish-subscribe 방식에 Custom Group 방식을 더한 Kafka 소개
+* RabbitMQ에 대해
 
 ### 2019.09.21
-    * HTTPS/DNS 차단 쉽게 이해하기
-    * Introducing React Hooks
-    * Spring Guide - 테스트 전략
-    * [소프트웨어 공학 - Observer Pattern]
-    * Spring Guide - 테스트 전략
+* HTTPS/DNS 차단 쉽게 이해하기
+* Introducing React Hooks
+* Spring Guide - 테스트 전략
+* [소프트웨어 공학 - Observer Pattern]
+* Spring Guide - 테스트 전략
