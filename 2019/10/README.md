@@ -16,3 +16,4 @@
 * [기술블로그 구독서비스 개발 후기 - 3부](https://taetaetae.github.io/2019/02/17/daily-dev-blog-3/)
 * [Spring Guide - Domain](https://cheese10yun.github.io/spring-guide-domain/)
     * 객체지향에서 중요한 것들이 많겠지만 그중에 하나가 객체 본인의 책임을 다하는 것입니다. 여러번 반복해서 언급하지만, 객체가 자기 자신의 책임을 다하지 않으면 그 책임은 다른 객체에게 넘어가게 됩니다.
+* [Effective Java3/E - 람다와 스트림](https://brunch.co.kr/@oemilk/207)
