@@ -44,5 +44,5 @@ public class TestService implements CommandLineRunner, ApplicationListener<Conte
     }
 }
 ```
-   - PostConstruct, CommandLineRunner(run method), ApplicationListener(onApplicationEvent method), InitializingBean(afterPropertiesSet method), DisposableBean(destory method)
-   - PostConstruct 메서드 다음에 afterPropertiesSet 호출
+   * PostConstruct, CommandLineRunner(run method), ApplicationListener(onApplicationEvent method), InitializingBean(afterPropertiesSet method), DisposableBean(destory method)
+   * PostConstruct 메서드 다음에 afterPropertiesSet 호출
