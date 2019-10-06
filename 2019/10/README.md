@@ -65,3 +65,7 @@ public class TestService implements CommandLineRunner, ApplicationListener<Conte
 * [[Shell Script] case문 (요일별로 동작하기 좋네)](https://rim0621.tistory.com/92)
 * [[Shell Script] for문 여러 형식](https://rim0621.tistory.com/93)
 * [[Shell Script] while문, until문](https://rim0621.tistory.com/94)
+* [Spring5 리액티브 스트림 정리 및 api 전달 방식 정리](https://wedul.site/624)
+* [디자인 패턴 06 - 어댑터 (Adapter)](https://dhsim86.github.io/programming/2019/08/17/design_patterns_06-post.html)
+* [디자인 패턴 07 - 가교 (Bridge)](https://dhsim86.github.io/programming/2019/08/17/design_patterns_07-post.html)
+* [LINE Manga 데이터베이스 샤딩 – 데이터베이스 엔지니어 편](https://engineering.linecorp.com/ko/blog/line-manga-database/)
