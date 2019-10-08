@@ -75,7 +75,7 @@ public class TestService implements CommandLineRunner, ApplicationListener<Conte
    * Protobuf 이용
       * ![image](https://user-images.githubusercontent.com/20143765/66271890-313bf300-e89e-11e9-8559-1d619d59fe60.png)
    * vs HTTP/1.1 + JSON
-      * gRPC가 현재 주목받는 가장큰 이유는 기존의 HTTP/1.1 + JSON Protocol보다 빠르기 때문이다. HTTP/1.1과 JSON은 Text Protocol인 만큼 성능면에서는 불리하다. gRPC에서 이용하는 HTTP/2와 ProtoBuf는 Binray Protocol인만큼 상대적을 적은양의 Packet을 주고 받는다. 또한 gRPC는 HTTP/2에서 지원하는 Connection Multiplexing, Server/Client Streaming을 이용하여 효율성을 좀더 끌어 올리고 있다.
+      * gRPC가 현재 주목받는 가장큰 이유는 기존의 HTTP/1.1 + JSON Protocol보다 빠르기 때문이다. HTTP/1.1과 JSON은 Text Protocol인 만큼 성능면에서는 불리하다. gRPC에서 이용하는 HTTP/2와 ProtoBuf는 Binray Protocol인만큼 상대적으로 적은양의 Packet을 주고 받는다. 또한 gRPC는 HTTP/2에서 지원하는 Connection Multiplexing, Server/Client Streaming을 이용하여 효율성을 좀더 끌어 올리고 있다.
 * [빅데이터 처리 후기 (검색엔진 처리)](https://blog.lael.be/post/9242)
 * [GeoJSON Format(형식)](http://www.gisdeveloper.co.kr/?p=8002)
 ```
