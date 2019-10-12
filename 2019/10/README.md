@@ -1,4 +1,4 @@
-### 2019.10.06
+## 2019.10.06
 * Cache-Aside Pattern in Redis
 * [번역] OOP를 빨리 잊을 수록 여러분과 여러분의 소프트웨어에 좋습니다
     * 단점
@@ -117,3 +117,11 @@ public class TestService implements CommandLineRunner, ApplicationListener<Conte
     ]
 }
 ```
+
+## 2019.10.12
+ * [Jackson 관련](https://happyer16.tistory.com/entry/Jackson-%EA%B4%80%EB%A0%A8)
+     * @JsonManagedReference : 해당 부분이 serialize 된다
+     * @JsonBackReference : serialize 에서 제외 된다.
+ * [효율적인 도커 이미지 만들기 #1 - 작은 도커 이미지](https://bcho.tistory.com/1356?category=731548)
+ * [효율적인 도커 이미지 만들기 #2 - 도커 레이어 캐슁을 통한 빌드/배포 속도 높이기](https://bcho.tistory.com/1357)
+     * jar 파일을 풀어서 라이브러리 jar파일들이 캐싱 대도록 레이어 분리
