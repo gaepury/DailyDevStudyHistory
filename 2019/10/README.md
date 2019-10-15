@@ -127,3 +127,12 @@ public class TestService implements CommandLineRunner, ApplicationListener<Conte
  * [효율적인 도커 이미지 만들기 #1 - 작은 도커 이미지](https://bcho.tistory.com/1356?category=731548)
  * [효율적인 도커 이미지 만들기 #2 - 도커 레이어 캐슁을 통한 빌드/배포 속도 높이기](https://bcho.tistory.com/1357)
      * jar 파일을 풀어서 라이브러리 jar파일들이 캐싱 대도록 레이어 분리
+
+
+## 2019.10.15
+ * [2019.10.10 - 토비의 스프링을 읽으며](https://blog.naver.com/writer0713/221674259511)
+ * [Outsider 기술 뉴스 #136 : 19-10-15](https://blog.outsider.ne.kr/1463)
+ * [Outsider 기술 뉴스 #136 : 19-09-02](https://blog.outsider.ne.kr/1458)
+ * [Outsider 기술 뉴스 #136 : 19-09-15](https://blog.outsider.ne.kr/1460)
+ * [Leon Sans : 동적으로 폰트의 웨이트를 바꿀 수 있고 애니메이션을 추가할 수 있는 폰트.](https://github.com/cmiscm/leonsans)
+    
