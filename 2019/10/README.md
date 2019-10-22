@@ -136,3 +136,7 @@ public class TestService implements CommandLineRunner, ApplicationListener<Conte
  * [Outsider 기술 뉴스 #136 : 19-09-15](https://blog.outsider.ne.kr/1460)
  * [Leon Sans : 동적으로 폰트의 웨이트를 바꿀 수 있고 애니메이션을 추가할 수 있는 폰트.](https://github.com/cmiscm/leonsans)
     * 인터렉티브 웹개발 토이프로젝트시 참고할만할듯
+    
+## 2019.10.22
+* [키바나 Aggregation Size 옵션 특징](http://kangmyounghun.blogspot.com/2019/10/aggregation-size.html)
+
