@@ -160,3 +160,8 @@ public class TestService implements CommandLineRunner, ApplicationListener<Conte
         * TP / (FP + TP)
     * 재현율(recall)
         * TP (FN + TP)
+* [Selenium, Puppeteer 비교하기](https://yangeok.github.io/node.js/2019/08/31/selenium-puppeteer-comparison.html)ㅋ
+    * Puppeteer
+        * 빠른속도, nodejs기반, 크롬에서만 사용 가능, 빠른 업데이트
+    * Selenium
+        * 상대적 느린속도, java, pythone기반, 다른 브라우저 사용 가능,  selenium grid로 허브를 
