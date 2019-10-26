@@ -148,5 +148,5 @@ public class TestService implements CommandLineRunner, ApplicationListener<Conte
         * 위 플러그인들을 이용하여 몽고와 logstash를 바로 연결 가능 
 * [python scikit learn 데이터 전처리 방법 - 머신러닝 data preparecessing](https://lsjsj92.tistory.com/511)
     * Label encoding, one-hot encoding, feature scaling(StandardScaler, MinMaxScaler) 
-* [Kubernetes] 쿠버네티스 POD 란?(https://blog.wonizz.tk/2019/08/19/kubernetes-pod/)
-* [Kubernetes] 쿠버네티스 Service 란?](https://blog.wonizz.tk/2019/08/21/kubernetes-service/)
+* [Kubernetes] 쿠버네티스 POD 란?](https://blog.wonizz.tk/2019/08/19/kubernetes-pod/)
+* [[Kubernetes] 쿠버네티스 Service 란?](https://blog.wonizz.tk/2019/08/21/kubernetes-service/)
