@@ -188,4 +188,3 @@
 * Introducing React Hooks
 * Spring Guide - 테스트 전략
 * [소프트웨어 공학 - Observer Pattern]
-* Spring Guide - 테스트 전략
