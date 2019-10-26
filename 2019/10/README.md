@@ -150,3 +150,13 @@ public class TestService implements CommandLineRunner, ApplicationListener<Conte
     * Label encoding, one-hot encoding, feature scaling(StandardScaler, MinMaxScaler) 
 * [[Kubernetes] 쿠버네티스 POD 란?](https://blog.wonizz.tk/2019/08/19/kubernetes-pod/)
 * [[Kubernetes] 쿠버네티스 Service 란?](https://blog.wonizz.tk/2019/08/21/kubernetes-service/)
+* [머신러닝 평가지표 방법 - 정확도, 재현율(recall), 정밀도(precision), 오차 행렬(confusion matrix)](https://lsjsj92.tistory.com/513)
+    * Confusion maxtirx
+        * ![image](https://user-images.githubusercontent.com/20143765/67615925-41941d80-f80d-11e9-9339-f770a87a93a1.png)
+        * ![image](https://user-images.githubusercontent.com/20143765/67615930-4e187600-f80d-11e9-89ec-8a40655f22f1.png)
+    * 정확도
+        * TN + TP / (TN + FP + FN + TP)
+    * 정밀도(precision)
+        * TP / (FP + TP)
+    * 재현율(recall)
+        * TP (FN + TP)
