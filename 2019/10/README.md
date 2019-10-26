@@ -140,3 +140,10 @@ public class TestService implements CommandLineRunner, ApplicationListener<Conte
 ## 2019.10.22
 * [키바나 Aggregation Size 옵션 특징](http://kangmyounghun.blogspot.com/2019/10/aggregation-size.html)
 
+## 2019.10.26
+* [Redis에서 Pub/Sub 방식 소개 및 Spring Boot에서 구현해보기](https://wedul.site/627)
+* [[logstash] plugin-input-mongodb을 이용하여 mongoldb 기반 pipeline 구축](https://blog.naver.com/pjt3591oo/221624138418)
+    * logstash-input-mongodb
+    * logstash-output-mongodb 
+        * 위 플러그인들을 이용하여 몽고와 logstash를 바로 연결 가능 
+* [python scikit learn 데이터 전처리 방법 - 머신러닝 data preparecessing](https://lsjsj92.tistory.com/511)
