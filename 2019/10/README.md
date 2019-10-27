@@ -173,3 +173,23 @@ public class TestService implements CommandLineRunner, ApplicationListener<Conte
 * [if kakao day 1 후기](https://nesoy.github.io/articles/2019-08/if-kakao-day1)
     * [ghz](https://github.com/bojand/ghz) - gRPC Load Test
     * [grpcui](https://github.com/fullstorydev/grpcui) - Postman과 유사하나 gRPC 테스트 용
+* [파이콘 한국 2019 스포카 코드 챌린지 수상작 및 참여작을 소개합니다.](https://spoqa.github.io/2019/08/30/pycon-kr-code-challenge.html)
+* [MySQL 파티셔닝 테이블 SELECT가 느려요.](https://gywn.net/2019/08/mysql-poor-performance-with-super-many-partitions/)
+    * InnoDB. 파티셔닝에서 실행계획을 세우는 단계에서 모든 파티션에 약 1~3개 정도의 페이지를 읽게되는데 이런 동작으로 인하여 엄청난 비효율이 발생
+    * 엄청난 갯수의 파티셔닝을 가진 상황에서, 파티셔닝 테이블 조회 시 이와 같은 이슈로 리소스가 충분히 활용되고 있지 않은지를 한번쯤 확인
+* [JavaScript SDK 성능개선 방법 – 압축과 최적화로 실행시간 단축하기](https://engineering.linecorp.com/ko/blog/improve-javascript-sdk-performance/)
+    * 성능 개선 방법 – 최소화(minimization)
+        * 개발 모드 확인
+            * mode: production
+        *  Tree shaking 개선(사용하지 않는 모듈 제거
+            * ![image](https://user-images.githubusercontent.com/20143765/67639283-5c5fb280-f931-11e9-8683-1a3160f38338.png)
+        * 자원 외부화
+            * ![image](https://user-images.githubusercontent.com/20143765/67639286-608bd000-f931-11e9-8f19-d0f5bb057a5e.png)
+        * 자원 파일 크기 축소
+            * 이미지 파일 축소 툴:  [imageOptim](https://imageoptim.com/mac)
+        * 필요 없는 모듈 제외 
+            * 애플리케이션에서 특정 국가의 언어만 지원할 때는 moment.js에 포함된 그 외 국가들의 로캘(locale) 정보 제거
+               * ![image](https://user-images.githubusercontent.com/20143765/67639289-65508400-f931-11e9-8206- 7df27bba83c0.png)
+        * 압축 파일 활용
+    * 성능 개선 방법 – 최적화(optimization)
+        * Dynamic Import와 모듈 chunk, Promise.all 조합
