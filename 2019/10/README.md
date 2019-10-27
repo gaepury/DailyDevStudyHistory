@@ -167,3 +167,9 @@ public class TestService implements CommandLineRunner, ApplicationListener<Conte
         * 상대적 느린속도, java, python기반, 다른 브라우저 사용 가능,  selenium grid로 허브를 
 * [redux에 Immutable.js을 끼얹어 상태 관리를 해보자(불변성 관리)](https://velog.io/@cyranocoding/redux%EC%97%90-Immutable.js%EC%9D%84-%EB%81%BC%EC%96%B9%EC%96%B4-%EC%83%81%ED%83%9C-%EA%B4%80%EB%A6%AC%EB%A5%BC-%ED%95%B4%EB%B3%B4%EC%9E%90%EB%B6%88%EB%B3%80%EC%84%B1-%EA%B4%80%EB%A6%AC)
     * 기자 어드민 react 프로젝트에서 피봐서 알겠지만 immutable 라이브러리 사용은 필수다.. 
+
+## 2019.10.27
+* [if kakao 2019 2일차 후기](https://zzsza.github.io/etc/2019/08/30/ifkakao-2019-review/)
+* [if kakao day 1 후기](https://nesoy.github.io/articles/2019-08/if-kakao-day1)
+    * [ghz](https://github.com/bojand/ghz) - gRPC Load Test
+    * [grpcui](https://github.com/fullstorydev/grpcui) - Postman과 유사하나 gRPC 테스트 용
