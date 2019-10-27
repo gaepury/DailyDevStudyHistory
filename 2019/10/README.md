@@ -193,3 +193,4 @@ public class TestService implements CommandLineRunner, ApplicationListener<Conte
         * 압축 파일 활용
     * 성능 개선 방법 – 최적화(optimization)
         * Dynamic Import와 모듈 chunk, Promise.all 조합
+            * ![image](https://user-images.githubusercontent.com/20143765/67639291-68e40b00-f931-11e9-8c99-105661de3dbe.png)
