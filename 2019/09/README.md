@@ -97,7 +97,7 @@
    * Proxy : 타겟은 프록시를 통해 호출되며 타겟 메서드 실행에 대한 전처리 후처리를 담당해줌과 동시에 AOP 추상화에 있어서 인터페이스를 제공한다.
    * Weaving : 핵심 로직 코드에의 적용을 말하며, Aspect 가 적용됨으로써 새로운 Proxy 객체가 생성된다.
    * Cross Cut : 공통 로직을 비즈니스 로직에서 추출해내는 것을 Cross Cutting 이라 한다.
-   * Scaling 의 종류에 대한 정리
+* Scaling 의 종류에 대한 정리
 * [[Python] 잘 알려져 있지 않은 파이썬 기능](https://yuda.dev/254)
 * [[번역] Linux에서 메모리를 다 써버렸을 때 일어나는 일](https://www.google.com/search?q=%5B%EB%B2%88%EC%97%AD%5D+Linux%EC%97%90%EC%84%9C+%EB%A9%94%EB%AA%A8%EB%A6%AC%EB%A5%BC+%EB%8B%A4+%EC%8D%A8%EB%B2%84%EB%A0%B8%EC%9D%84+%EB%95%8C+%EC%9D%BC%EC%96%B4%EB%82%98%EB%8A%94+%EC%9D%BC&oq=%5B%EB%B2%88%EC%97%AD%5D+Linux%EC%97%90%EC%84%9C+%EB%A9%94%EB%AA%A8%EB%A6%AC%EB%A5%BC+%EB%8B%A4+%EC%8D%A8%EB%B2%84%EB%A0%B8%EC%9D%84+%EB%95%8C+%EC%9D%BC%EC%96%B4%EB%82%98%EB%8A%94+%EC%9D%BC&aqs=chrome..69i57.208j0j4&sourceid=chrome&ie=UTF-8)
     * free 출력
