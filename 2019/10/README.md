@@ -194,3 +194,12 @@ public class TestService implements CommandLineRunner, ApplicationListener<Conte
     * 성능 개선 방법 – 최적화(optimization)
         * Dynamic Import와 모듈 chunk, Promise.all 조합
             * ![image](https://user-images.githubusercontent.com/20143765/67639291-68e40b00-f931-11e9-8c99-105661de3dbe.png)
+            
+## 2019.10.31
+* [스프링 - 생성자 주입을 사용해야 하는 이유, 필드인젝션이 좋지 않은 이유](https://yaboong.github.io/spring/2019/08/29/why-field-injection-is-bad/)
+    1. Component를 변경이 불가능한 immutable 상태로 선언이 가능합니다.(의존성 주입이 필요한 필드를 final 로 선언가능)
+    2. 더 나아가 생성자의 Parameter를 통해 의존관계를 한눈에 파악하고 Refactoring의 필요성을 얻을 수 있습니다.
+    3. Component간 순환 참조를 하고 있다면 BeanCurrentlyInCreationException이 발생해서 순환 의존성을 쉽게 알 수 있습니다.(순환참조시 앱구동 실패)
+    4. 특정 DI Container에 의존하지 않으며 쉽게 단위 테스트도 가능하고 필요하다면 다른 DI Container로 전환이 가능합니다.(객체 생성시 모든 의존관계를 주입할수 있으므로 단위테스트시 의존관계를 커스텀하게 주입가능)
+    5. DI Container가 Component를 주입을 못한 경우 실제 Method가 호출되기 이전인 생성자에서 Handling 할 수 있습니다.(의존관계 설정이 되지 않으면 객체생성 불가 -> 컴파일 타임에 인지 가능, NPE 방지)
+            
