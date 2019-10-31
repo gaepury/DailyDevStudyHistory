@@ -2,18 +2,18 @@
 - 프로세스와 스레드
 
 ## 2019.09.08
-* 문서 엔지니어링과 API 문서화
+* [문서 엔지니어링과 API 문서화](https://engineering.linecorp.com/ko/blog/document-engineering-api-documentation/)
 * Protocol Buffers Language Guide (휘리릭 읽는 프로토콜 버퍼 문법 및 작성 시 유의 사항, 이것만 알면 .proto 파일을 이해할 수 있다?)
     * 와닿지 않늗다..
 * Spring boot Resttemplate 사용시 HttpComponentsClientHttpRequestFactory 옵션 설명(setConnectTimeout, setConnectionRequestTimeout, setReadTimeout)
     * 여러 set options들
-* (Troubleshooting) 레디스 사망일기
+* [(Troubleshooting) 레디스 사망일기](https://perfectacle.github.io/2019/05/29/redis-monitoring/)
 * JavaScript 배열(Array)의 발전과 성능에 대해서 자세히 알아보기
     * Javascript 배열
         * 같은타입의 배열을 사용해라(내부적으로 연속적인 메모리를 가진 배열로 변환). 그렇지 않으면 성능상으로 확연히 느려진다.
     * Typed Array
         * ArrayBuffers, Int8Array, Uint8Array, Uint8ClampedArray, Int16Array, Uint16Array, Int32Array, Uint32Array, Float32Array, Float64Array
-* 지속 가능한 데이터 분석하기(지그재그)
+* [지속 가능한 데이터 분석하기(지그재그)](https://brunch.co.kr/@zigzag/16)
     * 지그재그 회사 괜찮네..
 * Kafka end Friends (ppt)
 *  React + Storybook + puppeteer + jest 개발환경 구축하기
@@ -25,9 +25,9 @@
 * [책 리뷰] 자바 최적화 (Optimizing Java,가장 빠른 성능을 구현하는 검증된 10가지 기법)
     * 사자
 * Item 9. try-finally 보다 try-with-resources를 사용하라.
-* Docker 기반 분산 트랜스코더 개발
-* 자바 Enum 실무에 적용 경험 공유하기 (properties에서 enum mapping, default value 사용하기)
-* AWS 자격증 시험 - 클라우드 종사자(Cloud Practitioner) 후기
+* [Docker 기반 분산 트랜스코더 개발](https://d2.naver.com/helloworld/3661677)
+* [자바 Enum 실무에 적용 경험 공유하기 (properties에서 enum mapping, default value 사용하기)](https://jeong-pro.tistory.com/191)
+* [AWS 자격증 시험 - 클라우드 종사자(Cloud Practitioner) 후기](AWS 자격증 시험 - 클라우드 종사자(Cloud Practitioner) 후기)
     * 용호님 글
 * Elasticsearch 특정 형태소 종류를 제외하여 검색하는 필터 nori_part_of_speech 적용
 * Elasticsearch nori 형태소 분석기에서 readingform filter를 이용해서 한자 내용을 한글로 변환하기
@@ -36,10 +36,10 @@
         * REST API를 사용하기 때문에 리소스의 크기가 서버에서 결정된다. 데이터 교환이 복잡하게 이루어지고, 엔드포인트 증가 및 overfetching과 underfetching 등의 문제점
 * [Node.js] Redis로 캐싱 시스템 구축하기
 * 5. 신입 개발자 면접 질문 모음 (클라우드, 인프라)
-* Spring에서 HMAC-SHA256 인증해보기
+* [Spring에서 HMAC-SHA256 인증해보기](https://junebuug.github.io/2019-06-10/spring-hmac)
 * 다시쓰는 Flask unittest (상,하편)
-* 2019년과 이후 JavaScript의 동향 - JavaScript(ECMAScript)
-* [번역] Elasticsearch 퍼포먼스 튜닝 방법 - ebay
+* [2019년과 이후 JavaScript의 동향 - JavaScript(ECMAScript)](https://d2.naver.com/helloworld/4007447)
+* [[번역] Elasticsearch 퍼포먼스 튜닝 방법 - ebay](https://wedul.site/613)
     * 1. 쿼리에 filter가 들어가고 그 값이 Enumerable할 때는 인덱스를 나눠서 설계하라
     * 2. 값이 enumerable하지 않다면 routing key를 사용하라.
     * 3. 기간이 정해져 있는 데이터들의 경우 기간별로 인덱스를 구성하여 사용하라.
@@ -64,7 +64,7 @@
 * 함수형 프로그래밍 정리
 * 쿠버네티스 패키지 매니저 Helm
 * Docker Best Practices
-* React, Typescript, Webpack환경에서 번들링 속도 올리기
+* [React, Typescript, Webpack환경에서 번들링 속도 올리기](https://b.luavis.kr/web/speed-up-webpack)
 * Python 로그를 남기는 Logbook 라이브러리 알아보기
 * 고객 행동 기반 실시간 딥 뉴럴 추천 시스템 : ForYou
 * 주니어 개발자가 반응형 레이아웃 리팩토링한 썰.txt
@@ -80,7 +80,7 @@
     * https://ssup2.github.io/theory_analysis/Kubernetes_Service_Proxy/
         * 먼소린지 하나도 모르겠네.. 
         * 나중에 더 공부하고 다시 봐보자
-* PM2를 활용한 Node.js 무중단 서비스하기
+* [PM2를 활용한 Node.js 무중단 서비스하기](https://engineering.linecorp.com/ko/blog/pm2-nodejs/)
 * Berlekamp-Massey 알고리즘
     * 모르겠다..
 * Facebook F8 2019 후기 #1, Facebook F8 2019 후기 #2
@@ -92,10 +92,8 @@
 * Spring layered architecture와 객체지향적으로 개발하기
 * Spring AOP 의 개념과 이해
 * Scaling 의 종류에 대한 정리
-* [Python] 잘 알려져 있지 않은 파이썬 기능
-    * 
-
-* [번역] Linux에서 메모리를 다 써버렸을 때 일어나는 일
+* [[Python] 잘 알려져 있지 않은 파이썬 기능](https://yuda.dev/254)
+* [[번역] Linux에서 메모리를 다 써버렸을 때 일어나는 일](https://www.google.com/search?q=%5B%EB%B2%88%EC%97%AD%5D+Linux%EC%97%90%EC%84%9C+%EB%A9%94%EB%AA%A8%EB%A6%AC%EB%A5%BC+%EB%8B%A4+%EC%8D%A8%EB%B2%84%EB%A0%B8%EC%9D%84+%EB%95%8C+%EC%9D%BC%EC%96%B4%EB%82%98%EB%8A%94+%EC%9D%BC&oq=%5B%EB%B2%88%EC%97%AD%5D+Linux%EC%97%90%EC%84%9C+%EB%A9%94%EB%AA%A8%EB%A6%AC%EB%A5%BC+%EB%8B%A4+%EC%8D%A8%EB%B2%84%EB%A0%B8%EC%9D%84+%EB%95%8C+%EC%9D%BC%EC%96%B4%EB%82%98%EB%8A%94+%EC%9D%BC&aqs=chrome..69i57.208j0j4&sourceid=chrome&ie=UTF-8)
     * free 출력
     * vmstat 출력
     * dmesg(운영체제 로그)
@@ -105,7 +103,7 @@
 * 딥러닝을 활용한 거래량 예측 기능 개선
 * Annotation과 Reflection을 이용한 챗봇 컨트롤러 만들기
     * Annotation, reflections 사용
-* 캐시가 동작하는 아주 구체적인 원리
+* [캐시가 동작하는 아주 구체적인 원리](https://parksb.github.io/article/29.html)
     * https://parksb.github.io/article/29.html?utm_source=gaerae.com&utm_campaign=%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%8A%A4%EB%9F%BD%EB%8B%A4&utm_medium=social
     * 어렵다ㅠ
 * [번역] 파이썬 매직 메소드 (Python's Magic Methods)
@@ -158,10 +156,10 @@
     * 앰배서더 패턴(Ambassador)
     * 어댑터 패턴(Adapter)
 * NodeJS에서 async_hooks을 이용해 요청의 고유한 context 사용하기
-* 최신 브라우저의 내부 살펴보기 1 - CPU, GPU, 메모리 그리고 다중 프로세스 아키텍처
-* 최신 브라우저의 내부 살펴보기 2 - 내비게이션 과정에서 일어나는 일
-* 최신 브라우저의 내부 살펴보기 3 - 렌더러 프로세스의 내부 동작
-* 최신 브라우저의 내부 살펴보기 4 - 컴포지터가 사용자 입력을 받았을 때
+* **최신 브라우저의 내부 살펴보기 1 - CPU, GPU, 메모리 그리고 다중 프로세스 아키텍처**
+* **최신 브라우저의 내부 살펴보기 2 - 내비게이션 과정에서 일어나는 일**
+* **최신 브라우저의 내부 살펴보기 3 - 렌더러 프로세스의 내부 동작**
+* **최신 브라우저의 내부 살펴보기 4 - 컴포지터가 사용자 입력을 받았을 때**
 * [Java] Jsoup 크롤링 및 파싱 - text 줄바꿈 사라짐
 * Redux-Saga 소개
    * ![image](https://user-images.githubusercontent.com/20143765/66271262-f3879c00-e896-11e9-8cad-8dccb9267e89.png)
@@ -169,8 +167,8 @@
    * select
       * ![image](https://user-images.githubusercontent.com/20143765/66271273-069a6c00-e897-11e9-8e54-12f18c56e78b.png)
          *  인자로 셀렉터(함수)를 줄 수 있다.
-* Springboot hystrix 사용기 (hystrix로 마이크로 서비스 간의 서비스 호출 실패를 방지해보자)
-* 11번가 Spring Cloud 기반 MSA로의 전환 - 발표정리
+* **Springboot hystrix 사용기 (hystrix로 마이크로 서비스 간의 서비스 호출 실패를 방지해보자)**
+* **11번가 Spring Cloud 기반 MSA로의 전환 - 발표정리**
     * CommandKey 단위로 통계를 내고 동작한다. 그렇다면 같은 한 CommandKey에서 서킷 오픈되면 같은 ComandKey를 가진 모들 메서드들은 서킷 오픈되는거아냐?
 * 172. [Kubernetes] Admission Controller의 이해 및 Python으로 Mutate Webhook 작성 예제
 * 정적 사이트 생성기 Gatsby
