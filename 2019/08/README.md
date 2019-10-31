@@ -2,7 +2,7 @@
 - Redux saga 사용 및 모듈화
 - borrow(Kafka consumer lag monitoring tool)
 - IPC
-- Elasticsearch 노드 종류
+- [Elasticsearch 노드 종류](https://wedul.site/622)
    - 노드 종류
       - Master-eligible 노드
       - Data 노드
@@ -14,7 +14,7 @@
 
 ### 2019.08.21    
 - Shell script
-- 2020 개발 트렌드
+- [2020 개발 트렌드](https://medium.com/@chrisjune_13837/2020년-꼭-알아야-할-기술-트렌드-1d6f60b38361)
    - 요약
       - rust
       - graphql
