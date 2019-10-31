@@ -104,15 +104,14 @@
 * Annotation과 Reflection을 이용한 챗봇 컨트롤러 만들기
     * Annotation, reflections 사용
 * [캐시가 동작하는 아주 구체적인 원리](https://parksb.github.io/article/29.html)
-    * https://parksb.github.io/article/29.html?utm_source=gaerae.com&utm_campaign=%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%8A%A4%EB%9F%BD%EB%8B%A4&utm_medium=social
     * 어렵다ㅠ
-* [번역] 파이썬 매직 메소드 (Python's Magic Methods)
+* [[번역] 파이썬 매직 메소드 (Python's Magic Methods)](https://ziwon.dev/post/python_magic_methods/)
 
 ## 2019.09.15
 * tcpdump
 * [docker] 도커 네트워크(bridge)를 생성하는 예시
 * 05 - Flex Panel Gallery
-* [번역] Redis partitioning        
+* [[번역] Redis partitioning](https://wedul.site/584)       
     * redis의 경우 싱글 스레드로 돌아가기 때문에 작업이 오래 발생되는 keys나 flushall은 사용하지 말아라. 1만건 이하에 데이터를 조작하는 경우에는 사용해도 되는데 그 이상 사용하는 경우에는 주의하라는 뜻.
 * 디자인 패턴3 - 데코레이터 패턴
 * 디자인 패턴4 - 템플릿 메소드 패턴이란(Template method pattern)
@@ -120,18 +119,18 @@
 * 디자인 패턴6 - 옵저버 패턴(Observer pattern)
 * 스프링 프록시 패턴 - Proxy Pattern
 * Let’s talk about data structures in Python
-* How to Test Your Vue Project with Jest and Nightwatch
+* [How to Test Your Vue Project with Jest and Nightwatch](https://hashnode.com/post/how-to-test-your-vue-project-with-jest-and-nightwatch-cjskmturk00665ss1gauawb84)
     * nightwatch 약간 푸피터와 비슷한 느낌인데?
 * Understanding Python slices
 * Enforcing Single Responsibility Principle in Python
 * 알아두면 좋은 MySQL 설정들
-* AWS 서비스를 활용한 Kubernetes 클러스터 구축
+* [AWS 서비스를 활용한 Kubernetes 클러스터 구축](http://engineering.vcnc.co.kr/2019/03/kubernetes-on-aws/)
     * 서비스를 외부에 노출: NGINX Ingress Controller + NLB
     * Pod에 IAM 역할 부여: kube2iam¶
     * 로그 수집: fluentd + CloudWatch Logs¶
     * 모니터링: Prometheus¶
     * 자동 처리량 확장: Cluster Autoscaler¶
-* progressive react
+* [progressive react](https://houssein.me/progressive-react)
     * Measure component-level rendering performance with either of the following:
         * Chrome DevTools Performance panel
         * React DevTools profiler
@@ -151,24 +150,24 @@
         * Extract critical styles if you are using a CSS-in-JS library.
         * Make sure your application is accessible. Consider using libraries like React A11y and react-axe.
         * Add a web app manifest if you think users would like to access your site through their device homescreen.
-* 쿠버네티스 pod 구성 패턴
+* [쿠버네티스 pod 구성 패턴](https://arisu1000.tistory.com/27863)
     * 사이드카 패턴(Sidecar)
     * 앰배서더 패턴(Ambassador)
     * 어댑터 패턴(Adapter)
-* NodeJS에서 async_hooks을 이용해 요청의 고유한 context 사용하기
-* **최신 브라우저의 내부 살펴보기 1 - CPU, GPU, 메모리 그리고 다중 프로세스 아키텍처**
-* **최신 브라우저의 내부 살펴보기 2 - 내비게이션 과정에서 일어나는 일**
-* **최신 브라우저의 내부 살펴보기 3 - 렌더러 프로세스의 내부 동작**
-* **최신 브라우저의 내부 살펴보기 4 - 컴포지터가 사용자 입력을 받았을 때**
+* [NodeJS에서 async_hooks을 이용해 요청의 고유한 context 사용하기](https://tech.ssut.me/getting-per-request-context-in-nodejs-with-async_hooks/)
+* [최신 브라우저의 내부 살펴보기 1 - CPU, GPU, 메모리 그리고 다중 프로세스 아키텍처](https://d2.naver.com/helloworld/2922312)
+* [최신 브라우저의 내부 살펴보기 2 - 내비게이션 과정에서 일어나는 일](https://d2.naver.com/helloworld/9274593)
+* [최신 브라우저의 내부 살펴보기 3 - 렌더러 프로세스의 내부 동작](https://d2.naver.com/helloworld/5237120)
+* [최신 브라우저의 내부 살펴보기 4 - 컴포지터가 사용자 입력을 받았을 때](https://d2.naver.com/helloworld/6204533)
 * [Java] Jsoup 크롤링 및 파싱 - text 줄바꿈 사라짐
-* Redux-Saga 소개
+* [Redux-Saga 소개](https://blog.javarouka.me/2019/04/02/redux-saga-1/)
    * ![image](https://user-images.githubusercontent.com/20143765/66271262-f3879c00-e896-11e9-8cad-8dccb9267e89.png)
       * 특정 END시점에 호출(연결)되게 할수도 있다. 신박하다
    * select
       * ![image](https://user-images.githubusercontent.com/20143765/66271273-069a6c00-e897-11e9-8e54-12f18c56e78b.png)
          *  인자로 셀렉터(함수)를 줄 수 있다.
-* **Springboot hystrix 사용기 (hystrix로 마이크로 서비스 간의 서비스 호출 실패를 방지해보자)**
-* **11번가 Spring Cloud 기반 MSA로의 전환 - 발표정리**
+* [Springboot hystrix 사용기 (hystrix로 마이크로 서비스 간의 서비스 호출 실패를 방지해보자)](https://jeong-pro.tistory.com/183)
+* [11번가 Spring Cloud 기반 MSA로의 전환 - 발표정리](https://happyer16.tistory.com/entry/11%EB%B2%88%EA%B0%80-Spring-Cloud-%EA%B8%B0%EB%B0%98-MSA%EB%A1%9C%EC%9D%98-%EC%A0%84%ED%99%98-%EB%B0%9C%ED%91%9C%EC%A0%95%EB%A6%AC)
     * CommandKey 단위로 통계를 내고 동작한다. 그렇다면 같은 한 CommandKey에서 서킷 오픈되면 같은 ComandKey를 가진 모들 메서드들은 서킷 오픈되는거아냐?
 * 172. [Kubernetes] Admission Controller의 이해 및 Python으로 Mutate Webhook 작성 예제
 * 정적 사이트 생성기 Gatsby
@@ -177,7 +176,7 @@
 * 시스템 행 현상이 발생되었을 때 NMI를 이용한 덤프 분석
 * 만화로 나누는 자유/오픈소스 소30. 리눅스 이야기: 리눅스 vs. 미닉스 1,2부
 * Spring Boot에서 6.4 Elasticsearch 연결 및 간단 CRUD
-* React - React Concurrent Mode
+* [React - React Concurrent Mode](https://ideveloper2.tistory.com/170)
 * [번역] shared message queues와 publish-subscribe 방식에 Custom Group 방식을 더한 Kafka 소개
 * RabbitMQ에 대해
 
