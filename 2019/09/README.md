@@ -8,7 +8,7 @@
 * Spring boot Resttemplate 사용시 HttpComponentsClientHttpRequestFactory 옵션 설명(setConnectTimeout, setConnectionRequestTimeout, setReadTimeout)
     * 여러 set options들
 * [(Troubleshooting) 레디스 사망일기](https://perfectacle.github.io/2019/05/29/redis-monitoring/)
-* JavaScript 배열(Array)의 발전과 성능에 대해서 자세히 알아보기
+* [JavaScript 배열(Array)의 발전과 성능에 대해서 자세히 알아보기](https://evan-moon.github.io/2019/06/15/diving-into-js-array/)
     * Javascript 배열
         * 같은타입의 배열을 사용해라(내부적으로 연속적인 메모리를 가진 배열로 변환). 그렇지 않으면 성능상으로 확연히 느려진다.
     * Typed Array
@@ -16,7 +16,7 @@
 * [지속 가능한 데이터 분석하기(지그재그)](https://brunch.co.kr/@zigzag/16)
     * 지그재그 회사 괜찮네..
 * Kafka end Friends (ppt)
-*  React + Storybook + puppeteer + jest 개발환경 구축하기
+* [React + Storybook + puppeteer + jest 개발환경 구축하기](https://medium.com/@pitapat/3-react-storybook-puppeteer-jest-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0-85cc8be9b56c)
     * 코드, 에셋 변경에 대한 UI 영향도를 즉각적으로 확인
     * 실제 출력 결과를 비교하여 개발자에게 알려주므로 편리
 * 파사드 패턴과 추상 팩토리 패턴
@@ -90,8 +90,14 @@
     * https://blog.cloudflare.com/ko/nginx-structural-enhancements-for-http-2-performance-ko/
     * 너무어려워
 * Spring layered architecture와 객체지향적으로 개발하기
-* Spring AOP 의 개념과 이해
-* Scaling 의 종류에 대한 정리
+* [Spring AOP 의 개념과 이해](https://jins-dev.tistory.com/entry/Spring-AOP-%EC%9D%98-%EA%B0%9C%EB%85%90%EA%B3%BC-%EC%9D%B4%ED%95%B4)
+   * Aspect : 핵심기능에 부가될 수 있는 모듈을 말한다. 재사용 가능하며 핵심적인 기능에 부가되어 의미를 가질 수 있는 모듈이다.
+   * Advice : Aspect 에 대한 구현체가 된다. 주로 어느시점에 어떤 동작을 할지가 기술된다.
+   * Point Cut : 핵심 모듈을 분리할 선이자, 어드바이스를 적용할 시점(Join Point)을 정의하는 모듈이 된다.
+   * Proxy : 타겟은 프록시를 통해 호출되며 타겟 메서드 실행에 대한 전처리 후처리를 담당해줌과 동시에 AOP 추상화에 있어서 인터페이스를 제공한다.
+   * Weaving : 핵심 로직 코드에의 적용을 말하며, Aspect 가 적용됨으로써 새로운 Proxy 객체가 생성된다.
+   * Cross Cut : 공통 로직을 비즈니스 로직에서 추출해내는 것을 Cross Cutting 이라 한다.
+   * Scaling 의 종류에 대한 정리
 * [[Python] 잘 알려져 있지 않은 파이썬 기능](https://yuda.dev/254)
 * [[번역] Linux에서 메모리를 다 써버렸을 때 일어나는 일](https://www.google.com/search?q=%5B%EB%B2%88%EC%97%AD%5D+Linux%EC%97%90%EC%84%9C+%EB%A9%94%EB%AA%A8%EB%A6%AC%EB%A5%BC+%EB%8B%A4+%EC%8D%A8%EB%B2%84%EB%A0%B8%EC%9D%84+%EB%95%8C+%EC%9D%BC%EC%96%B4%EB%82%98%EB%8A%94+%EC%9D%BC&oq=%5B%EB%B2%88%EC%97%AD%5D+Linux%EC%97%90%EC%84%9C+%EB%A9%94%EB%AA%A8%EB%A6%AC%EB%A5%BC+%EB%8B%A4+%EC%8D%A8%EB%B2%84%EB%A0%B8%EC%9D%84+%EB%95%8C+%EC%9D%BC%EC%96%B4%EB%82%98%EB%8A%94+%EC%9D%BC&aqs=chrome..69i57.208j0j4&sourceid=chrome&ie=UTF-8)
     * free 출력
