@@ -27,11 +27,11 @@
 * Item 9. try-finally 보다 try-with-resources를 사용하라.
 * [Docker 기반 분산 트랜스코더 개발](https://d2.naver.com/helloworld/3661677)
 * [자바 Enum 실무에 적용 경험 공유하기 (properties에서 enum mapping, default value 사용하기)](https://jeong-pro.tistory.com/191)
-* [AWS 자격증 시험 - 클라우드 종사자(Cloud Practitioner) 후기](AWS 자격증 시험 - 클라우드 종사자(Cloud Practitioner) 후기)
+* [AWS 자격증 시험 - 클라우드 종사자(Cloud Practitioner) 후기](https://yongho1037.tistory.com/783)
     * 용호님 글
 * Elasticsearch 특정 형태소 종류를 제외하여 검색하는 필터 nori_part_of_speech 적용
 * Elasticsearch nori 형태소 분석기에서 readingform filter를 이용해서 한자 내용을 한글로 변환하기
-* Apollo Client는 Redux와 무엇이 다른가
+* [Apollo Client는 Redux와 무엇이 다른가](https://d2.naver.com/helloworld/4245995)
     * Redux 단점
         * REST API를 사용하기 때문에 리소스의 크기가 서버에서 결정된다. 데이터 교환이 복잡하게 이루어지고, 엔드포인트 증가 및 overfetching과 underfetching 등의 문제점
 * [Node.js] Redis로 캐싱 시스템 구축하기
