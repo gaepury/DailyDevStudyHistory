@@ -21,14 +21,18 @@
 * [Effective Java3/E - 람다와 스트림](https://brunch.co.kr/@oemilk/207)
 * [스프링 애플리케이션이 시작, 종료될 때 수행할 메서드 지정하는 방법 + 스프링 빈(Bean)이 생성, 소멸될 때 수행할 메서드 지정하는 방법(graceful 종료, CommandLineRunner, ApplicationListener, InitializingBea..](https://jeong-pro.tistory.com/179)
    - 요약
-      - PostConstruct, CommandLineRunner(run method), ApplicationListener(onApplicationEvent method), InitializingBean(afterPropertiesSet method), DisposableBean(destory method)
+      - PostConstruct, CommandLineRunner(run method), ApplicationRunner(run method), ApplicationListener(onApplicationEvent method), InitializingBean(afterPropertiesSet method), DisposableBean(destory method)
       - PostConstruct 메서드 다음에 afterPropertiesSet 호출
 ``` java
 @Service
-public class TestService implements CommandLineRunner, ApplicationListener<ContextClosedEvent>, InitializingBean, DisposableBean {
+public class TestService implements CommandLineRunner, APplicationRunner, ApplicationListener<ContextClosedEvent>, InitializingBean, DisposableBean {
     @PostConstruct
     private void init() {
         System.err.println("PostConstruct annotation으로 빈이 완전히 생성된 후에 한 번 수행될 메서드에 붙입니다.");
+    }
+    @Override
+    public void run(ApplicationArguments args) throws Exception {
+        System.err.println("ApplicationRunner 인터페이스 구현 메서드입니다. '애플리케이션'이 실행될 때 '한 번' 실행됩니다.");
     }
     @Override
     public void run(String... args) throws Exception {
