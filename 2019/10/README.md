@@ -223,6 +223,8 @@ public class TestService implements CommandLineRunner, APplicationRunner, Applic
     7. Optional을 컬렉션의 원소로 사용 금지
         * getOrDefault(), putIfAbsent(), computeIfAbsent(), computeIfPresent() 처럼 null 체크가 포함된 메서드를 잘 이용하자
     8. of(), ofNullable() 혼동 주의
+        * of(X)은 X가 null이 아님이 확실할 때만 사용해야 하며, X가 null이면 NullPointerException 이 발생한다.
+        * ofNullable(X)은 X가 null일 수도 있을 때만 사용해야 하며, X가 null이 아님이 확실하면 of(X)를 사용해야 한다.
     9. Optional<T> 대신 OptionalInt, OptionalLong, OptionalDouble
 * [글로벌 네트워크 에뮬레이터 prism_pacman 소개](https://d2.naver.com/helloworld/7847943)
     * 네트워크 환경의 성능을 좌우하는 가장 큰 2가지 요소는 레이턴시(latency)와 대역폭(bandwidth)
