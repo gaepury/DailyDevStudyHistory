@@ -288,6 +288,6 @@ public class TestService implements CommandLineRunner, APplicationRunner, Applic
     * Tip #8. 가장 작은 이미지를 고르라 (Look for minimal flavors)
     * Tip #9. 일관된 환경에서 소스 코드를 빌드하라
     * Tip #10. Fetch dependencies in a separate step
-        *  빌드 시에만 필요한 의존성들을 포함하느라 크기가 더 커져버림
+        *  빌드 시에만 필요한 의존성들을 포함하느라 크기가 더 커져버릴수 있다.
     * Tip #11. 빌드 의존성을 제거하기 위해서 다단계 빌드(Multi-stage build)를 사용하라
         * AS 키워드 사용하여 참조
