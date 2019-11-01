@@ -185,7 +185,7 @@ public class TestService implements CommandLineRunner, APplicationRunner, Applic
     * 성능 개선 방법 – 최소화(minimization)
         * 개발 모드 확인
             * mode: production
-        *  Tree shaking 개선(사용하지 않는 모듈 제거
+        *  Tree shaking 개선(사용하지 않는 모듈 제거)
             * ![image](https://user-images.githubusercontent.com/20143765/67639283-5c5fb280-f931-11e9-8683-1a3160f38338.png)
         * 자원 외부화
             * ![image](https://user-images.githubusercontent.com/20143765/67639286-608bd000-f931-11e9-8f19-d0f5bb057a5e.png)
@@ -206,4 +206,51 @@ public class TestService implements CommandLineRunner, APplicationRunner, Applic
     3. Component간 순환 참조를 하고 있다면 BeanCurrentlyInCreationException이 발생해서 순환 의존성을 쉽게 알 수 있습니다.(순환참조시 앱구동 실패)
     4. 특정 DI Container에 의존하지 않으며 쉽게 단위 테스트도 가능하고 필요하다면 다른 DI Container로 전환이 가능합니다.(객체 생성시 모든 의존관계를 주입할수 있으므로 단위테스트시 의존관계를 커스텀하게 주입가능)
     5. DI Container가 Component를 주입을 못한 경우 실제 Method가 호출되기 이전인 생성자에서 Handling 할 수 있습니다.(의존관계 설정이 되지 않으면 객체생성 불가 -> 컴파일 타임에 인지 가능, NPE 방지)
-            
+* [파이썬(Python) 3.8 릴리스와 주요 변경 사항](https://www.44bits.io/ko/post/python-3-8-release-note-summary?fbclid=IwAR2w2tDWn2VijXQ1QHtZQPjaXF2VVfw1HyBmpvbKz0J4PPZQpVDxI258IW0)
+    * 할당 표현식assignment expressions
+    * 위치 고정 파라미터positional-only parameter
+    * f-문자열에서 평가식self-documenting expressions을 위한 = 기호 추가
+* [Java Optional 바르게 쓰기](http://homoefficio.github.io/2019/10/03/Java-Optional-%EB%B0%94%EB%A5%B4%EA%B2%8C-%EC%93%B0%EA%B8%B0/?fbclid=IwAR0ruUDGSwMf0UATvHE0XsJ2lCar_u_W8tXpfQIazXmDiTDRlFI1v3T4Whk)
+    1. isPresent()-get() 대신 orElse()/orElseGet()/orElseThrow()
+    2. orElse(new ...) 대신 orElseGet(() -> new ...)
+        * orElse는 Optional에 값이 있든 없든 무조건 실행, orElseGet(Supplier)에서 Supplier는 Optional에 값이 없을 때만 실행
+        * 따라서 객체를 생성하거나 새로운 연산을 수행하는 경우에는 orElse() 대신 orElseGet()을 써야한다.
+    3. 단지 값을 얻을 목적이라면 Optional 대신 null 비교
+        * ![image](https://user-images.githubusercontent.com/20143765/68016148-42c6be00-fcd7-11e9-9062-ce22dd863d90.png)
+    4. Optional 대신 비어있는 컬렉션 반환
+    5. Optional을 필드로 사용 금지
+    6. Optional을 생성자나 메서드 인자로 사용 금지
+    7. Optional을 컬렉션의 원소로 사용 금지
+        * getOrDefault(), putIfAbsent(), computeIfAbsent(), computeIfPresent() 처럼 null 체크가 포함된 메서드를 잘 이용하자
+    8. of(), ofNullable() 혼동 주의
+    9. Optional<T> 대신 OptionalInt, OptionalLong, OptionalDouble
+* [글로벌 네트워크 에뮬레이터 prism_pacman 소개](https://d2.naver.com/helloworld/7847943)
+    * 네트워크 환경의 성능을 좌우하는 가장 큰 2가지 요소는 레이턴시(latency)와 대역폭(bandwidth)
+        * 레이턴시: 송신자부터 수신자까지 패킷이 도달하는 시간
+            * 전파지연
+            * 전송지연
+            * 프로세싱 지연
+            * 큐잉 지연
+            * 최종 마일 레이턴시
+        * 대역폭: 통신 채널의 최대 처리량
+            * 코어 네트워크 대역폭
+            * 네트워크 에지 대역폭
+        * 무선 네트워크 특징, 성능 제한 요소
+            * 무선 통신의 채널 용량 계산식(C)
+            * 무선 통신의 대역폭
+            * 무선 통신의 신호대 잡음비(SNR)
+    * 네트워크 환경 영향 정리(physical layer, data link layer)
+        * 통신 선로 길이
+        * 매질의 굴절율
+        * 링크의 용량
+        * 라우터 incoming buffer의 크기
+        * 무선 주파수 대역폭
+        * 안테나 중계기 등 무선 통신 인프라 밀집도
+        * 무선 통신 전송 전력
+        * 무선 통신 SNR
+    * TCP에 의한 네트워크 환경 영향
+        * 흐름 제어(flow control)
+        * 느린 시작(slow start)
+        * 대역폭 지연곱(bandwidth delay product)
+        * 혼잡 회피(conjestion avoidance)
+    * prism_pacman(package manager의 약자 pacman)
