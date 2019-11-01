@@ -1,8 +1,8 @@
 10월부터 링크 연결 및 간단한 요약 정리 
 
 ## 2019.10.06
-* Cache-Aside Pattern in Redis
-* [번역] OOP를 빨리 잊을 수록 여러분과 여러분의 소프트웨어에 좋습니다
+* [Cache-Aside Pattern in Redis](https://brunch.co.kr/@springboot/151)
+* [[번역] OOP를 빨리 잊을 수록 여러분과 여러분의 소프트웨어에 좋습니다](https://rinae.dev/posts/the-faster-you-unlearn-oop-the-better-for-you-and-your-software-kr)
     - 단점
         - 간단한 문제가 OOP 방식으로 프로그램을 짰더니 엄청난 양의 코드가 되어버린 이유는 언제나 추상화할 구석이 남아있기 때문입니다.
         - 당신은 바나나를 원했지만 실제로는 바나나를 들고 있는 고릴라와 정글 전체를 얻고 말았다.
@@ -256,3 +256,38 @@ public class TestService implements CommandLineRunner, APplicationRunner, Applic
         * 대역폭 지연곱(bandwidth delay product)
         * 혼잡 회피(conjestion avoidance)
     * prism_pacman(package manager의 약자 pacman)
+* [15 Best Animation Libraries For React App](https://onaircode.com/best-animation-libraries-for-react-app/?fbclid=IwAR04EAjzK_GGwXqLKB5sGwDfjgRYCCCswe5EWOPc72GKf0YgN-Hr2t9Vx2M)
+* [🚫 안티 패턴으로서의 CSS background-image 속성](https://velog.io/@chris/the-css-background-image-property-as-an-anti-pattern)
+    * css background-image 단점
+        * seo에 좋지 않다.
+        * 접근성에 좋지 않다
+        * 성능에 좋지 않다
+        * CMS와 CDN에 좋지 않다.
+    * <PICTURE>를 사용
+        * SEO 친화적 이미지
+        * 접근성 친화적 이미지 (alt="" 속성 사용)
+        * CMS-generated 이미지, CDN과 함께 잘 동작함
+        * 이미지 최적화를 위한 srcset과 함께 잘 동작함
+        * .webp 같은 next-generation 이미지 포맷을 위해 <source>를 사용 가능
+        * 최종 예시 코드
+            * ![image](https://user-images.githubusercontent.com/20143765/68020315-6e4ea600-fce1-11e9-844e-41a6f0615692.png)
+                * object-fit 사용으로 background-size: cover; 대체
+                * 브라우저가 지원하는경우 Lazy lading(지원하지 않으면 기본동작)
+                * 브라우저가 선택할 수 있는 최적화된 반응형 이미지의 srcset.
+                * 브라우저가 지원하는 경우 webp 포맷 (지원하지 않으면 skip)
+* [도커 파일(Dockerfile) 작성 Best Practices](https://yeomko.tistory.com/10?fbclid=IwAR040dmDud1cEq7IJVj2tJxPpq5bXxZCXPz7tc5-3SndrgeFmrb12_zjSjw)
+    * Tip #1. 순서는 캐싱에 중요하다.
+        * 가장 변하지 않는 스텝을 먼저, 자주 변경되는 스텝은 아래로 배치함으로서 캐싱 최적화
+    * Tip #2. 더 구체적인 COPY는 캐시 부담을 줄여준다.
+    * Tip #3. 캐시할 수 있는 단위들을 구별해내라 
+    * Tip #4. 불필요한 의존성을 제거하라
+        * no-install-recommends 플래그 사용
+    * Tip #5. 패키지 매니저 캐시를 제거하라
+    * Tip #6. 가능하면 공식 이미지를 사용하라
+    * Tip #7. 더 구체적인 태그를 사용하라
+    * Tip #8. 가장 작은 이미지를 고르라 (Look for minimal flavors)
+    * Tip #9. 일관된 환경에서 소스 코드를 빌드하라
+    * Tip #10. Fetch dependencies in a separate step
+        *  빌드 시에만 필요한 의존성들을 포함하느라 크기가 더 커져버림
+    * Tip #11. 빌드 의존성을 제거하기 위해서 다단계 빌드(Multi-stage build)를 사용하라
+        * AS 키워드 사용하여 참조
