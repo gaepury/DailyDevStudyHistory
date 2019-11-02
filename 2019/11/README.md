@@ -159,7 +159,6 @@ public class Main {
     
 * [JSConf Korea에서 발표한 "Lessons from maintaining Mocha, an open source project” 발표자료](https://blog.outsider.ne.kr/1459?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+rss_outsider_dev+%28Outsider%27s+Dev+Story%29)
 * [[번역] Refs와 DOM](https://velog.io/@pop8682/%EB%B2%88%EC%97%AD-Refs%EC%99%80-DOM)
-* [React/TS/Electron Application을 개발하며 실수한 것들](https://medium.com/@axisj/react-ts-electron-application%EC%9D%84-%EA%B0%9C%EB%B0%9C%ED%95%98%EB%A9%B0-%EC%8B%A4%EC%88%98%ED%95%9C-%EA%B2%83%EB%93%A4-1a1d70edd1c2)
 * [Outsider 기술 뉴스 #137 : 19-11-01](https://blog.outsider.ne.kr/1464?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+rss_outsider_dev+%28Outsider%27s+Dev+Story%29)
 * [클라우드알못에서 AWS 이직까지](https://reoim.tistory.com/entry/%ED%81%B4%EC%95%8C%EB%AA%BB%EC%97%90%EC%84%9C-AWS-%EC%9D%B4%EC%A7%81%EA%B9%8C%EC%A7%80)
    * 정말 멋진 이직기.. 어린 나이에 결혼 생활을 시작 하시면서 어떻게 저렇게 멋진 커리어를 꾸려 나갔으실지 그 노력들이 감히 가늠이 안된다.
@@ -167,3 +166,20 @@ public class Main {
 * [글로벌 서비스를 위한 멀티 리전 프록시 도입기](https://medium.com/benx-tech-blog/%EA%B8%80%EB%A1%9C%EB%B2%8C-%EC%84%9C%EB%B9%84%EC%8A%A4%EB%A5%BC-%EC%9C%84%ED%95%9C-%EB%A9%80%ED%8B%B0-%EB%A6%AC%EC%A0%84-%ED%94%84%EB%A1%9D%EC%8B%9C-%EB%8F%84%EC%9E%85%EA%B8%B0-87eda1bd8d55)
     * 해외 리전에 proxy ec2 인스턴스를 구축하여 nginx proxy(국내 ec2로) 처리
 * [[번역] 오픈소스 에티켓](https://medium.com/jung-han/%EB%B2%88%EC%97%AD-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%97%90%ED%8B%B0%EC%BC%93-bf59267d1db3)     
+* [[Javascript] const와 Object.freeze()를 이용하여 Immutable한 Object 만들기](https://yorr.tistory.com/21)
+* [16. 스프링부트 MVC - Transaction 속성 정리](https://linked2ev.github.io/gitlog/2019/10/03/springboot-mvc-16-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8-MVC-Transaction-%EC%86%8D%EC%84%B1-%EC%A0%95%EB%A6%AC/)
+    * 속성
+        * propagation: 트랜잭션의 경계를 정의하며 시작 방법을 결정하는 속성, 각 속성은 document 참조
+        * Isolation:  일관성이 없는 데이터를 허용하도록 하는 수준, 각 속성은 document 참조
+        * readOnly: 트랜잭션이 시작된 이후 INSERT, UPDATE, DELETE 같은 쓰기 작업이 진행되면 예외가 발생한다.
+        * timeout: 지정한 시간 내에 해당 메소드 수행이 완료되이 않은 경우 rollback 수행
+        * rollbackFor:  롤백 룰을 정의해서 런타임 에러 발생 시에 롤백
+* [Grafana와 엘라스틱서치 사용시 각종 query 조건 사용 방법(and, or, regex 등)](https://blog.voidmainvoid.net/270)
+    1. exactly same document value 조건
+       * ```topic.keyword: "discover_log-live”```
+    2. OR 조건
+       * ```topic.keyword: "discover_log-live" or topic.keyword: "test_log-dev”```
+    3. AND 조건
+       * ```topic.keyword: "discover_log-live" and partition_no.keyword: "2"```
+    4. regex document value 조건
+       * ```topic.keyword: /.*[live|alp]/```
