@@ -36,7 +36,7 @@ java -jar ${JAR_OPTS} $(${JAR_NAME}) \
 파라미터1=파라미터값1 \
 파라미터2=파라미터값2
 ```
-* [GraphQL is not just a network protocol}(https://blog.cometkim.kr/posts/graphql-is-not-just-a-network-protocol/)
+* [GraphQL is not just a network protocol](https://blog.cometkim.kr/posts/graphql-is-not-just-a-network-protocol/)
     * 상태관리(Redux같은)로서 GraphQL를 활용한 흥미로운 예
     * GraphQL의 유즈케이스를 살펴보면 실제로 데이터베이스, 마이크로서비스, API 서버, 모바일 클라이언트 등 말 그대로 데이터를 다루는 모든 곳에서 활용되고 있다.
     * 저자는 DB들이 SQL 보다 GraphQL을 기본 쿼리 언어로 제공하게 되는 것이 앞으로의 트렌드라고 말하고 있음.
@@ -59,6 +59,9 @@ java -jar ${JAR_OPTS} $(${JAR_NAME}) \
     * 드뎌 GitHub actions setting 됨
     * github-actions-pracie 연습용 repository 생성
 * [[Spring & Design Pattern] Spring에서 발견한 디자인패턴_template method pattern](https://sabarada.tistory.com/19)    
+   * Spring에서 사용되는 Template method pattern 
+        * HttpServlet <-- FrameworkServlet <-- DispatcherServlet(doService method)
+   * template method pattern 예제 코드
  ``` java
 // 1. Worker
 package com.main;
@@ -153,5 +156,14 @@ public class Main {
     }
 }
 ```
-   * Spring에서 사용되는 Template method pattern 
-      * HttpServlet <-- FrameworkServlet <-- DispatcherServlet(doService method)
+    
+* [JSConf Korea에서 발표한 "Lessons from maintaining Mocha, an open source project” 발표자료](https://blog.outsider.ne.kr/1459?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+rss_outsider_dev+%28Outsider%27s+Dev+Story%29)
+* [[번역] Refs와 DOM](https://velog.io/@pop8682/%EB%B2%88%EC%97%AD-Refs%EC%99%80-DOM)
+* [React/TS/Electron Application을 개발하며 실수한 것들](https://medium.com/@axisj/react-ts-electron-application%EC%9D%84-%EA%B0%9C%EB%B0%9C%ED%95%98%EB%A9%B0-%EC%8B%A4%EC%88%98%ED%95%9C-%EA%B2%83%EB%93%A4-1a1d70edd1c2)
+* [Outsider 기술 뉴스 #137 : 19-11-01](https://blog.outsider.ne.kr/1464?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+rss_outsider_dev+%28Outsider%27s+Dev+Story%29)
+* [클라우드알못에서 AWS 이직까지](https://reoim.tistory.com/entry/%ED%81%B4%EC%95%8C%EB%AA%BB%EC%97%90%EC%84%9C-AWS-%EC%9D%B4%EC%A7%81%EA%B9%8C%EC%A7%80)
+   * 정말 멋진 이직기.. 어린 나이에 결혼 생활을 시작 하시면서 어떻게 저렇게 멋진 커리어를 꾸려 나갔으실지 그 노력들이 감히 가늠이 안된다.
+* [스타트업 개발자가 리눅스 서버에 들어가면 언제나 하는 작업들](https://blog.outsider.ne.kr/1464?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+rss_outsider_dev+%28Outsider%27s+Dev+Story%29)
+* [글로벌 서비스를 위한 멀티 리전 프록시 도입기](https://medium.com/benx-tech-blog/%EA%B8%80%EB%A1%9C%EB%B2%8C-%EC%84%9C%EB%B9%84%EC%8A%A4%EB%A5%BC-%EC%9C%84%ED%95%9C-%EB%A9%80%ED%8B%B0-%EB%A6%AC%EC%A0%84-%ED%94%84%EB%A1%9D%EC%8B%9C-%EB%8F%84%EC%9E%85%EA%B8%B0-87eda1bd8d55)
+    * 해외 리전에 proxy ec2 인스턴스를 구축하여 nginx proxy(국내 ec2로) 처리
+* [[번역] 오픈소스 에티켓](https://medium.com/jung-han/%EB%B2%88%EC%97%AD-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EC%97%90%ED%8B%B0%EC%BC%93-bf59267d1db3)     
