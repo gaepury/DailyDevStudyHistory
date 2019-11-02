@@ -59,8 +59,7 @@ java -jar ${JAR_OPTS} $(${JAR_NAME}) \
     * 드뎌 GitHub actions setting 됨
     * github-actions-pracie 연습용 repository 생성
 * [[Spring & Design Pattern] Spring에서 발견한 디자인패턴_template method pattern](https://sabarada.tistory.com/19)    
-
- ``` 
+ ``` java
 // 1. Worker
 package com.main;
 public abstract class Worker {
@@ -154,3 +153,5 @@ public class Main {
     }
 }
 ```
+   * Spring에서 사용되는 Template method pattern 
+      * HttpServlet <-- FrameworkServlet <-- DispatcherServlet(doService method)
