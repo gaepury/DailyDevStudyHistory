@@ -256,5 +256,15 @@ public class Main {
      * [운영체제 - 프로세스와 컨택스트 스위칭](https://velog.io/@pa324/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%EC%99%80-%EC%BB%A8%ED%83%9D%EC%8A%A4%ED%8A%B8-%EC%8A%A4%EC%9C%84%EC%B9%AD-8ik28uy8ud)
          * ![image](https://user-images.githubusercontent.com/20143765/68081356-108c9c00-fe50-11e9-95a6-b1bb1d837bf1.png)
          * 대부분의 IPC기법은 결국 커널 공간을 활용하는 것 이다.(커널 공간은 공유하기 때문, file방식 제외)
- 
- 
+* [함수들에 대한 그래프 시각화](http://www.gisdeveloper.co.kr/?p=8285)
+* [아파치 카프카 Lag 모니터링 대시보드 만들기](https://blog.voidmainvoid.net/279)
+   * Burrow(link) : linkedin에서 공개한 opensource lag monitoring application입니다. rest api를 통해 lag 정보를 전달받을 수 있습니다.
+   * Telegraf(link) : 데이터의 수집 및 전달에 특화된 agent입니다. 이 글에서는 configuration설정을 통해 burrow의 데이터를 ES에 넣는 역할을 한다.
+* [pandas의 DataFrame에 대한 Inner Join, Outer Join, Left Join, Right Join](http://www.gisdeveloper.co.kr/?p=8255)
+* [Scala CLASSES VS CASE CLASSES](https://sehajyang.github.io/2019/10/11/class-vs-case-class/)
+* [아파치 카프카 테스트용 data generator 소개 - ksql-datagen](https://blog.voidmainvoid.net/269)
+* [더이상 기다리지 않아도 되는 배치 무중단 배포](https://taetaetae.github.io/2019/10/13/batch-nondisruptive-deploy/)
+    * readlink( 실제 링크를 얻어오는 명령어) 사용
+    > Job이 실행중이라도 기존에 실행중인 Job은 기존 모듈을 바라보고 실행이 되고, 도중에 새로 배포가 되어도 기존 실행되는 Job에는 영향을 주지 않으며(심볼릭 링크에 연결되었던 과거 배포 경로에서 실행되고 있기 때문) 새롭게 배포된 후 Job이 실행될때도 배포된 경로의 > 심볼릭 링크의 > 실제 링크 즉, 새롭게 배포된 경로에서 실행되기 때문에 무중단 배포가 가능하게 된다.
+* [Spring에서 Logback을 이용해서 필터없이 별도의 디렉토리에 로그를 남기는 방법 (Logback MDC 사용법, 동적 로그 남기기)](https://jeong-pro.tistory.com/199)
+    * MDC: MDC는 Mapped Diagnostic Context다. 그냥 Logback에서 여러 메타 정보를 넣을 수 있고 공유되는 Map이라고 생각하면 쉽다.
