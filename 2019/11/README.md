@@ -20,6 +20,8 @@
  * [Accuracy, Precision, Recall](http://www.gisdeveloper.co.kr/?p=8146)
  * [라이브러리 추천: react-hook-form](https://velog.io/@iamchanii/react-hooks-form-%EC%9D%84-%EC%86%8C%EA%B0%9C%ED%95%A9%EB%8B%88%EB%8B%A4-54k0rrj6m7)
     * - redux form은 redux를 사용할때 편리한 장점이 있지만 성능상 이슈가 있다.
+    
+## 2019.11.02
 * [Spring Batch 공통 설정 관리하기 (feat. 젠킨스 Environment variables)](https://jojoldu.tistory.com/445)
     * JAR_OPTS, JAR_NAME 공통 설정
 ```
@@ -183,3 +185,5 @@ public class Main {
        * ```topic.keyword: "discover_log-live" and partition_no.keyword: "2"```
     4. regex document value 조건
        * ```topic.keyword: /.*[live|alp]/```
+       
+## 2019.11.03
