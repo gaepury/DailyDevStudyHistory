@@ -56,7 +56,7 @@ java -jar ${JAR_OPTS} $(${JAR_NAME}) \
 * [Spring Security 인프런 강의 정리](https://lelecoder.com/140)
     * 직접 강의 봐야겠다..
  * [[git] gitHub actions 간단하게 알아보자](https://blog.naver.com/pjt3591oo/221639403758)
-    * 드뎌 GitHub actions setting 됨
+    * 드 GitHub actions setting 됨
     * github-actions-pracie 연습용 repository 생성
 * [[Spring & Design Pattern] Spring에서 발견한 디자인패턴_template method pattern](https://sabarada.tistory.com/19)    
    * Spring에서 사용되는 Template method pattern 
