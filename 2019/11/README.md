@@ -21,6 +21,9 @@
  * [라이브러리 추천: react-hook-form](https://velog.io/@iamchanii/react-hooks-form-%EC%9D%84-%EC%86%8C%EA%B0%9C%ED%95%A9%EB%8B%88%EB%8B%A4-54k0rrj6m7)
     * - redux form은 redux를 사용할때 편리한 장점이 있지만 성능상 이슈가 있다.
     
+    
+---
+
 ## 2019.11.02
 * [Spring Batch 공통 설정 관리하기 (feat. 젠킨스 Environment variables)](https://jojoldu.tistory.com/445)
     * JAR_OPTS, JAR_NAME 공통 설정
@@ -185,5 +188,36 @@ public class Main {
        * ```topic.keyword: "discover_log-live" and partition_no.keyword: "2"```
     4. regex document value 조건
        * ```topic.keyword: /.*[live|alp]/```
-       
+     
+---
+
 ## 2019.11.03
+ * [[Spring & Design Pattern] Spring에서 발견한 디자인패턴_Proxy Pattern](https://sabarada.tistory.com/20)
+     * @Transactional 어노테이션에 구현된 proxy pattern
+ * [한글은 노토산스, 영문/숫자는 다른 폰트로 해주세요...](https://feel5ny.github.io/2019/09/08/CSS_02/)
+     * ![image](https://user-images.githubusercontent.com/20143765/68080932-d5d33580-fe48-11e9-8b1e-712768a371a8.png)
+ * [Puppeteer로 크롤러 만들기 - 준비](https://yangeok.github.io/node.js/2019/09/09/puppeteer-crawler-pre.html)
+ * [Puppeteer로 크롤러 만들기 - 페이지네이션](https://yangeok.github.io/node.js/2019/09/10/puppeteer-crawler-page.html)
+ * [Puppeteer로 크롤러 만들기 - 무한스크롤](https://yangeok.github.io/node.js/2019/09/11/puppeteer-crawler-scroll.html)
+ * REST 기반의 간단한 분산 트랜잭션 구현
+     * [REST 기반의 간단한 분산 트랜잭션 구현 - 1편](https://www.popit.kr/rest-%EA%B8%B0%EB%B0%98%EC%9D%98-%EA%B0%84%EB%8B%A8%ED%95%9C-%EB%B6%84%EC%82%B0-%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98-%EA%B5%AC%ED%98%84-1%ED%8E%B8/)
+         *  TCC(Try-Confirm/Cancel) 방식
+     * [REST 기반의 간단한 분산 트랜잭션 구현 - 2편 TCC Cancel, Timeout](https://www.popit.kr/rest-%EA%B8%B0%EB%B0%98%EC%9D%98-%EA%B0%84%EB%8B%A8%ED%95%9C-%EB%B6%84%EC%82%B0-%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98-%EA%B5%AC%ED%98%84-2%ED%8E%B8-tcc-cancel-timeout/)
+     * [REST 기반의 간단한 분산 트랜잭션 구현 - 3편 TCC Confirm(Eventual Consistency)](https://www.popit.kr/rest-%EA%B8%B0%EB%B0%98%EC%9D%98-%EA%B0%84%EB%8B%A8%ED%95%9C-%EB%B6%84%EC%82%B0-%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98-%EA%B5%AC%ED%98%84-3%ED%8E%B8-tcc-confirmeventual-consistency/)
+     * [REST 기반의 간단한 분산 트랜잭션 구현 - 4편 REST Retry](https://www.popit.kr/rest-%EA%B8%B0%EB%B0%98%EC%9D%98-%EA%B0%84%EB%8B%A8%ED%95%9C-%EB%B6%84%EC%82%B0-%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98-%EA%B5%AC%ED%98%84-4%ED%8E%B8-rest-retry/)
+* [[HTML] 좋은 사용자 경험(UX)을 제공하는 Form 만들기](https://armadillo-dev.github.io/html/ux/makes-good-ux-form-with-html/)
+    * inputmode 속성 활용하기: 천 단위로 ,을 표기하고 싶을 때
+    * 양식 자동 완성 기능 활용하기: autocomplete 속성 사용
+    * 자동 대문자 활성화 방지(모바일): 'autocapitalize: off’ 속성 사용
+* [[Kubernetes] 쿠버네티스 Deployment 란?](https://blog.wonizz.tk/2019/09/17/kubernetes-deployment/)
+    * ![image](https://user-images.githubusercontent.com/20143765/68080933-da97e980-fe48-11e9-957a-4932cc30e4cb.png) 
+* [504 Gateway Time-out 문제의 원인과 해결 방법](https://blog.lael.be/post/9251)
+    * upstream이란 tomcat, node, php등 application을 가르킨다.
+* [네트워크 모니터링이 궁금할땐 ? Packetbeat !](https://taetaetae.github.io/2019/09/08/network-monitor-by-packetbeat/)
+    * elastic stack packetbeat 
+* [우아한 스프링 배치 테크세미나 정리 및 후기 (by 우아한 형제들)](https://taetaetae.github.io/2019/09/29/woowabros-spring-batch/)
+    > 1. 자기보다 경험이 “적은” 사람에게 “설득을 당할 수” 있어야 하고, 자기보다 경험이 “많은 사람을 설득” 시킬 수 있어야 한다.
+    > 2. 무중단 배포에 대해 설명을 해주셨다. 이는 사실 스프링배치 나 Jenkins 와는 관련이 없지만 이 둘을 사용하면서 배포를 할때 리눅스의 명령어니 readlink와 ln -s를 활용하여 중단없이 배포를 할 수 있도록 한다고 한다. 필자는 이제까지 Jenkins의 끄기전 준비를 실행 하고 스케쥴러에 의해 다음 Job이 실행되지 않는것을 확인 후에 배포를 하곤 했었는데 이러한 기능을 통해 충분히 무중단 배포를 구성 해볼수도 있을껏 같았다.
+    * 배치 어플리케이션을 구성하면서 가장 중요시 생각해야할 개념은 멱등성. 
+      * 멱등성이란 연산을 여러번 적용 하더라도 결과가 달라지지 않는 성질을 의미
+  * 관련해서 Keep Spring batch 복습
