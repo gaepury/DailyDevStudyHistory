@@ -268,3 +268,5 @@ public class Main {
     > Job이 실행중이라도 기존에 실행중인 Job은 기존 모듈을 바라보고 실행이 되고, 도중에 새로 배포가 되어도 기존 실행되는 Job에는 영향을 주지 않으며(심볼릭 링크에 연결되었던 과거 배포 경로에서 실행되고 있기 때문) 새롭게 배포된 후 Job이 실행될때도 배포된 경로의 > 심볼릭 링크의 > 실제 링크 즉, 새롭게 배포된 경로에서 실행되기 때문에 무중단 배포가 가능하게 된다.
 * [Spring에서 Logback을 이용해서 필터없이 별도의 디렉토리에 로그를 남기는 방법 (Logback MDC 사용법, 동적 로그 남기기)](https://jeong-pro.tistory.com/199)
     * MDC: MDC는 Mapped Diagnostic Context다. 그냥 Logback에서 여러 메타 정보를 넣을 수 있고 공유되는 Map이라고 생각하면 쉽다.
+* [2019 상반기 웹디자인 트렌드(상)](https://brunch.co.kr/@thinkaboutlove/273)
+ * [2019 상반기 웹디자인 트렌드(하)](https://brunch.co.kr/@thinkaboutlove/275)
