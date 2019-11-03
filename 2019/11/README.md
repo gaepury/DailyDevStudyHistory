@@ -196,6 +196,7 @@ public class Main {
      * @Transactional 어노테이션에 구현된 proxy pattern
  * [한글은 노토산스, 영문/숫자는 다른 폰트로 해주세요...](https://feel5ny.github.io/2019/09/08/CSS_02/)
      * ![image](https://user-images.githubusercontent.com/20143765/68080932-d5d33580-fe48-11e9-8b1e-712768a371a8.png)
+     * uriencode-range로 폰트 자동 조절 가능
  * [Puppeteer로 크롤러 만들기 - 준비](https://yangeok.github.io/node.js/2019/09/09/puppeteer-crawler-pre.html)
  * [Puppeteer로 크롤러 만들기 - 페이지네이션](https://yangeok.github.io/node.js/2019/09/10/puppeteer-crawler-page.html)
  * [Puppeteer로 크롤러 만들기 - 무한스크롤](https://yangeok.github.io/node.js/2019/09/11/puppeteer-crawler-scroll.html)
@@ -219,5 +220,41 @@ public class Main {
     > 1. 자기보다 경험이 “적은” 사람에게 “설득을 당할 수” 있어야 하고, 자기보다 경험이 “많은 사람을 설득” 시킬 수 있어야 한다.
     > 2. 무중단 배포에 대해 설명을 해주셨다. 이는 사실 스프링배치 나 Jenkins 와는 관련이 없지만 이 둘을 사용하면서 배포를 할때 리눅스의 명령어니 readlink와 ln -s를 활용하여 중단없이 배포를 할 수 있도록 한다고 한다. 필자는 이제까지 Jenkins의 끄기전 준비를 실행 하고 스케쥴러에 의해 다음 Job이 실행되지 않는것을 확인 후에 배포를 하곤 했었는데 이러한 기능을 통해 충분히 무중단 배포를 구성 해볼수도 있을껏 같았다.
     * 배치 어플리케이션을 구성하면서 가장 중요시 생각해야할 개념은 멱등성. 
-      * 멱등성이란 연산을 여러번 적용 하더라도 결과가 달라지지 않는 성질을 의미
-  * 관련해서 Keep Spring batch 복습
+        * 멱등성이란 연산을 여러번 적용 하더라도 결과가 달라지지 않는 성질을 의미
+    * 관련해서 Keep Spring batch 복습
+ * [운영체제 - 스케쥴링 알고리즘 기본](https://velog.io/@pa324/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C-%EC%8A%A4%EC%BC%80%EC%A5%B4%EB%A7%81-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B8%B0%EB%B3%B8-uwk12tlqwj)
+    * FIFO, SJF(short job first), Priority-Based, Round Robin
+* [python에서 비동기 프로그래밍 하기 (feat. Asyncio)](https://jay-ji.tistory.com/39)
+    * asyncio
+* [빽 투더 기본기 [OS]
+    * [1편. 프로세스](https://dailyheumsi.tistory.com/129?category=855210)
+        * Process creation
+            * fork():  fork() 는 OS가 새로운 메모리 공간을 할당하도록 한 후, 현재 프로세스의 코드와 정보를 모두 새로운 메모리 공간에 복사하도록 한다.
+            * exec(): exec() 는 OS가 현재 프로세스의 공간에 새로운 프로세스를 덮어쓰게 한다.
+        * Zombie(좀비) vs Orphan(고아) Process
+        * IPC
+            * Share memory, messaging pass, pipe, message queue, socket, semiphore 등
+    * [2편. 쓰레드](https://dailyheumsi.tistory.com/130?category=855210)
+        * User-level Thread vs Kernel-level Thread
+            * 유저 <-> 커널 모드 전환에서 오버헤드가 크다.
+            * 커널 레벨 쓰레드 
+                * 장점 : 안전성, 기능의 다양성
+                * 단점 : 커널에서 기능을 제공하기 때문에 성능 저하
+            *  유저레벨 쓰레드
+                * 장점 : 전환 필요없기때문에 성능 좋음
+                * 단점 : 프로세스 내에 쓰레드가 하나만 블로킹 되어도 나머지 쓰레드가 작동하기 어려움
+        * 다중 스레드 모델
+            * ![image](https://user-images.githubusercontent.com/20143765/68081217-caced400-fe4d-11e9-943a-ebe6651f894d.png)
+        * [3편. CPU 스케줄링](https://dailyheumsi.tistory.com/131?category=855210)
+            * 싱글레벨 큐(하나의 큐): FIFO, SJF(short job first), Priority-Based, Round Robin
+            * 다중레벨 큐(여러개의 큐): 큐 간 독자적인 스케쥴링 알고리즘을 사용
+        * [4편. 동기화와 Peterson’ 알고리즘](https://dailyheumsi.tistory.com/132?category=855210)
+        * [5편. 뮤텍스와 세마포어](https://dailyheumsi.tistory.com/133?category=855210)
+            * 뮤텍스는 임계 영역에 들어가는 쓰레드가 하나라면, 세마포어는 복수 개가 가능
+            * > 세마포어는 뮤텍스가 될 수 있지만 (S = 1 인 경우), 뮤텍스는 세마포어가 될 수 없다.
+            * 뮤텍스는 바이너리 값을 갖는 세마포어다.
+     * [운영체제 - 프로세스와 컨택스트 스위칭](https://velog.io/@pa324/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%EC%99%80-%EC%BB%A8%ED%83%9D%EC%8A%A4%ED%8A%B8-%EC%8A%A4%EC%9C%84%EC%B9%AD-8ik28uy8ud)
+         * ![image](https://user-images.githubusercontent.com/20143765/68081356-108c9c00-fe50-11e9-95a6-b1bb1d837bf1.png)
+         * 대부분의 IPC기법은 결국 커널 공간을 활용하는 것 이다.(커널 공간은 공유하기 때문, file방식 제외)
+ 
+ 
