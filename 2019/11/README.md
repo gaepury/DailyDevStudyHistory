@@ -226,7 +226,7 @@ public class Main {
     * FIFO, SJF(short job first), Priority-Based, Round Robin
 * [python에서 비동기 프로그래밍 하기 (feat. Asyncio)](https://jay-ji.tistory.com/39)
     * asyncio
-* [빽 투더 기본기 [OS]
+* 빽 투더 기본기 [OS]
     * [1편. 프로세스](https://dailyheumsi.tistory.com/129?category=855210)
         * Process creation
             * fork():  fork() 는 OS가 새로운 메모리 공간을 할당하도록 한 후, 현재 프로세스의 코드와 정보를 모두 새로운 메모리 공간에 복사하도록 한다.
