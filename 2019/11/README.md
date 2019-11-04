@@ -20,7 +20,7 @@
      * ```sudo nsenter -t 15652 -n netstat```
  * [Accuracy, Precision, Recall](http://www.gisdeveloper.co.kr/?p=8146)
  * [라이브러리 추천: react-hook-form](https://velog.io/@iamchanii/react-hooks-form-%EC%9D%84-%EC%86%8C%EA%B0%9C%ED%95%A9%EB%8B%88%EB%8B%A4-54k0rrj6m7)
-    * - redux form은 redux를 사용할때 편리한 장점이 있지만 성능상 이슈가 있다.
+    * redux form은 redux를 사용할때 편리한 장점이 있지만 성능상 이슈가 있다.
     
     
 ---
