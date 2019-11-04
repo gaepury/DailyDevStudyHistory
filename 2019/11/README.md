@@ -2,6 +2,7 @@
 * [enable.auto.commit 일 때 Kafka consumer close() method 동작분석](https://blog.voidmainvoid.net/259)
     * 설명 미약..
 * [[입 개발] Redis 버그 – Dataset 사이즈가 200GB가 넘어가면 죽는다구요?](https://charsyam.wordpress.com/2019/08/26/%EC%9E%85-%EA%B0%9C%EB%B0%9C-redis-%EB%B2%84%EA%B7%B8-dataset-%EC%82%AC%EC%9D%B4%EC%A6%88%EA%B0%80-200gb%EA%B0%80-%EB%84%98%EC%96%B4%EA%B0%80%EB%A9%B4-%EC%A3%BD%EB%8A%94%EB%8B%A4%EA%B5%AC%EC%9A%94/)
+    * redis 내부 데이터 index 자료구조 int형 초과
 * [[Spring] mockMvc로 Controller 테스트 (ContentType)](https://blog.naver.com/writer0713/221629279019)
 * [[Spring] MVC 단위테스트](https://blog.naver.com/writer0713/221630444346)
     * Controller -> Mock BO
