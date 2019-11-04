@@ -269,4 +269,6 @@ public class Main {
 * [Spring에서 Logback을 이용해서 필터없이 별도의 디렉토리에 로그를 남기는 방법 (Logback MDC 사용법, 동적 로그 남기기)](https://jeong-pro.tistory.com/199)
     * MDC: MDC는 Mapped Diagnostic Context다. 그냥 Logback에서 여러 메타 정보를 넣을 수 있고 공유되는 Map이라고 생각하면 쉽다.
 * [2019 상반기 웹디자인 트렌드(상)](https://brunch.co.kr/@thinkaboutlove/273)
- * [2019 상반기 웹디자인 트렌드(하)](https://brunch.co.kr/@thinkaboutlove/275)
+* [2019 상반기 웹디자인 트렌드(하)](https://brunch.co.kr/@thinkaboutlove/275)
+* [자바스크립트 릿코드 #번외 카카오 코딩테스트 공채 문제 풀이 1](https://velog.io/@jakeseo_me/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EB%A6%BF%EC%BD%94%EB%93%9C-%EB%B2%88%EC%99%B8-%EC%B9%B4%EC%B9%B4%EC%98%A4-%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8-%EA%B3%B5%EC%B1%84-%EB%AC%B8%EC%A0%9C-%ED%92%80%EC%9D%B4-v7k2iyddb2)
+    * 숫자.toString(진법) 메소드는 숫자를 특정 진법의 숫자 문자열로 바꿔준다.
