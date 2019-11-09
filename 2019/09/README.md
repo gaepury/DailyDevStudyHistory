@@ -20,8 +20,8 @@
     * 코드, 에셋 변경에 대한 UI 영향도를 즉각적으로 확인
     * 실제 출력 결과를 비교하여 개발자에게 알려주므로 편리
 * 파사드 패턴과 추상 팩토리 패턴
-* CompletableFuture, parallelStream, ExecutorSev
-* Docker 기반 분산 트랜스코더 개발
+* [CompletableFuture, parallelStream, ExecutorSevice 사용시 주의점](https://lhb0517.tistory.com/entry/CompletableFuture-parallelStream-ExecutorService-%EC%82%AC%EC%9A%A9-%EC%8B%9C-%EC%A3%BC%EC%9D%98%EC%A0%90)
+* [Docker 기반 분산 트랜스코더 개발](https://d2.naver.com/helloworld/3661677)
 * [책 리뷰] 자바 최적화 (Optimizing Java,가장 빠른 성능을 구현하는 검증된 10가지 기법)
     * 사자
 * Item 9. try-finally 보다 try-with-resources를 사용하라.
@@ -35,9 +35,9 @@
     * Redux 단점
         * REST API를 사용하기 때문에 리소스의 크기가 서버에서 결정된다. 데이터 교환이 복잡하게 이루어지고, 엔드포인트 증가 및 overfetching과 underfetching 등의 문제점
 * [Node.js] Redis로 캐싱 시스템 구축하기
-* 5. 신입 개발자 면접 질문 모음 (클라우드, 인프라)
+* [5. 신입 개발자 면접 질문 모음 (클라우드, 인프라)](https://blog.naver.com/alice_k106/221566668266)
 * [Spring에서 HMAC-SHA256 인증해보기](https://junebuug.github.io/2019-06-10/spring-hmac)
-* 다시쓰는 Flask unittest (상,하편)
+* [다시쓰는 Flask unittest (상,하편)](https://jybaek.tistory.com/805)
 * [2019년과 이후 JavaScript의 동향 - JavaScript(ECMAScript)](https://d2.naver.com/helloworld/4007447)
 * [[번역] Elasticsearch 퍼포먼스 튜닝 방법 - ebay](https://wedul.site/613)
     * 1. 쿼리에 filter가 들어가고 그 값이 Enumerable할 때는 인덱스를 나눠서 설계하라
@@ -89,7 +89,7 @@
 * HTTP/2 성능 향상을 위한 NGINX 구조 개선
     * https://blog.cloudflare.com/ko/nginx-structural-enhancements-for-http-2-performance-ko/
     * 너무어려워
-* Spring layered architecture와 객체지향적으로 개발하기
+* [Spring layered architecture와 객체지향적으로 개발하기](https://happyer16.tistory.com/entry/Spring-layered-architecture%EC%99%80-%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%EC%A0%81%EC%9C%BC%EB%A1%9C-%EA%B0%9C%EB%B0%9C%ED%95%98%EA%B8%B0)
 * [Spring AOP 의 개념과 이해](https://jins-dev.tistory.com/entry/Spring-AOP-%EC%9D%98-%EA%B0%9C%EB%85%90%EA%B3%BC-%EC%9D%B4%ED%95%B4)
    * Aspect : 핵심기능에 부가될 수 있는 모듈을 말한다. 재사용 가능하며 핵심적인 기능에 부가되어 의미를 가질 수 있는 모듈이다.
    * Advice : Aspect 에 대한 구현체가 된다. 주로 어느시점에 어떤 동작을 할지가 기술된다.
@@ -97,7 +97,7 @@
    * Proxy : 타겟은 프록시를 통해 호출되며 타겟 메서드 실행에 대한 전처리 후처리를 담당해줌과 동시에 AOP 추상화에 있어서 인터페이스를 제공한다.
    * Weaving : 핵심 로직 코드에의 적용을 말하며, Aspect 가 적용됨으로써 새로운 Proxy 객체가 생성된다.
    * Cross Cut : 공통 로직을 비즈니스 로직에서 추출해내는 것을 Cross Cutting 이라 한다.
-* Scaling 의 종류에 대한 정리
+* [Scaling 의 종류에 대한 정리](https://jins-dev.tistory.com/entry/Scaling-%EC%9D%98-%EC%A2%85%EB%A5%98%EC%97%90-%EB%8C%80%ED%95%9C-%EC%A0%95%EB%A6%AC)
 * [[Python] 잘 알려져 있지 않은 파이썬 기능](https://yuda.dev/254)
 * [[번역] Linux에서 메모리를 다 써버렸을 때 일어나는 일](https://www.google.com/search?q=%5B%EB%B2%88%EC%97%AD%5D+Linux%EC%97%90%EC%84%9C+%EB%A9%94%EB%AA%A8%EB%A6%AC%EB%A5%BC+%EB%8B%A4+%EC%8D%A8%EB%B2%84%EB%A0%B8%EC%9D%84+%EB%95%8C+%EC%9D%BC%EC%96%B4%EB%82%98%EB%8A%94+%EC%9D%BC&oq=%5B%EB%B2%88%EC%97%AD%5D+Linux%EC%97%90%EC%84%9C+%EB%A9%94%EB%AA%A8%EB%A6%AC%EB%A5%BC+%EB%8B%A4+%EC%8D%A8%EB%B2%84%EB%A0%B8%EC%9D%84+%EB%95%8C+%EC%9D%BC%EC%96%B4%EB%82%98%EB%8A%94+%EC%9D%BC&aqs=chrome..69i57.208j0j4&sourceid=chrome&ie=UTF-8)
     * free 출력
@@ -115,7 +115,7 @@
 
 ## 2019.09.15
 * tcpdump
-* [docker] 도커 네트워크(bridge)를 생성하는 예시
+* [[docker] 도커 네트워크(bridge)를 생성하는 예시](https://knight76.tistory.com/entry/docker-%EB%8F%84%EC%BB%A4-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%ACbridge%EB%A5%BC-%EC%83%9D%EC%84%B1%ED%95%98%EB%8A%94-%EC%98%88%EC%8B%9C)
 * 05 - Flex Panel Gallery
 * [[번역] Redis partitioning](https://wedul.site/584)       
     * redis의 경우 싱글 스레드로 돌아가기 때문에 작업이 오래 발생되는 keys나 flushall은 사용하지 말아라. 1만건 이하에 데이터를 조작하는 경우에는 사용해도 되는데 그 이상 사용하는 경우에는 주의하라는 뜻.
@@ -124,12 +124,12 @@
 * 디자인패턴5 - 컴포지트 패턴 (Composite pattern )
 * 디자인 패턴6 - 옵저버 패턴(Observer pattern)
 * 스프링 프록시 패턴 - Proxy Pattern
-* Let’s talk about data structures in Python
+* [Let’s talk about data structures in Python](https://apirobot.me/posts/lets-talk-about-data-structures-in-python)
 * [How to Test Your Vue Project with Jest and Nightwatch](https://hashnode.com/post/how-to-test-your-vue-project-with-jest-and-nightwatch-cjskmturk00665ss1gauawb84)
     * nightwatch 약간 푸피터와 비슷한 느낌인데?
-* Understanding Python slices
+* [Understanding Python slices](https://www.google.com/search?q=Understanding+Python+slices&oq=Understanding+Python+slices&aqs=chrome..69i57.156j0j1&sourceid=chrome&ie=UTF-8)
 * Enforcing Single Responsibility Principle in Python
-* 알아두면 좋은 MySQL 설정들
+* [알아두면 좋은 MySQL 설정들](https://lee-seul.github.io/backend/2019/03/09/mysql-setting.html)
 * [AWS 서비스를 활용한 Kubernetes 클러스터 구축](http://engineering.vcnc.co.kr/2019/03/kubernetes-on-aws/)
     * 서비스를 외부에 노출: NGINX Ingress Controller + NLB
     * Pod에 IAM 역할 부여: kube2iam¶
@@ -176,18 +176,18 @@
 * [11번가 Spring Cloud 기반 MSA로의 전환 - 발표정리](https://happyer16.tistory.com/entry/11%EB%B2%88%EA%B0%80-Spring-Cloud-%EA%B8%B0%EB%B0%98-MSA%EB%A1%9C%EC%9D%98-%EC%A0%84%ED%99%98-%EB%B0%9C%ED%91%9C%EC%A0%95%EB%A6%AC)
     * CommandKey 단위로 통계를 내고 동작한다. 그렇다면 같은 한 CommandKey에서 서킷 오픈되면 같은 ComandKey를 가진 모들 메서드들은 서킷 오픈되는거아냐?
 * 172. [Kubernetes] Admission Controller의 이해 및 Python으로 Mutate Webhook 작성 예제
-* 정적 사이트 생성기 Gatsby
+* [정적 사이트 생성기 Gatsby](https://blog.outsider.ne.kr/1426)
 * 도커 & 쿠버네티스 8,9주차 스터디
 * HTTP 요청에 body를 붙여서 보내면 어떤 일이 벌어질까? part 2
 * 시스템 행 현상이 발생되었을 때 NMI를 이용한 덤프 분석
 * 만화로 나누는 자유/오픈소스 소30. 리눅스 이야기: 리눅스 vs. 미닉스 1,2부
 * Spring Boot에서 6.4 Elasticsearch 연결 및 간단 CRUD
 * [React - React Concurrent Mode](https://ideveloper2.tistory.com/170)
-* [번역] shared message queues와 publish-subscribe 방식에 Custom Group 방식을 더한 Kafka 소개
+* [[번역] shared message queues와 publish-subscribe 방식에 Custom Group 방식을 더한 Kafka 소개](https://wedul.site/577)
 * RabbitMQ에 대해
 
 ## 2019.09.21
 * HTTPS/DNS 차단 쉽게 이해하기
 * Introducing React Hooks
-* Spring Guide - 테스트 전략
+* [Spring Guide - 테스트 전략](https://cheese10yun.github.io/spring-guide-test-1/)
 * [소프트웨어 공학 - Observer Pattern]
