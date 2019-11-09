@@ -193,7 +193,7 @@ public class TestService implements CommandLineRunner, APplicationRunner, Applic
             * 이미지 파일 축소 툴:  [imageOptim](https://imageoptim.com/mac)
         * 필요 없는 모듈 제외 
             * 애플리케이션에서 특정 국가의 언어만 지원할 때는 moment.js에 포함된 그 외 국가들의 로캘(locale) 정보 제거
-               * ![image](https://user-images.githubusercontent.com/20143765/67639289-65508400-f931-11e9-8206- 7df27bba83c0.png)
+               * ![image](https://user-images.githubusercontent.com/20143765/68521775-b2e0cf80-02e7-11ea-9dcb-45d33c990ad0.png)
         * 압축 파일 활용
     * 성능 개선 방법 – 최적화(optimization)
         * Dynamic Import와 모듈 chunk, Promise.all 조합
