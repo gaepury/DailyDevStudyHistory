@@ -294,3 +294,9 @@ public class Main {
       - 컴파일 시간, 클래스로드 시간, 실행 시간에 위빙됨
    - 포인트 커트 작성
       - @Aspect, @PointCut, @Arount
+      
+## 2019.11.09
+* [CSRF is (really) dead](https://scotthelme.co.uk/csrf-is-really-dead/)
+    * ```Set-Cookie: __Host-session=123; path=/; Secure; HttpOnly; SameSite=Lax```
+* [2019년과 이후 JavaScript의 동향 – 브라우저 밖의 JavaScript 1](https://d2.naver.com/helloworld/7700312)
+* [2019년과 이후 JavaScript의 동향 – 브라우저 밖의 JavaScript 2](https://d2.naver.com/helloworld/7975004)
