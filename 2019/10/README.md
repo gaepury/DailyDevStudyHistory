@@ -263,7 +263,7 @@ public class TestService implements CommandLineRunner, APplicationRunner, Applic
         * 접근성에 좋지 않다
         * 성능에 좋지 않다
         * CMS와 CDN에 좋지 않다.
-    * <PICTURE>를 사용
+    * ``<PICTURE>`` 를 사용
         * SEO 친화적 이미지
         * 접근성 친화적 이미지 (alt="" 속성 사용)
         * CMS-generated 이미지, CDN과 함께 잘 동작함
