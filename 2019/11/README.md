@@ -273,3 +273,24 @@ public class Main {
 * [2019 상반기 웹디자인 트렌드(하)](https://brunch.co.kr/@thinkaboutlove/275)
 * [자바스크립트 릿코드 #번외 카카오 코딩테스트 공채 문제 풀이 1](https://velog.io/@jakeseo_me/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EB%A6%BF%EC%BD%94%EB%93%9C-%EB%B2%88%EC%99%B8-%EC%B9%B4%EC%B9%B4%EC%98%A4-%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8-%EA%B3%B5%EC%B1%84-%EB%AC%B8%EC%A0%9C-%ED%92%80%EC%9D%B4-v7k2iyddb2)
     * 숫자.toString(진법) 메소드는 숫자를 특정 진법의 숫자 문자열로 바꿔준다.
+
+
+## 2019.11.08
+* [스프링 책 읽기(Spring in action) - 3.고급 와이어링](https://bob-full.tistory.com/13)
+* [스프링 책 읽기(Spring in action) - 4. 애스펙트 지향 스프링](https://bob-full.tistory.com/14)
+   - 어드바이스
+      - 애스펙트가 해야할 작업
+      - before - 호출 전**, after 실행 후, after-running - 성공 후, after-throwing - 실패 후**, around - 전후로 간단한 기능
+   - 조인 포인트
+      - 어드바이스 적용 가능한 지점(point)
+   - 포인트커트
+      - 조인 포인트의 영역을 좁히는 일을 함
+      - 어드바이스 = 무엇, 언제 // 포인트 커트 = 어디서
+      - 간단하게, 클래스 메소드명 지정부터, 정규표현식 정의 도 가능
+   - 애스펙트
+      - 어드바이스 + 포인트커트 = 언제 무엇을 어디서 할지 정의한 것
+   - 위빙
+      - 타깃 객체에, 애스펙트를 적용하여 새로운 프록시 객체를 생성하는 절차
+      - 컴파일 시간, 클래스로드 시간, 실행 시간에 위빙됨
+   - 포인트 커트 작성
+      - @Aspect, @PointCut, @Arount
