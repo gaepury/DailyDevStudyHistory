@@ -293,7 +293,7 @@ public class Main {
       - 타깃 객체에, 애스펙트를 적용하여 새로운 프록시 객체를 생성하는 절차
       - 컴파일 시간, 클래스로드 시간, 실행 시간에 위빙됨
    - 포인트 커트 작성
-      - @Aspect, @PointCut, @Arount
+      - @Aspect, @PointCut, @Around
       
 ## 2019.11.09
 * [CSRF is (really) dead](https://scotthelme.co.uk/csrf-is-really-dead/)
