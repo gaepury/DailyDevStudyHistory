@@ -300,3 +300,27 @@ public class Main {
     * ```Set-Cookie: __Host-session=123; path=/; Secure; HttpOnly; SameSite=Lax```
 * [2019년과 이후 JavaScript의 동향 – 브라우저 밖의 JavaScript 1](https://d2.naver.com/helloworld/7700312)
 * [2019년과 이후 JavaScript의 동향 – 브라우저 밖의 JavaScript 2](https://d2.naver.com/helloworld/7975004)
+
+## 2019.11.12
+* [도커 볼륨](https://bcho.tistory.com/1360)
+* [HTTP/3? 그게 뭔데?](https://velog.io/@devjeon1358/-HTTP3-%EA%B7%B8%EA%B2%8C-%EB%AD%94%EB%8D%B0-fwk2swcx8s)
+    * HTTP/1, HTTP/2 에서 사용되던 TCP 연결 방식을 UDP 기반의 프로토콜(QUIC)로 변경, QUIC 기술을 사용하여 기존 TCP에서 사용되던 연결 수립 과정을 빠르게 처리
+        * QUIC(Quick UDP Internet Connection): 구글에서 TCP가 가지는 응답속도의 문제의 해결을 중점으로 두고 개발한 UDP 프로토콜
+    * HTTP/3을 사용할 수 있게 할려면 Web 서버도 QUIC을 지원할 수 있도록 다시 빌드해야 하는 High Cost, QUIC을 사용하기 위한 별도 브라우저 설정등으로 도입 판단하긴 아직 이른듯.
+* [REST API 응답은 어떻게 줘야할까? (표준 Response 객체를 만들 수 있을까?, 정확하게 응답 처리를 하는 방법, 성공과 실패 응답)](https://jeong-pro.tistory.com/200)
+
+## 2019.11.15
+ * [Jackson 직렬화 옵션의 적절한 활용과 Jackson에 기여하기까지 (feat. 글로벌 캐싱)](https://hyperconnect.github.io/2019/10/28/jackson-serialize-for-global-caching.html?fbclid=IwAR3Dv2yptUM-RoOesRVqZ_o2XZ70mXHZJ9nyOpO4dwaWVvM4bp_rYv-Lddg)
+ * [JDK Dynamic Proxy vs CGLib Proxy](https://dreamchaser3.tistory.com/9?category=710874)
+     * JDK Dynamic Proxy
+         * interface를 구현하는 class들만 target이 될 수 있다.
+         * Java reflection을 사용해 target class의 method를 invoke하며, Advise대상이든 아니든 모든 method call마다 reflection invoke를 실시하므로 성능이 떨어진다.
+     * CGLib Proxy
+         * interface가 없어도 사용 가능
+         * bytecode 사용해 target class의 method 호출
+         * 'final' class or method에는 쓸 수 없음
+     * Spring AOP의 ProxyFactoryBean의 두 proxy 사용
+         * ProxyFactoryBean은 interface의 유무로 proxy를 자동으로 설정한다. interface를 하나 이상 구현하고 있는 class라면 JDK Dynamic Proxy를 생성한다. 반대로 interface를 전혀 구현하고 있지 않는 class라면 CGLib proxy를 생성한다. 
+             > 결국 사용되는 case는 interface를 구현하고 있지만, CGLib proxy를 사용하고 싶을 때뿐일 것이다. ProxyTargetClass property를 true로 설정하면, CGLib proxy를 쓰겠다는 것이다. 반대로 false로 설정하면 쓰지 않겠다는 것이다. 
+             > (주의) false로 설정했다 할지라도, target class가 interface를 구현하고 있지 않은 경우에는 CGLib proxy를 쓴다.
+          * ```<aop:config proxy-target-class="true”>```
