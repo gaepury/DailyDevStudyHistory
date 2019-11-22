@@ -28,20 +28,20 @@
 ## 2019.11.02
 * [Spring Batch 공통 설정 관리하기 (feat. 젠킨스 Environment variables)](https://jojoldu.tistory.com/445)
     * JAR_OPTS, JAR_NAME 공통 설정
-```
-java -jar ${JAR_OPTS} ${JAR_NAME} \
---job.name=스프링배치Job이름 \
-파라미터1=파라미터값1 \
-파라미터2=파라미터값2
-```
+       * ```
+         java -jar ${JAR_OPTS} ${JAR_NAME} \
+         --job.name=스프링배치Job이름 \
+         파라미터1=파라미터값1 \
+         파라미터2=파라미터값2
+         ```
 
    * Readlink(readlink란 심볼릭 링크가 연결되어 있는 원본의 파일명을 가져오는 명령어) 사용방식
-```
-java -jar ${JAR_OPTS} $(${JAR_NAME}) \
---job.name=스프링배치Job이름 \
-파라미터1=파라미터값1 \
-파라미터2=파라미터값2
-```
+      * ```
+         java -jar ${JAR_OPTS} $(${JAR_NAME}) \
+         --job.name=스프링배치Job이름 \
+         파라미터1=파라미터값1 \
+         파라미터2=파라미터값2
+         ```
 * [GraphQL is not just a network protocol](https://blog.cometkim.kr/posts/graphql-is-not-just-a-network-protocol/)
     * 상태관리(Redux같은)로서 GraphQL를 활용한 흥미로운 예
     * GraphQL의 유즈케이스를 살펴보면 실제로 데이터베이스, 마이크로서비스, API 서버, 모바일 클라이언트 등 말 그대로 데이터를 다루는 모든 곳에서 활용되고 있다.
@@ -63,7 +63,7 @@ java -jar ${JAR_OPTS} $(${JAR_NAME}) \
     * 직접 강의 봐야겠다..
  * [[git] gitHub actions 간단하게 알아보자](https://blog.naver.com/pjt3591oo/221639403758)
     * 드디어 GitHub actions setting 됨
-    * github-actions-pracie 연습용 repository 생성
+    * github-actions-practice 연습용 repository 생성
 * [[Spring & Design Pattern] Spring에서 발견한 디자인패턴_template method pattern](https://sabarada.tistory.com/19)    
    * Spring에서 사용되는 Template method pattern 
         * HttpServlet <-- FrameworkServlet <-- DispatcherServlet(doService method)
