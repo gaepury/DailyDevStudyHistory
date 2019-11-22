@@ -332,3 +332,17 @@ public class Main {
  * [자바스크립트 디자인패턴 - 데코레이터 (Decorator)](https://velog.io/@pa324/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4-%EB%8D%B0%EC%BD%94%EB%A0%88%EC%9D%B4%ED%84%B0-Decorator-ivk2zg2pf0)
  * [[Github Actions] Github 에서 Workflow 사용하기](https://velog.io/@devjeon1358/Github-Actions-Github-%EC%97%90%EC%84%9C-Workflow-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-8wk2y2ijbu)
  * [GitHub Action을 사용해 새로 올라온 전월세 방 목록 받아보기](https://ahnheejong.name/articles/receive-new-room-notification-mails-using-github-action/?fbclid=IwAR04PvyDxJA0VJyCCiDdsotVm8Iye43Zp5brGKh9mkPX0sCE1ryC460j6Qg)
+ 
+ ## 2019.11.22
+* [Github - Suggestion 기능 활용하기](https://nesoy.github.io/articles/2019-11/Github-suggestion)
+* Quartz 스케줄러 적용 아키텍처 개선
+  * [1편 모듈 분리](http://homoefficio.github.io/2019/09/28/Quartz-%EC%8A%A4%EC%BC%80%EC%A4%84%EB%9F%AC-%EC%A0%81%EC%9A%A9-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98-%EA%B0%9C%EC%84%A0-1/)
+     * 키워드: 모듈 분리와 URLClassLoader
+     * ![image](https://user-images.githubusercontent.com/20143765/69397788-e5002180-0d2a-11ea-969b-ad329dec1190.png)
+  * [2편 의존 관계 주입](http://homoefficio.github.io/2019/09/29/Quartz-%EC%8A%A4%EC%BC%80%EC%A4%84%EB%9F%AC-%EC%A0%81%EC%9A%A9-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98-%EA%B0%9C%EC%84%A0-3/)
+     * 키워드: 의존 관계 주입과 SpringBeanJobFactory
+     * ![image](https://user-images.githubusercontent.com/20143765/69397790-e893a880-0d2a-11ea-8c87-f94bb0598068.png)
+  * [3편 트랜잭션 처리](http://homoefficio.github.io/2019/09/29/Quartz-%EC%8A%A4%EC%BC%80%EC%A4%84%EB%9F%AC-%EC%A0%81%EC%9A%A9-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98-%EA%B0%9C%EC%84%A0-3/)
+     * 키워드: 트랜잭션 처리와 PlatformTransactionManager
+     * ![image](https://user-images.githubusercontent.com/20143765/69397793-eb8e9900-0d2a-11ea-9390-9152557d5547.png)
+
