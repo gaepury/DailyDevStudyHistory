@@ -328,6 +328,8 @@ public class Main {
 ## 2019.11.16
  * [[git] github actions를 활용한 pipit 배포 자동화](https://blog.naver.com/pjt3591oo/221708923091)
  * [Nodejs 성능 최적화](https://velog.io/@pa324/Nodejs-%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94-u1k2zkwoqq)
+   - json serializable fast-json-stringify 라이브러리 사용
+   - 비동기 처리 Promise.all 사용
  * [AWS 솔루션 아키텍트 어소시에이트 자격증 취득](https://blog.outsider.ne.kr/1465?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+rss_outsider_dev+%28Outsider%27s+Dev+Story%29)
  * [자바스크립트 디자인패턴 - 데코레이터 (Decorator)](https://velog.io/@pa324/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4-%EB%8D%B0%EC%BD%94%EB%A0%88%EC%9D%B4%ED%84%B0-Decorator-ivk2zg2pf0)
  * [[Github Actions] Github 에서 Workflow 사용하기](https://velog.io/@devjeon1358/Github-Actions-Github-%EC%97%90%EC%84%9C-Workflow-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-8wk2y2ijbu)
