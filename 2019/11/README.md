@@ -359,5 +359,62 @@ public class Main {
 * [Outsider 기술 뉴스 #138 : 19-11-16](https://blog.outsider.ne.kr/1466?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+rss_outsider_dev+%28Outsider%27s+Dev+Story%29)
 
 ## 2019.11.23
- * [Reactive Streams (1)](https://jongmin92.github.io/2019/11/07/Java/reactive-2/)
- * [Reactive Streams (2)](https://jongmin92.github.io/2019/11/07/Java/reactive-2/)
+* [Reactive Streams (1)](https://jongmin92.github.io/2019/11/07/Java/reactive-2/)
+* [Reactive Streams (2)](https://jongmin92.github.io/2019/11/07/Java/reactive-2/)
+
+## 2019.11.28
+* [[JUnit] JUnit5 사용법 - Parameterized Tests](https://gmlwjd9405.github.io/2019/11/27/junit5-guide-parameterized-test.html)
+     * 사용하기
+         * gradle
+             * ![image](https://user-images.githubusercontent.com/20143765/69771595-b8d41d00-11d0-11ea-81f8-6b2e93868ad8.png)
+     * Parameterized Tests
+         * @ParameterizedTest 이 annotation을 추가하는 것을 제외하고는 다른 테스트와 동일하다.
+         * ![image](https://user-images.githubusercontent.com/20143765/69771604-c4274880-11d0-11ea-9781-17fd1273f977.png)
+     * Simple Value
+         * @ValueSource
+             * 해당 annotation 에 지정한 배열을 파라미터 값으로 순서대로 넘겨준다.
+             * test method 실행 당 하나의 인수(argument) 만을 전달할 때 사용할 수 있다.
+             * c.f. literal values 종류: short, byte, int, long, float, double, char, java.lang.String, java.lang.Class
+             * ![image](https://user-images.githubusercontent.com/20143765/69771619-cdb0b080-11d0-11ea-96bc-bb1831a767dc.png)
+     * Null And Empty Values
+         * @NullSource
+         * @EmptySource
+         * @NullAndEmptySource
+     * Enum
+         * @EnumSource
+         * ![image](https://user-images.githubusercontent.com/20143765/69771632-dacd9f80-11d0-11ea-8eea-c905f64988f0.png)
+     * Method
+         * @MethodSource
+             * @MethodSource는 test method 실행 당 복잡한 인수 를 전달할 때 사용하는 방법
+             * ``` java
+               @ParameterizedTest
+               @MethodSource("provideStringsForIsBlank") // needs to match an existing method.
+               void isBlank_ShouldReturnTrueForNullOrBlankStrings(String input, boolean expected) {
+                   assertEquals(expected, Strings.isBlank(input));
+               }
+               ```
+             * ``` java
+                // a static method that returns a Stream of Arguments
+                private static Stream<Arguments> provideStringsForIsBlank() { // argument source method
+                    return Stream.of(
+                      Arguments.of(null, true),
+                      Arguments.of("", true),
+                      Arguments.of("  ", true),
+                      Arguments.of("not blank", false)
+                    );
+                }
+               ```
+             * ``` java
+                @ParameterizedTest
+                @MethodSource("com.baeldung.parameterized.StringParams#blankStrings") // 클래스 외부의 source method
+                void isBlank_ShouldReturnTrueForNullOrBlankStringsExternalSource(String input) {
+                    assertTrue(Strings.isBlank(input));
+                }
+               ```
+             * ``` java
+                public class StringParams {
+                  static Stream<String> blankStrings() {
+                      return Stream.of(null, "", "  ");
+                  }
+                }
+               ```
