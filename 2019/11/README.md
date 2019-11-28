@@ -349,13 +349,14 @@ public class Main {
      * ![image](https://user-images.githubusercontent.com/20143765/69397793-eb8e9900-0d2a-11ea-9390-9152557d5547.png)
 * [<번역>앱의 프론트엔드 성능을 향상시키는 방법 - 5가지 코딩 팁](https://junwoo45.github.io/2019-10-05-frontend-performance/)
 * [아틀라시안 취업후기](https://tacogrammer.com/%EC%95%84%ED%8B%80%EB%9D%BC%EC%8B%9C%EC%95%88-%EC%B7%A8%EC%97%85%ED%9B%84%EA%B8%B0/)
-    * 프로젝트 구성, 사용하는 기술들에 관해 설명
-    * 가장 선호하는 언어와 이유, 자바에 추가되면 좋을 것 같은 기능
-    * 확장성 있는 서비스 어떻게 설계하나,
-    * 데드락이 무엇이며 어떻게 방지하는가
-    * 서버 느려 졌을 때 프로파일링 하는 방법
-    * JVM 메모리 관련 튜닝 경험들, JVM 메모리 구조에 대해서 설명해보라
-    * 시큐어 코딩하는 방법. XSS등 웹 보안 취약점 설명하고 어떻게 막을 수 있는지
+    * 면접질문
+       * 프로젝트 구성, 사용하는 기술들에 관해 설명
+       * 가장 선호하는 언어와 이유, 자바에 추가되면 좋을 것 같은 기능
+       * 확장성 있는 서비스 어떻게 설계하나,
+       * 데드락이 무엇이며 어떻게 방지하는가
+       * 서버 느려 졌을 때 프로파일링 하는 방법
+       * JVM 메모리 관련 튜닝 경험들, JVM 메모리 구조에 대해서 설명해보라
+       * 시큐어 코딩하는 방법. XSS등 웹 보안 취약점 설명하고 어떻게 막을 수 있는지
 * [Outsider 기술 뉴스 #138 : 19-11-16](https://blog.outsider.ne.kr/1466?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+rss_outsider_dev+%28Outsider%27s+Dev+Story%29)
 
 ## 2019.11.23
