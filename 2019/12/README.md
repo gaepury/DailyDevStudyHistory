@@ -18,22 +18,22 @@
      - JSONassert
      - JsonPath
   - @SpringBootTest 어노테이션
-     -  ApplicationContext를 쉽게 생성하고 조작할 수 있습니다. 기존 spring-test에서 사용하던 @ContextConfiguration의 발전된 기능
+     - ApplicationContext를 쉽게 생성하고 조작, 기존 spring-test에서 사용하던 @ContextConfiguration의 발전된 기능
      - @RunWith(SpringRunner.class)와 함께 사용
   - Bean
      - @SpringBootTest classes 속성을 이용하여 손쉽게 빈 등록
   - TestConfiguration
-     - 기존에 정의했던 Configuration을 커스터마이징하고 싶은 경우 TestConfiguration 기능을 사용할 수 있습니다. TestConfiguration은 ComponentScan 과정에서 생성될 것이며 해당 자신이 속한 테스트가 실행될때 정의된 빈을 생성하여 등록할 것
-     - 더 좋은 방법은 @Import 어노테이션을 사용하는 것입니다. @Import 어노테이션을 통해서 직접 사용할 TestConfiguration을 명시
+     - 기존에 정의했던 Configuration을 커스터마이징하고 싶은 경우 TestConfiguration 기능을 사용. TestConfiguration은 ComponentScan 과정에서 생성될 것이며 해당 자신이 속한 테스트가 실행될때 정의된 빈을 생성하여 등록할 것
+     - 더 좋은 방법은 @Import 어노테이션을 사용하는 것. @Import 어노테이션을 통해서 직접 사용할 TestConfiguration을 명시
        - ![image](https://user-images.githubusercontent.com/20143765/70228639-03890280-1798-11ea-8d26-258167842c85.png)
   - MockBean and SpyBean
      - spring-boot-test 패키지는 Mockito를 포함
   - Properties
-    - 별도의 테스트를 위한 application.properties(또는 application.yml)을 지정할 수 있  습니다.  (vm옵션도 지정가능)
+    - 별도의 테스트를 위한 application.properties(또는 application.yml)을 지정(vm옵션도 지정가능)
   - Web Environment test
   - TestRestTemplate
-     -기존에 컨트롤러를 테스트하는데 많이 사용되던 MockMvc와 어떤 차이가 있는지 궁금할 것입니다. 가장 큰 차이점이라면 Servlet Container를 사용하느냐 안하느냐의 차이입니다. MockMvc는 Servlet Container를 생성하지 않습니다. 반면, @SpringBootTest와 TestRestTemplate은 Servlet Container를 사용합니다. 
+     - MovcMvc와 차이: Servlet Container를 사용하느냐 안하느냐의 차이. MockMvc는 Servlet Container를 생성하지 않는다.. 반면, @SpringBootTest와 TestRestTemplate은 Servlet Container를 사용한다.
   - 트랜젝션   
-     - RANDOM_PORT나 DEFINED_PORT로 테스트를 설정하면 실제 테스트 서버는 별도의 스레드에서 수행되기 때문에 rollback이 이루어지지 않습니다.
+     - RANDOM_PORT나 DEFINED_PORT로 테스트를 설정하면 실제 테스트 서버는 별도의 스레드에서 수행되기 때문에 rollback이 이루어지지 않는다.
   - ApplicationContext 캐시
      -  동일한 ApplicationContext 사용
