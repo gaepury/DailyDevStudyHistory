@@ -38,3 +38,19 @@
      - RANDOM_PORT나 DEFINED_PORT로 테스트를 설정하면 실제 테스트 서버는 별도의 스레드에서 수행되기 때문에 rollback이 이루어지지 않는다.
   - ApplicationContext 캐시
      -  동일한 ApplicationContext 사용
+## 2019.12.14
+* [Enum 찾기의 달인 (효율적으로 찾기, spring bean과 맵핑)](https://sjh836.tistory.com/175)
+    * 1. Enum을 효율적으로 찾는 방법
+       * ``` java
+         public static final Map<String, OperatingSystemType> map = new HashMap<>(); 
+         static { for (OperatingSystemType os : OperatingSystemType.values()) { map.put(os.getCode(), os); } }
+         public static OperatingSystemType getOs3ByCode(String code) { return map.get(code); }
+         ```
+    * 2. Enum 으로 Bean 을 찾아보자
+       * EnumMap 으로 enum 과 bean 을 바로 맵핑
+         ``` java
+         Map<OperatingSystemType, OperatingSystemHandler> map = new EnumMap<>(OperatingSystemType.class); 
+         // OperatingSystemHandler 구현체에서 enum type 을 getType 메소드로 명시 
+         for (OperatingSystemHandler handler :
+         operatingSystemHandlerList) { map.put(handler.getType(), handler); }
+         ```
