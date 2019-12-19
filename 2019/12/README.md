@@ -1,5 +1,9 @@
 ## 2019.12.02
 * [React Hook 정리](https://velog.io/@noyo0123/React-Hook-%EC%A0%95%EB%A6%AC)
+   * useState
+      * state get, set
+   * useEffect
+      * componentDidMount와 componentDidUpdate를 대체
 * [Outsider 기술 뉴스 #138 : 19-12-02](https://blog.outsider.ne.kr/1467)
 
 ## 2019.12.04
@@ -54,3 +58,7 @@
          for (OperatingSystemHandler handler :
          operatingSystemHandlerList) { map.put(handler.getType(), handler); }
          ```
+
+## 2019.12.19
+* [자바스크립트 - 가비지 컬렉터](https://velog.io/@pa324/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EA%B0%80%EB%B9%84%EC%A7%80-%EC%BB%AC%EB%A0%89%ED%84%B0)
+   * 클로저에 의해 메모리 누수가 발생할 수 있다.
