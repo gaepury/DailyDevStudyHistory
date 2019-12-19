@@ -66,7 +66,7 @@
    > 엔지니어는 문제를 해결하는 사람이지 주의 사항을 알리는 사람이 아니기 때문입니다. 도로에 구멍이 났을 때 엔지니어의 역할은 그 구멍을 메우고 다시 나지 않게 하는 것이지, “여기 구멍이 있으니 아무도 지나가지 마!” 라고 외치는 것이 아닙니다.
 * [기술 뉴스 #140 : 19-12-16](https://blog.outsider.ne.kr/1471?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+rss_outsider_dev+%28Outsider%27s+Dev+Story%29)
 * [크로스 웹 브라우저 테스트 툴](https://www.mrlatte.net/research/2019/12/08/cross-web-browser-test-tool.html)
-* [What's New for Node.js in 2020]
+* [What's New for Node.js in 2020](https://developer.okta.com/blog/2019/12/04/whats-new-nodejs-2020#internationalization-support-expands-in-2020)
     * Support for ECMAScript Modules: you can finally use import and export syntax you may already be using for client-side JavaScript running in the browser.
     * Node.js can Import WebAssembly Modules
     * Internationalization Support Expands in 2020
