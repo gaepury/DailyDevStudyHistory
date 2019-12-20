@@ -274,6 +274,7 @@ public class Main {
 * [자바스크립트 릿코드 #번외 카카오 코딩테스트 공채 문제 풀이 1](https://velog.io/@jakeseo_me/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EB%A6%BF%EC%BD%94%EB%93%9C-%EB%B2%88%EC%99%B8-%EC%B9%B4%EC%B9%B4%EC%98%A4-%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8-%EA%B3%B5%EC%B1%84-%EB%AC%B8%EC%A0%9C-%ED%92%80%EC%9D%B4-v7k2iyddb2)
     * 숫자.toString(진법) 메소드는 숫자를 특정 진법의 숫자 문자열로 바꿔준다.
 
+---
 
 ## 2019.11.08(2개)
 * [스프링 책 읽기(Spring in action) - 3.고급 와이어링](https://bob-full.tistory.com/13)
@@ -294,12 +295,16 @@ public class Main {
       - 컴파일 시간, 클래스로드 시간, 실행 시간에 위빙됨
    - 포인트 커트 작성
       - @Aspect, @PointCut, @Around
-      
+
+---
+
 ## 2019.11.09(3개)
 * [CSRF is (really) dead](https://scotthelme.co.uk/csrf-is-really-dead/)
     * ```Set-Cookie: __Host-session=123; path=/; Secure; HttpOnly; SameSite=Lax```
 * [2019년과 이후 JavaScript의 동향 – 브라우저 밖의 JavaScript 1](https://d2.naver.com/helloworld/7700312)
 * [2019년과 이후 JavaScript의 동향 – 브라우저 밖의 JavaScript 2](https://d2.naver.com/helloworld/7975004)
+
+---
 
 ## 2019.11.12(3개)
 * [도커 볼륨](https://bcho.tistory.com/1360)
@@ -308,6 +313,8 @@ public class Main {
         * QUIC(Quick UDP Internet Connection): 구글에서 TCP가 가지는 응답속도의 문제의 해결을 중점으로 두고 개발한 UDP 프로토콜
     * HTTP/3을 사용할 수 있게 할려면 Web 서버도 QUIC을 지원할 수 있도록 다시 빌드해야 하는 High Cost, QUIC을 사용하기 위한 별도 브라우저 설정등으로 도입 판단하긴 아직 이른듯.
 * [REST API 응답은 어떻게 줘야할까? (표준 Response 객체를 만들 수 있을까?, 정확하게 응답 처리를 하는 방법, 성공과 실패 응답)](https://jeong-pro.tistory.com/200)
+
+---
 
 ## 2019.11.15(2개)
  * [Jackson 직렬화 옵션의 적절한 활용과 Jackson에 기여하기까지 (feat. 글로벌 캐싱)](https://hyperconnect.github.io/2019/10/28/jackson-serialize-for-global-caching.html?fbclid=IwAR3Dv2yptUM-RoOesRVqZ_o2XZ70mXHZJ9nyOpO4dwaWVvM4bp_rYv-Lddg)
@@ -325,6 +332,8 @@ public class Main {
              > (주의) false로 설정했다 할지라도, target class가 interface를 구현하고 있지 않은 경우에는 CGLib proxy를 쓴다.
           * ```<aop:config proxy-target-class="true”>```
 
+---
+
 ## 2019.11.16(6개)
  * [[git] github actions를 활용한 pipit 배포 자동화](https://blog.naver.com/pjt3591oo/221708923091)
  * [Nodejs 성능 최적화](https://velog.io/@pa324/Nodejs-%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94-u1k2zkwoqq)
@@ -334,6 +343,8 @@ public class Main {
  * [자바스크립트 디자인패턴 - 데코레이터 (Decorator)](https://velog.io/@pa324/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4-%EB%8D%B0%EC%BD%94%EB%A0%88%EC%9D%B4%ED%84%B0-Decorator-ivk2zg2pf0)
  * [[Github Actions] Github 에서 Workflow 사용하기](https://velog.io/@devjeon1358/Github-Actions-Github-%EC%97%90%EC%84%9C-Workflow-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-8wk2y2ijbu)
  * [GitHub Action을 사용해 새로 올라온 전월세 방 목록 받아보기](https://ahnheejong.name/articles/receive-new-room-notification-mails-using-github-action/?fbclid=IwAR04PvyDxJA0VJyCCiDdsotVm8Iye43Zp5brGKh9mkPX0sCE1ryC460j6Qg)
+ 
+ ---
  
  ## 2019.11.22(6개)
 * [Github - Suggestion 기능 활용하기](https://nesoy.github.io/articles/2019-11/Github-suggestion)
@@ -359,9 +370,13 @@ public class Main {
        * 시큐어 코딩하는 방법. XSS등 웹 보안 취약점 설명하고 어떻게 막을 수 있는지
 * [Outsider 기술 뉴스 #138 : 19-11-16](https://blog.outsider.ne.kr/1466?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+rss_outsider_dev+%28Outsider%27s+Dev+Story%29)
 
+---
+
 ## 2019.11.23(2개)
 * [Reactive Streams (1)](https://jongmin92.github.io/2019/11/07/Java/reactive-2/)
 * [Reactive Streams (2)](https://jongmin92.github.io/2019/11/07/Java/reactive-2/)
+
+---
 
 ## 2019.11.28(1개)
 * [[JUnit] JUnit5 사용법 - Parameterized Tests](https://gmlwjd9405.github.io/2019/11/27/junit5-guide-parameterized-test.html)
