@@ -90,3 +90,31 @@
         ENV TZ=Asia/Seoul
         RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
         ```
+* [일급 컬렉션 (First Class Collection)의 소개와 써야할 이유](https://jojoldu.tistory.com/412)
+   * 일급 콜렉션?
+      > 규칙 8: 일급 콜렉션 사용
+이 규칙의 적용은 간단하다.
+콜렉션을 포함한 클래스는 반드시 다른 멤버 변수가 없어야 한다.
+각 콜렉션은 그 자체로 포장돼 있으므로 이제 콜렉션과 관련된 동작은 근거지가 마련된셈이다.
+필터가 이 새 클래스의 일부가 됨을 알 수 있다.
+필터는 또한 스스로 함수 객체가 될 수 있다.
+또한 새 클래스는 두 그룹을 같이 묶는다든가 그룹의 각 원소에 규칙을 적용하는 등의 동작을 처리할 수 있다.
+이는 인스턴스 변수에 대한 규칙의 확실한 확장이지만 그 자체를 위해서도 중요하다.
+콜렉션은 실로 매우 유용한 원시 타입이다.
+많은 동작이 있지만 후임 프로그래머나 유지보수 담당자에 의미적 의도나 단초는 거의 없다. - 소트웍스 앤솔로지 객체지향 생활체조편
+   * 일급 콜렉션 만들기
+      * Collection Wrapping
+      * ![image](https://user-images.githubusercontent.com/20143765/71228076-811a4a00-2324-11ea-9a79-a8da43975924.png)
+   * 이점
+      * 1. 비지니스에 종속적인 자료구조
+         * ![image](https://user-images.githubusercontent.com/20143765/71228107-9ee7af00-2324-11ea-929b-e40af2fa1ffd.png)
+      * 2. Collection의 불변성을 보장
+         * ![image](https://user-images.githubusercontent.com/20143765/71228131-af982500-2324-11ea-8d48-5ac3a326737f.png)
+      * 3. 상태와 행위를 한 곳에서 관리
+         * ![image](https://user-images.githubusercontent.com/20143765/71228168-c5a5e580-2324-11ea-97c2-39aa3ddc8a37.png)
+         * ![image](https://user-images.githubusercontent.com/20143765/71228184-d22a3e00-2324-11ea-8008-15c48ed93b2c.png)
+      * 4. 이름이 있는 컬렉션
+         * ![image](https://user-images.githubusercontent.com/20143765/71228211-e1a98700-2324-11ea-9198-344f2a8e9efb.png)
+
+
+    * Internationalization Support Expands in 2020
