@@ -123,3 +123,14 @@
          * ![image](https://user-images.githubusercontent.com/20143765/71228184-d22a3e00-2324-11ea-8008-15c48ed93b2c.png)
       * 4. 이름이 있는 컬렉션
          * ![image](https://user-images.githubusercontent.com/20143765/71228211-e1a98700-2324-11ea-9198-344f2a8e9efb.png)
+* [[Selenium]Python Study - PPT Presentation Material - 1](https://developer-ankiwoong.tistory.com/743?category=787938)
+    * Selenium: 웹앱 테스트용 프레임워크
+    * webdriver api를 통해 브라우저 제어
+    * 요소검색 및 조작, 스크린샷, 쿠키조작, 이전페이지/다음페이지 이동, 자바스크립트 실행 등 다양한 기능 사용가능
+* [[Selenium]Python Study - PPT Presentation Material - 2](https://developer-ankiwoong.tistory.com/744?category=787938)
+    * 브라우저 정보 저장(크기, url등)
+    * Implycitly_wait
+    * Gmail 자동 로그인
+        * ![image](https://user-images.githubusercontent.com/20143765/71229838-6b0f8800-232a-11ea-9cea-7e390d67b273.png)
+* [[Selenium]Python Study - PPT Presentation Material - 3](https://developer-ankiwoong.tistory.com/745?category=787938)
+    * Selenium Headless
