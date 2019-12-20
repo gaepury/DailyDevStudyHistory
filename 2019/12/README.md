@@ -26,6 +26,7 @@
      - @RunWith(SpringRunner.class)와 함께 사용
   - Bean
      - @SpringBootTest classes 속성을 이용하여 손쉽게 빈 등록
+     - ![image](https://user-images.githubusercontent.com/20143765/71225508-34327580-231c-11ea-877c-19c74281a79d.png)
   - TestConfiguration
      - 기존에 정의했던 Configuration을 커스터마이징하고 싶은 경우 TestConfiguration 기능을 사용. TestConfiguration은 ComponentScan 과정에서 생성될 것이며 해당 자신이 속한 테스트가 실행될때 정의된 빈을 생성하여 등록할 것
      - 더 좋은 방법은 @Import 어노테이션을 사용하는 것. @Import 어노테이션을 통해서 직접 사용할 TestConfiguration을 명시
@@ -36,6 +37,8 @@
     - properties 속성
     - 별도의 테스트를 위한 application.properties(또는 application.yml)을 지정(vm옵션도 지정가능)
   - Web Environment test
+     - @SpringBootTest의 webEnvironment 파라미터를 이용
+     - MOCK, RANDOM_PORT< DEFINED_PORT, NONE
   - TestRestTemplate
      - MovcMvc와 차이: Servlet Container를 사용하느냐 안하느냐의 차이. MockMvc는 Servlet Container를 생성하지 않는다.. 반면, @SpringBootTest와 TestRestTemplate은 Servlet Container를 사용한다.
   - 트랜젝션   
@@ -66,6 +69,7 @@
    > 엔지니어는 문제를 해결하는 사람이지 주의 사항을 알리는 사람이 아니기 때문입니다. 도로에 구멍이 났을 때 엔지니어의 역할은 그 구멍을 메우고 다시 나지 않게 하는 것이지, “여기 구멍이 있으니 아무도 지나가지 마!” 라고 외치는 것이 아닙니다.
 * [기술 뉴스 #140 : 19-12-16](https://blog.outsider.ne.kr/1471?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+rss_outsider_dev+%28Outsider%27s+Dev+Story%29)
 * [크로스 웹 브라우저 테스트 툴](https://www.mrlatte.net/research/2019/12/08/cross-web-browser-test-tool.html)
+   * Browserstack, LambdaTest, CrossBrowserTesting, Browserling, Experitest, Functionize, Saucelabs, EndTest, Selenium, IE Tab
 * [What's New for Node.js in 2020](https://developer.okta.com/blog/2019/12/04/whats-new-nodejs-2020#internationalization-support-expands-in-2020)
     * Support for ECMAScript Modules: you can finally use import and export syntax you may already be using for client-side JavaScript running in the browser.
     * Node.js can Import WebAssembly Modules
@@ -74,3 +78,15 @@
     * Better Python 3 build support: in 2020 it should be possible to build Node.js and native modules using Python 3.
     * An Updated V8 JavaScript engine: V8 v7.8 and 7.9 increase performance and Wasm support.
     * Stable Workers Threads API
+
+## 2019.12.20
+* [JAVA ConcurrentHashMap](https://dydtjr1128.github.io/java/2019/12/18/JAVA-ConcurrentHashMap.html)
+    * 하나의 공유자원을 여러개의 세그먼트로 나누고 각 세그먼트별로 다른 락을 거는 기법을lock striping이라고 부르는데, 이 기법을 적용시킨 ConcurrentHashMap은 기본적으로 16개의 세그먼트로 나뉘어져 있고, 각 세그먼트별로 다른 lock으로 동기화 되도록 만들었다.
+    *  ConcurrentHashMap과 Collections.synchronizedMap(new HashMap<>())의 성능을 비교
+       * ![image](https://user-images.githubusercontent.com/20143765/71225475-1b29c480-231c-11ea-9016-67589202c170.png)
+* [docker 명령어 정리](https://velog.io/@pa324/docker-%EB%AA%85%EB%A0%B9%EC%96%B4-%EC%A0%95%EB%A6%AC)
+    * Docker 컨테이너 Timezone 변경(Dockerfile에서 local서버 시간과 동기화)
+      * ```
+        ENV TZ=Asia/Seoul
+        RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+        ```
