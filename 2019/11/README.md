@@ -1,4 +1,4 @@
-## 2019.11.01
+## 2019.11.01(13개)
 * [enable.auto.commit 일 때 Kafka consumer close() method 동작분석](https://blog.voidmainvoid.net/259)
     * 설명 미약..
 * [[입 개발] Redis 버그 – Dataset 사이즈가 200GB가 넘어가면 죽는다구요?](https://charsyam.wordpress.com/2019/08/26/%EC%9E%85-%EA%B0%9C%EB%B0%9C-redis-%EB%B2%84%EA%B7%B8-dataset-%EC%82%AC%EC%9D%B4%EC%A6%88%EA%B0%80-200gb%EA%B0%80-%EB%84%98%EC%96%B4%EA%B0%80%EB%A9%B4-%EC%A3%BD%EB%8A%94%EB%8B%A4%EA%B5%AC%EC%9A%94/)
@@ -13,19 +13,19 @@
 * [반응형 웹 - 3. 미디어 쿼리 (feat. React, styled-components)](https://eblee-repo.tistory.com/49)
 * [AWS Lambda, Docker로 테스트하기 (with Python)](https://yahwang.github.io/posts/77)
     * lambci/lambda:build-XXXX 형식으로 언어별로 image를 제공
- * [머신러닝의 앙상블[ensemble]이란? - 배깅(baggage), 부스팅(boosting), 보팅(voting) 학습](https://lsjsj92.tistory.com/515)
- * [Memchcahed 개념과 특징](https://goodgid.github.io/Memcached/)
- * [Docker Container 내부 소켓 상태 확인 - nsenter와 netstat](https://aidanbae.github.io/code/docker/docker-netstat/)
-     * nsenter: namespace enter의 약자
-     * ```sudo nsenter -t 15652 -n netstat```
- * [Accuracy, Precision, Recall](http://www.gisdeveloper.co.kr/?p=8146)
- * [라이브러리 추천: react-hook-form](https://velog.io/@iamchanii/react-hooks-form-%EC%9D%84-%EC%86%8C%EA%B0%9C%ED%95%A9%EB%8B%88%EB%8B%A4-54k0rrj6m7)
+* [머신러닝의 앙상블[ensemble]이란? - 배깅(baggage), 부스팅(boosting), 보팅(voting) 학습](https://lsjsj92.tistory.com/515)
+* [Memchcahed 개념과 특징](https://goodgid.github.io/Memcached/)
+* [Docker Container 내부 소켓 상태 확인 - nsenter와 netstat](https://aidanbae.github.io/code/docker/docker-netstat/)
+    * nsenter: namespace enter의 약자
+    * ```sudo nsenter -t 15652 -n netstat```
+* [Accuracy, Precision, Recall](http://www.gisdeveloper.co.kr/?p=8146)
+* [라이브러리 추천: react-hook-form](https://velog.io/@iamchanii/react-hooks-form-%EC%9D%84-%EC%86%8C%EA%B0%9C%ED%95%A9%EB%8B%88%EB%8B%A4-54k0rrj6m7)
     * redux form은 redux를 사용할때 편리한 장점이 있지만 성능상 이슈가 있다.
     
     
 ---
 
-## 2019.11.02
+## 2019.11.02(22개)
 * [Spring Batch 공통 설정 관리하기 (feat. 젠킨스 Environment variables)](https://jojoldu.tistory.com/445)
     * JAR_OPTS, JAR_NAME 공통 설정
        * ```
@@ -35,12 +35,12 @@
          파라미터2=파라미터값2
          ```
 
-   * Readlink(readlink란 심볼릭 링크가 연결되어 있는 원본의 파일명을 가져오는 명령어) 사용방식
-      * ```
-         java -jar ${JAR_OPTS} $(${JAR_NAME}) \
-         --job.name=스프링배치Job이름 \
-         파라미터1=파라미터값1 \
-         파라미터2=파라미터값2
+* Readlink(readlink란 심볼릭 링크가 연결되어 있는 원본의 파일명을 가져오는 명령어) 사용방식
+   * ```
+      java -jar ${JAR_OPTS} $(${JAR_NAME}) \
+      --job.name=스프링배치Job이름 \
+      파라미터1=파라미터값1 \
+      파라미터2=파라미터값2
          ```
 * [GraphQL is not just a network protocol](https://blog.cometkim.kr/posts/graphql-is-not-just-a-network-protocol/)
     * 상태관리(Redux같은)로서 GraphQL를 활용한 흥미로운 예
@@ -61,9 +61,9 @@
 * [Spring Security 개념 잡기](https://junebuug.github.io/2019-09-05/spring-security)
 * [Spring Security 인프런 강의 정리](https://lelecoder.com/140)
     * 직접 강의 봐야겠다..
- * [[git] gitHub actions 간단하게 알아보자](https://blog.naver.com/pjt3591oo/221639403758)
-    * 드디어 GitHub actions setting 됨
-    * github-actions-practice 연습용 repository 생성
+* [[git] gitHub actions 간단하게 알아보자](https://blog.naver.com/pjt3591oo/221639403758)
+   * 드디어 GitHub actions setting 됨
+   * github-actions-practice 연습용 repository 생성
 * [[Spring & Design Pattern] Spring에서 발견한 디자인패턴_template method pattern](https://sabarada.tistory.com/19)    
    * Spring에서 사용되는 Template method pattern 
         * HttpServlet <-- FrameworkServlet <-- DispatcherServlet(doService method)
@@ -192,7 +192,7 @@ public class Main {
      
 ---
 
-## 2019.11.03
+## 2019.11.03(32개)
  * [[Spring & Design Pattern] Spring에서 발견한 디자인패턴_Proxy Pattern](https://sabarada.tistory.com/20)
      * @Transactional 어노테이션에 구현된 proxy pattern
  * [한글은 노토산스, 영문/숫자는 다른 폰트로 해주세요...](https://feel5ny.github.io/2019/09/08/CSS_02/)
@@ -254,9 +254,9 @@ public class Main {
             * 뮤텍스는 임계 영역에 들어가는 쓰레드가 하나라면, 세마포어는 복수 개가 가능
             * > 세마포어는 뮤텍스가 될 수 있지만 (S = 1 인 경우), 뮤텍스는 세마포어가 될 수 없다.
             * 뮤텍스는 바이너리 값을 갖는 세마포어다.
-     * [운영체제 - 프로세스와 컨택스트 스위칭](https://velog.io/@pa324/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%EC%99%80-%EC%BB%A8%ED%83%9D%EC%8A%A4%ED%8A%B8-%EC%8A%A4%EC%9C%84%EC%B9%AD-8ik28uy8ud)
-         * ![image](https://user-images.githubusercontent.com/20143765/68081356-108c9c00-fe50-11e9-95a6-b1bb1d837bf1.png)
-         * 대부분의 IPC기법은 결국 커널 공간을 활용하는 것 이다.(커널 공간은 공유하기 때문, file방식 제외)
+* [운영체제 - 프로세스와 컨택스트 스위칭](https://velog.io/@pa324/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%EC%99%80-%EC%BB%A8%ED%83%9D%EC%8A%A4%ED%8A%B8-%EC%8A%A4%EC%9C%84%EC%B9%AD-8ik28uy8ud)
+   * ![image](https://user-images.githubusercontent.com/20143765/68081356-108c9c00-fe50-11e9-95a6-b1bb1d837bf1.png)
+   * 대부분의 IPC기법은 결국 커널 공간을 활용하는 것 이다.(커널 공간은 공유하기 때문, file방식 제외)
 * [함수들에 대한 그래프 시각화](http://www.gisdeveloper.co.kr/?p=8285)
 * [아파치 카프카 Lag 모니터링 대시보드 만들기](https://blog.voidmainvoid.net/279)
    * Burrow(link) : linkedin에서 공개한 opensource lag monitoring application입니다. rest api를 통해 lag 정보를 전달받을 수 있습니다.
@@ -275,7 +275,7 @@ public class Main {
     * 숫자.toString(진법) 메소드는 숫자를 특정 진법의 숫자 문자열로 바꿔준다.
 
 
-## 2019.11.08
+## 2019.11.08(2개)
 * [스프링 책 읽기(Spring in action) - 3.고급 와이어링](https://bob-full.tistory.com/13)
 * [스프링 책 읽기(Spring in action) - 4. 애스펙트 지향 스프링](https://bob-full.tistory.com/14)
    - 어드바이스
@@ -295,13 +295,13 @@ public class Main {
    - 포인트 커트 작성
       - @Aspect, @PointCut, @Around
       
-## 2019.11.09
+## 2019.11.09(3개)
 * [CSRF is (really) dead](https://scotthelme.co.uk/csrf-is-really-dead/)
     * ```Set-Cookie: __Host-session=123; path=/; Secure; HttpOnly; SameSite=Lax```
 * [2019년과 이후 JavaScript의 동향 – 브라우저 밖의 JavaScript 1](https://d2.naver.com/helloworld/7700312)
 * [2019년과 이후 JavaScript의 동향 – 브라우저 밖의 JavaScript 2](https://d2.naver.com/helloworld/7975004)
 
-## 2019.11.12
+## 2019.11.12(3개)
 * [도커 볼륨](https://bcho.tistory.com/1360)
 * [HTTP/3? 그게 뭔데?](https://velog.io/@devjeon1358/-HTTP3-%EA%B7%B8%EA%B2%8C-%EB%AD%94%EB%8D%B0-fwk2swcx8s)
     * HTTP/1, HTTP/2 에서 사용되던 TCP 연결 방식을 UDP 기반의 프로토콜(QUIC)로 변경, QUIC 기술을 사용하여 기존 TCP에서 사용되던 연결 수립 과정을 빠르게 처리
@@ -309,7 +309,7 @@ public class Main {
     * HTTP/3을 사용할 수 있게 할려면 Web 서버도 QUIC을 지원할 수 있도록 다시 빌드해야 하는 High Cost, QUIC을 사용하기 위한 별도 브라우저 설정등으로 도입 판단하긴 아직 이른듯.
 * [REST API 응답은 어떻게 줘야할까? (표준 Response 객체를 만들 수 있을까?, 정확하게 응답 처리를 하는 방법, 성공과 실패 응답)](https://jeong-pro.tistory.com/200)
 
-## 2019.11.15
+## 2019.11.15(2개)
  * [Jackson 직렬화 옵션의 적절한 활용과 Jackson에 기여하기까지 (feat. 글로벌 캐싱)](https://hyperconnect.github.io/2019/10/28/jackson-serialize-for-global-caching.html?fbclid=IwAR3Dv2yptUM-RoOesRVqZ_o2XZ70mXHZJ9nyOpO4dwaWVvM4bp_rYv-Lddg)
  * [JDK Dynamic Proxy vs CGLib Proxy](https://dreamchaser3.tistory.com/9?category=710874)
      * JDK Dynamic Proxy
@@ -325,7 +325,7 @@ public class Main {
              > (주의) false로 설정했다 할지라도, target class가 interface를 구현하고 있지 않은 경우에는 CGLib proxy를 쓴다.
           * ```<aop:config proxy-target-class="true”>```
 
-## 2019.11.16
+## 2019.11.16(6개)
  * [[git] github actions를 활용한 pipit 배포 자동화](https://blog.naver.com/pjt3591oo/221708923091)
  * [Nodejs 성능 최적화](https://velog.io/@pa324/Nodejs-%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94-u1k2zkwoqq)
    - json serializable **fast-json-stringify** 라이브러리 사용
@@ -335,7 +335,7 @@ public class Main {
  * [[Github Actions] Github 에서 Workflow 사용하기](https://velog.io/@devjeon1358/Github-Actions-Github-%EC%97%90%EC%84%9C-Workflow-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-8wk2y2ijbu)
  * [GitHub Action을 사용해 새로 올라온 전월세 방 목록 받아보기](https://ahnheejong.name/articles/receive-new-room-notification-mails-using-github-action/?fbclid=IwAR04PvyDxJA0VJyCCiDdsotVm8Iye43Zp5brGKh9mkPX0sCE1ryC460j6Qg)
  
- ## 2019.11.22
+ ## 2019.11.22(6개)
 * [Github - Suggestion 기능 활용하기](https://nesoy.github.io/articles/2019-11/Github-suggestion)
 * Quartz 스케줄러 적용 아키텍처 개선
   * [1편 모듈 분리](http://homoefficio.github.io/2019/09/28/Quartz-%EC%8A%A4%EC%BC%80%EC%A4%84%EB%9F%AC-%EC%A0%81%EC%9A%A9-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98-%EA%B0%9C%EC%84%A0-1/)
@@ -359,11 +359,11 @@ public class Main {
        * 시큐어 코딩하는 방법. XSS등 웹 보안 취약점 설명하고 어떻게 막을 수 있는지
 * [Outsider 기술 뉴스 #138 : 19-11-16](https://blog.outsider.ne.kr/1466?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+rss_outsider_dev+%28Outsider%27s+Dev+Story%29)
 
-## 2019.11.23
+## 2019.11.23(2개)
 * [Reactive Streams (1)](https://jongmin92.github.io/2019/11/07/Java/reactive-2/)
 * [Reactive Streams (2)](https://jongmin92.github.io/2019/11/07/Java/reactive-2/)
 
-## 2019.11.28
+## 2019.11.28(1개)
 * [[JUnit] JUnit5 사용법 - Parameterized Tests](https://gmlwjd9405.github.io/2019/11/27/junit5-guide-parameterized-test.html)
      * 사용하기
          * gradle
@@ -419,3 +419,6 @@ public class Main {
                   }
                 }
                ```
+
+
+### 블로그 총 본개수: 89개
