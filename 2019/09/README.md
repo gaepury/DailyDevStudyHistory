@@ -1,7 +1,9 @@
-## 2019.09.02
+## 2019.09.02(1개)
 - 프로세스와 스레드
 
-## 2019.09.08
+--- 
+
+## 2019.09.08(40개)
 * [문서 엔지니어링과 API 문서화](https://engineering.linecorp.com/ko/blog/document-engineering-api-documentation/)
 * Protocol Buffers Language Guide (휘리릭 읽는 프로토콜 버퍼 문법 및 작성 시 유의 사항, 이것만 알면 .proto 파일을 이해할 수 있다?)
     * 와닿지 않늗다..
@@ -69,8 +71,9 @@
 * 고객 행동 기반 실시간 딥 뉴럴 추천 시스템 : ForYou
 * 주니어 개발자가 반응형 레이아웃 리팩토링한 썰.txt
 
+---
 
-## 2019.09.14
+## 2019.09.14(23개)
 * 레거시 코드에서 이해하기 쉬운코드로 리팩토링
 * 워드프레스 아임포트 결제 플러그인 다중 정기결제(multiple subscription) 업데이트 
 * LINE Search UI 개선기
@@ -113,7 +116,9 @@
     * 어렵다ㅠ
 * [[번역] 파이썬 매직 메소드 (Python's Magic Methods)](https://ziwon.dev/post/python_magic_methods/)
 
-## 2019.09.15
+--- 
+
+## 2019.09.15(36개)
 * tcpdump
 * [[docker] 도커 네트워크(bridge)를 생성하는 예시](https://knight76.tistory.com/entry/docker-%EB%8F%84%EC%BB%A4-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%ACbridge%EB%A5%BC-%EC%83%9D%EC%84%B1%ED%95%98%EB%8A%94-%EC%98%88%EC%8B%9C)
 * 05 - Flex Panel Gallery
@@ -186,8 +191,14 @@
 * [[번역] shared message queues와 publish-subscribe 방식에 Custom Group 방식을 더한 Kafka 소개](https://wedul.site/577)
 * RabbitMQ에 대해
 
-## 2019.09.21
+---
+
+## 2019.09.21(4개)
 * HTTPS/DNS 차단 쉽게 이해하기
 * Introducing React Hooks
 * [Spring Guide - 테스트 전략](https://cheese10yun.github.io/spring-guide-test-1/)
 * [소프트웨어 공학 - Observer Pattern]
+
+--- 
+
+## 9월 블로그 총 본개수: 104
