@@ -1,6 +1,6 @@
 10월부터 링크 연결 및 간단한 요약 정리 
 
-## 2019.10.06
+## 2019.10.06(26개)
 * [Cache-Aside Pattern in Redis](https://brunch.co.kr/@springboot/151)
 * [[번역] OOP를 빨리 잊을 수록 여러분과 여러분의 소프트웨어에 좋습니다](https://rinae.dev/posts/the-faster-you-unlearn-oop-the-better-for-you-and-your-software-kr)
     - 단점
@@ -124,7 +124,9 @@ public class TestService implements CommandLineRunner, APplicationRunner, Applic
 }
 ```
 
-## 2019.10.12
+--- 
+
+## 2019.10.12(3개)
  * [Jackson 관련](https://happyer16.tistory.com/entry/Jackson-%EA%B4%80%EB%A0%A8)
      * @JsonManagedReference : 해당 부분이 serialize 된다
      * @JsonBackReference : serialize 에서 제외 된다.
@@ -132,19 +134,24 @@ public class TestService implements CommandLineRunner, APplicationRunner, Applic
  * [효율적인 도커 이미지 만들기 #2 - 도커 레이어 캐슁을 통한 빌드/배포 속도 높이기](https://bcho.tistory.com/1357)
      * jar 파일을 풀어서 라이브러리 jar파일들이 캐싱 대도록 레이어 분리
 
+--- 
 
-## 2019.10.15
+## 2019.10.15(5개)
  * [2019.10.10 - 토비의 스프링을 읽으며](https://blog.naver.com/writer0713/221674259511)
  * [Outsider 기술 뉴스 #136 : 19-10-15](https://blog.outsider.ne.kr/1463)
  * [Outsider 기술 뉴스 #136 : 19-09-02](https://blog.outsider.ne.kr/1458)
  * [Outsider 기술 뉴스 #136 : 19-09-15](https://blog.outsider.ne.kr/1460)
  * [Leon Sans : 동적으로 폰트의 웨이트를 바꿀 수 있고 애니메이션을 추가할 수 있는 폰트.](https://github.com/cmiscm/leonsans)
     * 인터렉티브 웹개발 토이프로젝트시 참고할만할듯
-    
-## 2019.10.22
+
+--- 
+
+## 2019.10.22(1개)
 * [키바나 Aggregation Size 옵션 특징](http://kangmyounghun.blogspot.com/2019/10/aggregation-size.html)
 
-## 2019.10.26
+--- 
+
+## 2019.10.26(8개)
 * [Redis에서 Pub/Sub 방식 소개 및 Spring Boot에서 구현해보기](https://wedul.site/627)
 * [[logstash] plugin-input-mongodb을 이용하여 mongoldb 기반 pipeline 구축](https://blog.naver.com/pjt3591oo/221624138418)
     * logstash-input-mongodb
@@ -172,7 +179,9 @@ public class TestService implements CommandLineRunner, APplicationRunner, Applic
 * [redux에 Immutable.js을 끼얹어 상태 관리를 해보자(불변성 관리)](https://velog.io/@cyranocoding/redux%EC%97%90-Immutable.js%EC%9D%84-%EB%81%BC%EC%96%B9%EC%96%B4-%EC%83%81%ED%83%9C-%EA%B4%80%EB%A6%AC%EB%A5%BC-%ED%95%B4%EB%B3%B4%EC%9E%90%EB%B6%88%EB%B3%80%EC%84%B1-%EA%B4%80%EB%A6%AC)
     * 기자 어드민 react 프로젝트에서 피봐서 알겠지만 immutable 라이브러리 사용은 필수다.. 
 
-## 2019.10.27
+--- 
+
+## 2019.10.27(5개)
 * [if kakao 2019 2일차 후기](https://zzsza.github.io/etc/2019/08/30/ifkakao-2019-review/)
 * [if kakao day 1 후기](https://nesoy.github.io/articles/2019-08/if-kakao-day1)
     * [ghz](https://github.com/bojand/ghz) - gRPC Load Test
@@ -199,7 +208,9 @@ public class TestService implements CommandLineRunner, APplicationRunner, Applic
         * Dynamic Import와 모듈 chunk, Promise.all 조합
             * ![image](https://user-images.githubusercontent.com/20143765/67639291-68e40b00-f931-11e9-8c99-105661de3dbe.png)
             
-## 2019.10.31
+--- 
+
+## 2019.10.31(7개)
 * [스프링 - 생성자 주입을 사용해야 하는 이유, 필드인젝션이 좋지 않은 이유](https://yaboong.github.io/spring/2019/08/29/why-field-injection-is-bad/)
     1. Component를 변경이 불가능한 immutable 상태로 선언이 가능합니다.(의존성 주입이 필요한 필드를 final 로 선언가능)
     2. 더 나아가 생성자의 Parameter를 통해 의존관계를 한눈에 파악하고 Refactoring의 필요성을 얻을 수 있습니다.
@@ -291,3 +302,6 @@ public class TestService implements CommandLineRunner, APplicationRunner, Applic
         *  빌드 시에만 필요한 의존성들을 포함하느라 크기가 더 커져버릴수 있다.
     * Tip #11. 빌드 의존성을 제거하기 위해서 다단계 빌드(Multi-stage build)를 사용하라
         * AS 키워드 사용하여 참조
+
+--- 
+## 10월 블로그 총 본 개수: 55개
