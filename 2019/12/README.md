@@ -115,6 +115,3 @@
          * ![image](https://user-images.githubusercontent.com/20143765/71228184-d22a3e00-2324-11ea-8008-15c48ed93b2c.png)
       * 4. 이름이 있는 컬렉션
          * ![image](https://user-images.githubusercontent.com/20143765/71228211-e1a98700-2324-11ea-9198-344f2a8e9efb.png)
-
-
-    * Internationalization Support Expands in 2020
