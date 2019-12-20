@@ -6,11 +6,16 @@
       * componentDidMount와 componentDidUpdate를 대체
 * [Outsider 기술 뉴스 #138 : 19-12-02](https://blog.outsider.ne.kr/1467)
 
+--- 
+
 ## 2019.12.04
 * [SpringBoot Application의 monitoring 시스템 구축하기](https://jongmin92.github.io/2019/12/04/Spring/prometheus/)
     * Dependency 설정
         * ![image](https://user-images.githubusercontent.com/20143765/70228476-c3298480-1797-11ea-8b72-b7b94a2fa382.png)
     * Actuator web expose endpoint에 prometheus 추가
+    
+--- 
+
 ## 2019.12.05
 - [Spring Boot에서 테스트를 - 1](https://hyper-cube.io/2017/08/06/spring-boot-test-1/)
   - spring-boot-test 포함 라이브러리 
@@ -61,6 +66,7 @@
          for (OperatingSystemHandler handler :
          operatingSystemHandlerList) { map.put(handler.getType(), handler); }
          ```
+--- 
 
 ## 2019.12.19
 * [자바스크립트 - 가비지 컬렉터](https://velog.io/@pa324/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EA%B0%80%EB%B9%84%EC%A7%80-%EC%BB%AC%EB%A0%89%ED%84%B0)
@@ -78,6 +84,8 @@
     * Better Python 3 build support: in 2020 it should be possible to build Node.js and native modules using Python 3.
     * An Updated V8 JavaScript engine: V8 v7.8 and 7.9 increase performance and Wasm support.
     * Stable Workers Threads API
+
+--- 
 
 ## 2019.12.20
 * [JAVA ConcurrentHashMap](https://dydtjr1128.github.io/java/2019/12/18/JAVA-ConcurrentHashMap.html)
