@@ -134,3 +134,25 @@
         * ![image](https://user-images.githubusercontent.com/20143765/71229838-6b0f8800-232a-11ea-9cea-7e390d67b273.png)
 * [[Selenium]Python Study - PPT Presentation Material - 3](https://developer-ankiwoong.tistory.com/745?category=787938)
     * Selenium Headless
+
+
+---
+
+## 2019.12.24
+* [Spring Guide - Exception 전략](https://cheese10yun.github.io/spring-guide-exception/) - 복습
+    * ErrorResponse, ErrorCode, GlobalExceptionHandler, BussinessException, BussinessException를 상속하는 Custom Exception, 
+    * 통일된 Error Response 객체
+       * ![image](https://user-images.githubusercontent.com/20143765/71393968-7af0da00-2652-11ea-9072-198352249daf.png)
+       * Error Response JSON(Response 결과)
+          * ![image](https://user-images.githubusercontent.com/20143765/71393980-893ef600-2652-11ea-98d3-dc5e7adc7090.png)
+       * Error Response 객체(객체 설계0
+          * ![image](https://user-images.githubusercontent.com/20143765/71393996-9c51c600-2652-11ea-8228-03884c17082c.png)
+    * @ControllerAdvice로 모든 예외를 핸들링
+       * ![image](https://user-images.githubusercontent.com/20143765/71394000-a83d8800-2652-11ea-9104-05b57a8329a8.png)
+    * Business Exception 처리
+    * 컨트롤러 예외 처리
+        * Model Validation처리(@NotEmpty등)
+    * Try Catch 전략
+        * 1. try catch를 최대한 지양해라
+        * 2. try catch로 에러를 먹고 주는 코드는 지양해라(이런 코드가 있다면 로그라도 추가해주세요…)
+        * 3. try catch를 사용하게 된다면 더 구체적인 Exception을 발생시키는 것이 좋다.
