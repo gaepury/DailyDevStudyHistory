@@ -39,7 +39,7 @@
   - MockBean and SpyBean
      - spring-boot-test 패키지는 Mockito를 포함
   - Properties
-    - properties 속성
+    - @SpringBootTest의 properties 속성
     - 별도의 테스트를 위한 application.properties(또는 application.yml)을 지정(vm옵션도 지정가능)
   - Web Environment test
      - @SpringBootTest의 webEnvironment 파라미터를 이용
