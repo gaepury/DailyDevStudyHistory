@@ -156,3 +156,19 @@
         * 1. try catch를 최대한 지양해라
         * 2. try catch로 에러를 먹고 주는 코드는 지양해라(이런 코드가 있다면 로그라도 추가해주세요…)
         * 3. try catch를 사용하게 된다면 더 구체적인 Exception을 발생시키는 것이 좋다.
+
+---
+
+## 2019.12.26
+* [Spring Junit5 test Mockito (백기선님 인프런 강의)](https://wedul.site/648)
+    * Mock 객체 만들기
+        * ![image](https://user-images.githubusercontent.com/20143765/71453923-4bb4a700-27d1-11ea-908f-3d385e6b5182.png)
+    * Mock 객체 반환타입
+        * 객체는 Null
+        * Option 타입은 Optional.empty 리턴
+        * Primitive 타입은 기본 Primitive 값
+        * 콜렉션은 비워있는 콜렉션
+        * void 반환값의 메소드는 아무런 일이 발생되지 않는다.
+    * Stubbing and 호출 횟수 확인
+        * ![image](https://user-images.githubusercontent.com/20143765/71453930-596a2c80-27d1-11ea-913d-df291a7691fe.png)
+* [웹 JS 애플리케이션 개발시 IntelliJ 디버거 사용하기](https://jojoldu.tistory.com/468)
