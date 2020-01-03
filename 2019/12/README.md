@@ -176,4 +176,4 @@
         * ![image](https://user-images.githubusercontent.com/20143765/71453930-596a2c80-27d1-11ea-913d-df291a7691fe.png)
 * [웹 JS 애플리케이션 개발시 IntelliJ 디버거 사용하기](https://jojoldu.tistory.com/468)
 
-## 11월 블로그 총 본개수: 19개
+## 12월 블로그 총 본개수: 19개
