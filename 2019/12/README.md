@@ -1,4 +1,4 @@
-## 2019.12.02
+## 2019.12.02(2개)
 * [React Hook 정리](https://velog.io/@noyo0123/React-Hook-%EC%A0%95%EB%A6%AC)
    * useState
       * state get, set
@@ -8,7 +8,7 @@
 
 --- 
 
-## 2019.12.04
+## 2019.12.04(1개)
 * [SpringBoot Application의 monitoring 시스템 구축하기](https://jongmin92.github.io/2019/12/04/Spring/prometheus/)
     * Dependency 설정
         * ![image](https://user-images.githubusercontent.com/20143765/70228476-c3298480-1797-11ea-8b72-b7b94a2fa382.png)
@@ -16,7 +16,7 @@
     
 --- 
 
-## 2019.12.05
+## 2019.12.05(1개)
 - [Spring Boot에서 테스트를 - 1](https://hyper-cube.io/2017/08/06/spring-boot-test-1/)
   - spring-boot-test 포함 라이브러리 
      - JUnit
@@ -50,7 +50,10 @@
      - RANDOM_PORT나 DEFINED_PORT로 테스트를 설정하면 실제 테스트 서버는 별도의 스레드에서 수행되기 때문에 rollback이 이루어지지 않는다.
   - ApplicationContext 캐시
      -  동일한 ApplicationContext 사용
-## 2019.12.14
+     
+--- 
+
+## 2019.12.14(1개)
 * [Enum 찾기의 달인 (효율적으로 찾기, spring bean과 맵핑)](https://sjh836.tistory.com/175)
     * 1. Enum을 효율적으로 찾는 방법
        * ``` java
@@ -68,7 +71,7 @@
          ```
 --- 
 
-## 2019.12.19
+## 2019.12.19(5개)
 * [자바스크립트 - 가비지 컬렉터](https://velog.io/@pa324/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EA%B0%80%EB%B9%84%EC%A7%80-%EC%BB%AC%EB%A0%89%ED%84%B0)
    * 클로저에 의해 메모리 누수가 발생할 수 있다.
 * [잘못 된 문서화, 잘 된 문서화](https://tech.peoplefund.co.kr/2019/12/06/bad-and-good-documentation.html)
@@ -87,7 +90,7 @@
 
 --- 
 
-## 2019.12.20
+## 2019.12.20(6개)
 * [JAVA ConcurrentHashMap](https://dydtjr1128.github.io/java/2019/12/18/JAVA-ConcurrentHashMap.html)
     * 하나의 공유자원을 여러개의 세그먼트로 나누고 각 세그먼트별로 다른 락을 거는 기법을lock striping이라고 부르는데, 이 기법을 적용시킨 ConcurrentHashMap은 기본적으로 16개의 세그먼트로 나뉘어져 있고, 각 세그먼트별로 다른 lock으로 동기화 되도록 만들었다.
     *  ConcurrentHashMap과 Collections.synchronizedMap(new HashMap<>())의 성능을 비교
@@ -138,7 +141,7 @@
 
 ---
 
-## 2019.12.24
+## 2019.12.24(1개)
 * [Spring Guide - Exception 전략](https://cheese10yun.github.io/spring-guide-exception/) - 복습
     * ErrorResponse, ErrorCode, GlobalExceptionHandler, BussinessException, BussinessException를 상속하는 Custom Exception, 
     * 통일된 Error Response 객체
@@ -159,7 +162,7 @@
 
 ---
 
-## 2019.12.26
+## 2019.12.26(2개)
 * [Spring Junit5 test Mockito (백기선님 인프런 강의)](https://wedul.site/648)
     * Mock 객체 만들기
         * ![image](https://user-images.githubusercontent.com/20143765/71453923-4bb4a700-27d1-11ea-908f-3d385e6b5182.png)
@@ -172,3 +175,5 @@
     * Stubbing and 호출 횟수 확인
         * ![image](https://user-images.githubusercontent.com/20143765/71453930-596a2c80-27d1-11ea-913d-df291a7691fe.png)
 * [웹 JS 애플리케이션 개발시 IntelliJ 디버거 사용하기](https://jojoldu.tistory.com/468)
+
+## 11월 블로그 총 본개수: 19개
