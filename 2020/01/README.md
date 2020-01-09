@@ -31,3 +31,21 @@
 * [http-decision-diagram](https://github.com/for-GET/http-decision-diagram/blob/master/doc/README_request.md#allowed_methods-var)
     * HTTP의 상태 코드를 결정하는 다이어그램. 200대부터 500대 코드까지 HTTP 요청 상황의 true/false로 따라가서 적절한 상태 코드를 찾을 수 있다
     * 꽤 유용할듯
+
+--- 
+
+## 2020.01.09
+* [gRPC Reference - 예제](https://hyungyu-lee.github.io/articles/2020-01/grpc-2)
+    * Proto file 작성
+        * ![image](https://user-images.githubusercontent.com/20143765/72040425-d88c5400-32eb-11ea-9d93-5cf7494ea961.png)
+            * proto 파일을 별도로 컴파일할 경우 mvn protobuf:{goal} 명령어로 컴파일 할 수 있다.
+            * 컴파일된 결과물은 target(혹은 지정 빌드 디렉토리)/generated-sources/protobuf/java 이하 디렉토리에 생성된다.
+            * message 는 서버-클라이언트 간 송수신될 데이터 포맷
+            * service 는 서버, 클라이언트에서 원격 호출되는 서비스 메소드
+    * 서버 프로그램 작성
+        * 서비스 기능구현
+            * ![image](https://user-images.githubusercontent.com/20143765/72040431-db874480-32eb-11ea-808b-a04591e941b5.png)
+        * 작성한 서비스를 사용하는 서버 구현
+            * ![image](https://user-images.githubusercontent.com/20143765/72040436-dfb36200-32eb-11ea-99d0-73c41de94653.png)
+    * 클라이언트 프로그램 작성
+        * ![image](https://user-images.githubusercontent.com/20143765/72040443-e4781600-32eb-11ea-9a9d-31c712534bad.png)
