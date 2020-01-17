@@ -49,3 +49,33 @@
             * ![image](https://user-images.githubusercontent.com/20143765/72040436-dfb36200-32eb-11ea-99d0-73c41de94653.png)
     * 클라이언트 프로그램 작성
         * ![image](https://user-images.githubusercontent.com/20143765/72040443-e4781600-32eb-11ea-9a9d-31c712534bad.png)
+
+---
+
+## 2020.01.17
+ * [[자바스크립트] 엄격 모드(strict mode)](http://beomy.tistory.com/13)
+    * 실수를 에러로 변환(Converting mistakes into errors)
+       * 1. 선언하지 않고 전역 변수를 만들 수 없습니다.
+       * 2. writable이 false로, 읽기 전용 객체에 쓰는 것이 불가능 합니다. (read only 객체 수정 불가능)
+       * 3. get으로 선언된 객체는 수정할 수 없습니다. (getter-only property 수정 불가능)
+       * 4. extensible 특성이 false로 설정된 객체에 속성을 확장 할 수 없습니다. (확장 불가 객체 확장 불가능)
+       * 5. delete를 호출 할 수 없습니다.
+       * 6. 리터럴 객체는 동일한 이름의 property를 가질 수 없습니다.(하지만ES6는 가능함)
+       * 7. 함수의 동일한 매개 변수 이름을 선언하는 것이 불가능 합니다.
+       * 8. 8진수 숫자 리터럴 및 이스케이프 문자를 사용 할 수 없습니다.
+       * 9. primitive values의 속성 설정이 불가능합니다.
+    * 변수 사용의 명료화(Simplify variable uses)
+       * 10. with를 사용할 수 없습니다.
+       * 11. eval 함수는 주변 스코프에 새로운 변수를 추가하지 않습니다.
+    * eval과 arguments 명료화(Making eval and arguments simpler)
+       * 12. eval을 변수 또는 함수, 매개 변수의 이름으로 사용할 수 없습니다.
+       * 13. arguments를 변수 또는 함수, 매개 변수의 이름으로 사용할 수 없습니다.
+       * 14. 인자값을 수정함으로 arguments의 값이 수정되지 않습니다.
+       * 15. callee를 지원하지 않습니다.
+    * 안전한 자바스크립트("Securing" JavaScript)
+       * 16. this의 값이 null 또는 undefined인 경우 전역 객체로 변환하지 않습니다.
+       * 17. callee, caller를 통해 stack 검색이 불가능합니다.
+       * 18. arguments의 caller를 지원하지 않습니다.
+    * 미래의 자바스트립트 준비(Paving the way for future ECMAScript versions)
+       * 19. 예약된 키워드의 이름으로 변수 또한 함수를 생성할 수 없습니다
+       * 20. 함수 선언은 스크립트나 함수의 최상위에서 해야 합니다.
