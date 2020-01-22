@@ -81,19 +81,20 @@
        * 20. 함수 선언은 스크립트나 함수의 최상위에서 해야 합니다.
 
 ## 2020.01.18
-    * [7.10 Git 도구 - Git으로 버그 찾기](https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-Git%EC%9C%BC%EB%A1%9C-%EB%B2%84%EA%B7%B8-%EC%B0%BE%EA%B8%B0)
-    * [도커 컨테이너는 가상머신인가요? 프로세스인가요?](https://www.44bits.io/ko/post/is-docker-container-a-virtual-machine-or-a-process)
-        * 도커 컨테이너의 프로세스 아이디는 1번
-            * 리눅스 커널에 포함된 프로세스 격리 기술들을 사용
-                * pid namespace
-            * 셸의 pid 확인 : echo $$
-        * PID 1번의 비밀, 도커 없이 일반 프로세스의 PID를 1번으로 실행하기
-            * pid namespace 분리
-                * 외에 UTS, PID, 네크워크, 마운트 등 다양한 종류의 namespace가 있음
-            * unshare로 프로세스의 pid namespace 분리
-        * 프로세스 ID를 격리하는 PID 네임스페이스
-            * /proc 디렉터리: 프로세스 관련된 정보가 담겨져 있는 디렉토리
-            * 1번 프로세스(init process) 아래 ns 디렉토리
-                * ![image](https://user-images.githubusercontent.com/20143765/72868655-0464fc00-3d26-11ea-8879-0d55db92b341.png)
-            *  기본적으로 모든 프로세스는 init 프로세스의 네임스페이스를 그대로 공유
-                * ![image](https://user-images.githubusercontent.com/20143765/72868659-07f88300-3d26-11ea-8c2c-861a26d8dcf0.png)
+ * [7.10 Git 도구 - Git으로 버그 찾기](https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-Git%EC%9C%BC%EB%A1%9C-%EB%B2%84%EA%B7%B8-%EC%B0%BE%EA%B8%B0)
+    - git blame, git bisect
+ * [도커 컨테이너는 가상머신인가요? 프로세스인가요?](https://www.44bits.io/ko/post/is-docker-container-a-virtual-machine-or-a-process)
+     * 도커 컨테이너의 프로세스 아이디는 1번
+         * 리눅스 커널에 포함된 프로세스 격리 기술들을 사용
+             * pid namespace
+         * 셸의 pid 확인 : echo $$
+     * PID 1번의 비밀, 도커 없이 일반 프로세스의 PID를 1번으로 실행하기
+         * pid namespace 분리
+             * 외에 UTS, PID, 네크워크, 마운트 등 다양한 종류의 namespace가 있음
+         * unshare로 프로세스의 pid namespace 분리
+     * 프로세스 ID를 격리하는 PID 네임스페이스
+         * /proc 디렉터리: 프로세스 관련된 정보가 담겨져 있는 디렉토리
+         * 1번 프로세스(init process) 아래 ns 디렉토리
+             * ![image](https://user-images.githubusercontent.com/20143765/72868655-0464fc00-3d26-11ea-8879-0d55db92b341.png)
+         *  기본적으로 모든 프로세스는 init 프로세스의 네임스페이스를 그대로 공유
+             * ![image](https://user-images.githubusercontent.com/20143765/72868659-07f88300-3d26-11ea-8c2c-861a26d8dcf0.png)
