@@ -98,3 +98,13 @@
              * ![image](https://user-images.githubusercontent.com/20143765/72868655-0464fc00-3d26-11ea-8879-0d55db92b341.png)
          *  기본적으로 모든 프로세스는 init 프로세스의 네임스페이스를 그대로 공유
              * ![image](https://user-images.githubusercontent.com/20143765/72868659-07f88300-3d26-11ea-8c2c-861a26d8dcf0.png)
+
+
+## 2020.01.30
+* [[Spring] SpEL](https://velog.io/@max9106/Spring-SpEL)
+    * 표현식: #{"표현식”}
+    * 프로퍼티: ${"프로퍼티”}
+    * 표현식으로 프로퍼티를 감싸서 사용할 수 있다.(But 프로퍼티로 표현식을 감싸서 사용할 수는 없다)
+        * ![image](https://user-images.githubusercontent.com/20143765/73411955-78b52600-434a-11ea-96e3-aaccd05d5ad1.png)
+    * 표현식으로 빈의 정보 가져오기
+        * ![image](https://user-images.githubusercontent.com/20143765/73411959-7c48ad00-434a-11ea-9da0-dd2cb3ddc16d.png)
