@@ -11,3 +11,4 @@ Dev Blog 읽은 History 남기기 위한 레퍼지토리
    
 
 - [2020](https://github.com/gaepury/DevBlogReadHistory/tree/master/2020)
+   - [1월 블로그](https://github.com/gaepury/DevBlogReadHistory/blob/master/2020/01) 총 본개수: 16개
