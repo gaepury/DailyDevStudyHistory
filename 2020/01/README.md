@@ -1,4 +1,4 @@
-## 2020.01.04
+## 2020.01.04(10개)
 * [[Outsider`s blog] 2019년 회고](https://blog.outsider.ne.kr/1472?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+rss_outsider_dev+%28Outsider%27s+Dev+Story%29)
 * [Spring BootJunit5 테스트 (백기선님 인프런 강의)](https://wedul.site/647)
     * Junit5 추가된 기능
@@ -34,7 +34,7 @@
 
 --- 
 
-## 2020.01.09
+## 2020.01.09(1개)
 * [gRPC Reference - 예제](https://hyungyu-lee.github.io/articles/2020-01/grpc-2)
     * Proto file 작성
         * ![image](https://user-images.githubusercontent.com/20143765/72040425-d88c5400-32eb-11ea-9d93-5cf7494ea961.png)
@@ -52,7 +52,7 @@
 
 ---
 
-## 2020.01.17
+## 2020.01.17(1개)
  * [[자바스크립트] 엄격 모드(strict mode)](http://beomy.tistory.com/13)
     * 실수를 에러로 변환(Converting mistakes into errors)
        * 1. 선언하지 않고 전역 변수를 만들 수 없습니다.
@@ -80,7 +80,9 @@
        * 19. 예약된 키워드의 이름으로 변수 또한 함수를 생성할 수 없습니다
        * 20. 함수 선언은 스크립트나 함수의 최상위에서 해야 합니다.
 
-## 2020.01.18
+--- 
+
+## 2020.01.18(2개)
  * [7.10 Git 도구 - Git으로 버그 찾기](https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-Git%EC%9C%BC%EB%A1%9C-%EB%B2%84%EA%B7%B8-%EC%B0%BE%EA%B8%B0)
     - git blame, git bisect
  * [도커 컨테이너는 가상머신인가요? 프로세스인가요?](https://www.44bits.io/ko/post/is-docker-container-a-virtual-machine-or-a-process)
@@ -99,8 +101,9 @@
          *  기본적으로 모든 프로세스는 init 프로세스의 네임스페이스를 그대로 공유
              * ![image](https://user-images.githubusercontent.com/20143765/72868659-07f88300-3d26-11ea-8c2c-861a26d8dcf0.png)
 
+--- 
 
-## 2020.01.30
+## 2020.01.30(1개)
 * [[Spring] SpEL](https://velog.io/@max9106/Spring-SpEL)
     * 표현식: #{"표현식”}
     * 프로퍼티: ${"프로퍼티”}
@@ -109,3 +112,10 @@
     * 표현식으로 빈의 정보 가져오기
         * ![image](https://user-images.githubusercontent.com/20143765/73411959-7c48ad00-434a-11ea-9da0-dd2cb3ddc16d.png)
 
+
+---
+## 2020.01.31(1개)
+* [The Top 50 100+ Developer Tools 2019](https://stackshare.io/posts/top-developer-tools-2019?fbclid=IwAR0rK_brgT-adFNcTB0RJy9_bbf8JjPV-tcLhXMfMv4GNNEPwvLScgsZ1_0#languages)
+
+
+## 1월 블로그 총 본개수: 16개
