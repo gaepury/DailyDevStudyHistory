@@ -17,7 +17,7 @@
         2. Git을 이용한 배포 버전 관리
         3. 변경 사항 운영 반영 자동화
         4. 자가 치유 및 이상 탐지
-* [ving Deep Into Kubernetes Networking: Docker와 k8s 네트워크 분석](https://woohhan.github.io/study/k8s_networking_deep_diving/)
+* [Diving Deep Into Kubernetes Networking: Docker와 k8s 네트워크 분석](https://woohhan.github.io/study/k8s_networking_deep_diving/)
     * 한번 더 읽을필요가있다
 * [가난한 스타트업의 WebRTC 백엔드 비용절감위한 고군분투기](https://blog.remotemonster.com/%EB%9D%BC%EC%9D%B4%ED%8A%B8%EC%84%B8%EC%9D%BC%EC%97%90-%EA%BE%B8%EC%97%AD%EA%BE%B8%EC%97%AD-%EC%98%A4%ED%86%A0-%EC%8A%A4%EC%BC%80%EC%9D%BC%EB%A7%81-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0-c31f467415d6)
     * aws 라이트세일
