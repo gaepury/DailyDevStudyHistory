@@ -56,3 +56,21 @@
     7. Spring AOP 가 제공하는 프록시 기반 방식은 런타임 위빙 (RTW) 이라는 방식으로 프로그램 구동중에 위빙이 일어난다. 반면 AspectJ 는 컴파일 단계 또는 로드타임에 코드를 삽입하여(위빙) RTW 보다 성능면에서 우세하다. (CTW : 컴파일 타임 위빙, LTW : 로드 타임 위빙). 또한 AspectJ 는 기본 Spring AOP 보다 보다 다양한 포인트컷을 지원한다.
     8. 일반적인 경우 Spring AOP 에서 지원하는 방식으로 요구사항들이 충분히 해결되는 경우가 많고, 성능 또한 @AspectJ 갯수에 따라 달라지는데 일반적인 경우에서는 크게 체감하기 힘들다는 평이 있다.
     9. AspectJ 를 사용하기 위해서는 AJC 등 별도의 컴파일러 설정 등 추가 설정이 필요한데, Spring AOP 는 그렇지 않다.
+
+--- 
+## 2020.02.19(1개)
+* [도커 네트워크 요약 (Docker Networking)](https://jonnung.dev/docker/2020/02/16/docker_network/)
+    * none
+        * 네트워크를 사용하지 않습니다. 따라서 컨테이너는 외부에서 접근할 수 없는 상태가 됩니다. --net=none 인자를 통해 None 네트워크 컨테이너를 생성할 수 있습니다.
+    * host
+        * 호스트의 네트워크 네임 스페이스를 그대로 공유합니다. 따라서 컨테이너와 호스트 사이의 네트워크에 대한 Isolation이 제공되지 않습니다
+    * bridge
+        * 리눅스 브릿지는 소프트웨어로 구현된 스위치
+        * docker bridge
+           * ![image](https://user-images.githubusercontent.com/20143765/74805184-be4f8800-5325-11ea-9fd9-b338973d4708.png)
+        * Docker는 설치시 자동으로 docker0 브릿지를 생성하고 브릿지 네트워크로 실행된 컨테이너를 이 브릿지에 연결
+        * 컨테이너는 Linux Namespace 기술을 이용해 각자 격리된 네트워크 공간을 할당받게 된다. 그리고 위에서 언급한 대로 172.17.0.0/16 대역의 IP를 순차적으로 할당 받는다. 이 IP는 컨테이너가 재시작할 때마다 변경될 수 있다. 컨테이너는 외부와 통신하기 위해 2개의 네트워크 인터페이스를 함께 생성한다. 하나는 컨테이너 내부 Namespace에 할당되는eth0 이름의 인터페이스이고, 나머지 하나는 호스트 네트워크 브릿지 docker0에 바인딩 되는 vethXXXXXXX이름 형식의 veth 인터페이스다. (“veth”는 “virtual eth”라는 의미)
+컨테이너의 eth0인터페이스와 호스트의 veth 인터페이스는 서로 연결되어 있다. 결국 docker0 브리지는 각 veth인터페이스와 연결돼 호스트의 eth0 인터페이스와 이어주는 역할을 한다. 그리고 컨테이너의 eth0인터페이브스는 호스트의 veth인터페이스를 통해 외부와 통신할 수 있게 되는 것이다.
+    * 참고
+        * https://jonnung.dev/docker/2020/02/16/docker_network/
+        * https://woohhan.github.io/study/k8s_networking_deep_diving/
