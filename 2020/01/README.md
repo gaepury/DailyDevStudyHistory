@@ -25,7 +25,7 @@
 * [빽 투더 기본기 [OS 6편]. 메모리 관리 1](https://dailyheumsi.tistory.com/137?category=855210)
     * 페이지 테이블은 메인 메모리에 상주, 논리주소는 메모리 내 페이지 테이블을 거쳐, 원래 목적 메모리 주소에 도달하게 되는, 즉 2번 메모리를 접근하여 명령어를 수행
 * [빽 투더 기본기 [OS 7편]. 메모리 관리 2](https://dailyheumsi.tistory.com/138?category=855210)
-    * 메모리에 있는 페이지 테이블과 다르게, 캐시 메모리(하드웨어)에 별도로 (페이지 넘버 - 프레임 넘버)에 대한 매핑 정보를 담고 있는 테이블
+    * TLB: 메모리에 있는 페이지 테이블과 다르게, 캐시 메모리(하드웨어)에 별도로 (페이지 넘버 - 프레임 넘버)에 대한 매핑 정보를 담고 있는 테이블
     * 페이징 테이블 접근에 의한 메모리 2번 접근 이슈 개선
 * [빽 투더 기본기 [OS 8편]. 가상 메모리 관리](https://dailyheumsi.tistory.com/139?category=855210)
 * [http-decision-diagram](https://github.com/for-GET/http-decision-diagram/blob/master/doc/README_request.md#allowed_methods-var)
