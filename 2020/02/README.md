@@ -74,3 +74,185 @@
     * 참고
         * https://jonnung.dev/docker/2020/02/16/docker_network/
         * https://woohhan.github.io/study/k8s_networking_deep_diving/
+
+---
+## 2020.02.29(20개)
+* [Spring Batch의 멱등성 유지하기](https://jojoldu.tistory.com/451)
+    * LocalDate.now()같은게 코드내의 담겨있으면 재현하기 힘듬. 날짜를 JobParameter로 넘기자
+* [HTTP/3: 과거, 현재 그리고 미래](https://blog.cloudflare.com/ko/http3-the-past-present-and-future-ko/)
+    * HTTP/1.1
+        * 단점
+            * TCP + TLS 핸드쉐이크
+                * ![image](https://user-images.githubusercontent.com/20143765/75607773-db623300-5b3d-11ea-9333-1e76aa80758e.png)
+            * 슬로우 스타트
+        * 킵 얼라이브로로도 하나씩 순서대로 보내야 하므로 각 연결에서는 한번에 하나의 요청/응답 교환만을 처리하므로 비효율적
+    * HTTP/2
+        * 스트림
+            * 동일한 TCP 연결에 복수의 HTTP 응답/요청 교환을 동시 다중 송신할 수 있도록 하는 추상 개념
+                *  모든 응답과 요청은 패킷 손실에 대해서 하나의 요청에만 관계된 것이라도 동등하게 같은 영향을 받습니다(네트워크 혼잡 상황). 이것은 HTTP/2 계층이 서로 다른 HTTP 응답/요청 교환을 별개의 스트림으로 분리 하였지만 TCP는 그러한 추상화에 대해 알지 못하므로 특별한 의미가 없는 바이트 열로만 보기 때문입니다.
+    * HTTP/3
+        *  QUIC 스트림은 동일 QUIC 연결을 공유 하므로 새 스트림을 만들 때 추가적인 핸드쉐이크나 슬로우 스타트가 필요하지 않습니다.
+        * QUIC 연결
+            * ![image](https://user-images.githubusercontent.com/20143765/75607782-e2894100-5b3d-11ea-9e38-bb35db7a639e.png)
+            * HTTP의 첫 요청에 필요한 QUIC 연결을 새로 만들 때에도 데이터 전송 시작까지 걸리는 지연 시간은 TCP 상의 TLS보다 작습니다.
+        * HTTP/2와 다른 헤더 압축기법
+            * HPACK이라고 하는 HTTP/2의 헤더 압축 기법
+* [LINE 인프라 플랫폼의 뒷이야기 – 서비스 확장성을 확보하며 운영 비용 줄이기](https://engineering.linecorp.com/ko/blog/challenges-and-solutions-of-line-infra-scaleout/)
+* [Spring Batch 간단 정리](https://cheese10yun.github.io/spring-batch-basic/#undefined)
+    * 청크 지향프러그래밍의 이점은 1000개 개의 데이터에 대해 배치 로직을 실행한다고 가정했을 때 청크로 나누지 않았을 때는 하나만 실패해도 다른 성공한 999개의 데이터가 롤백
+    * 재시도 템플릿
+        * RetryTemplate
+* [캐시의 개념과 장점](https://feel5ny.github.io/2019/09/30/HTTP_007-1/#topology)
+* [캐시의 원리와 제어방법](https://feel5ny.github.io/2019/10/05/HTTP_007-2/)
+    * 캐시 재검사 시 가장 유용한 2가지 조건부 요청 헤더
+        * If-Modified-Since: 날짜 재검사
+        * If-None-Match: 엔터티 태그(ETag) 재검사
+    * 언제 엔터티 태그를 사용하고 언제 Last-Modified 일시를 사용하는가
+        * HTTP/1.1 클라는 만약 서버가 엔터티 태그를 반환했다면, 반드시 엔터티 태그 검사기를 사용해야 한다.
+        * Last-Modified 값만을 반환했다면 클라는 If-Modified-Since 검사를 사용할 수 있다.
+        * 만약 HTTP/1.1 캐시나 서버가 If-Modified-Since와 엔터티 태그, 조건부 헤더를 모두 받았다면, 요청의 모든 조건부 헤더 필드의 조건에 부합해야 200을 반환해야 한다.
+* [Google Code review Guide](https://wiki.lucashan.space/code-review/01.intro.html#_1-code%EB%A5%BC-%EB%A6%AC%EB%B7%B0%ED%95%98%EB%8A%94-%EC%82%AC%EB%9E%8C%EB%93%A4%EC%9D%80-%EC%96%B4%EB%96%A4%EA%B2%83%EC%9D%84-%EC%A4%91%EC%A0%90%EC%A0%81%EC%9C%BC%EB%A1%9C-%EC%82%B4%ED%8E%B4%EC%95%BC%ED%95%98%EB%8A%94%EA%B0%80)
+    * Code를 리뷰하는 사람들은 어떤것을 중점적으로 살펴야하는가
+        * 디자인(Design): 코드가 잘 설계되어 있고 시스템에 적합한가?
+        * 기능성(Functionality): 코드가 작성자의 의도대로 동작하는가?
+        * 복잡성(Complexity): 코드가 더 간단히 작성될 수 있는가? 다른 개발자가 코드를 쉽게 이해하고 사용 할 수 있는가?
+        * 테스트(Tests): 코드에 정확하고 잘 설계된 자동 테스트가 있는가?
+        * 이름짓기(Naming): 개발자가 변수, 클래스, 메소드(함수)등에 명확한 이름을 선택했는가?
+        * 주석(Comments): 주석이 명확하고 유용한가?
+        * 스타일(Style): 코드가 스타일 가이드를 따르는가?
+            * 위의 링크는 google 스타일 가이드로 연결되지만, 각 조직의 스타일 가이드를 뜻한다고 봐도 무방합니다.
+        * 문서화(Documentation): 개발자가 관련문서를 작성하거나 적절하게 업데이트 하였는가?
+* [문제를 해결할 때 사고가 중요한 이유](https://engineering.linecorp.com/ko/blog/think-differently-to-solve-problems/)
+* [서버 사이드 테스트 자동화 여정 – 1. 테스트 자동화를 시작한 계기와 그 첫 발걸음](https://engineering.linecorp.com/ko/blog/server-side-test-automation-journey-1/)
+    * Pr hookd으로 별걸 다하네..
+        * Unit test task
+        * Configuration verification task
+        * Infrastructure(연계모듈) check task
+        * Performance task
+* [서버 사이드 테스트 자동화 여정 – 2. 통합 테스트 수준의 회귀 테스트 환경 구축 및 Docker 활용](https://engineering.linecorp.com/ko/blog/server-side-test-automation-journey-2/)
+    * 통합테스트
+        * pytest
+    * 통합테스트 보고서
+        * pytest-html
+    * 통합 테스트 보고서 생성 시간 단축하기
+    * Docker를 이용하여 통합 테스트 환경 개선
+    * 외부 시스템 의존 로직도 테스트할 수 있게 만들기 - 모의 서버 개발
+        * ![image](https://user-images.githubusercontent.com/20143765/75607776-ddc48d00-5b3d-11ea-9571-083166af05db.png)
+* [서버 사이드 테스트 자동화 여정 – 3. Docker를 활용한 통합 테스트 환경 개선](https://engineering.linecorp.com/ko/blog/server-side-test-automation-journey-3/);
+    * 로깅
+        * 디버깅 내용도 저장(Kibana 6.7의 Logs라는 기능을 이용하여 디버깅 내용도 보기에 적합)
+    * 테스트 병렬화로 테스트 수행 시간 단축
+    * 통합 테스트 실행 환경 준비 시간 단축하기
+        *  Jenkins 라벨을 사용하면 잡이 실행될 노드를 지정
+    * 최종 아키텍처
+        * ![image](https://user-images.githubusercontent.com/20143765/75607785-e7e68b80-5b3d-11ea-8f7f-0546d4f93664.png)
+* [[MSA] Spring Cloud Ribbon - 개념과 실습편](https://sabarada.tistory.com/54?category=822738)
+    * Ribbon의 구성요소로는 Rule, Ping, ServerList
+    * ServerList - 로드 밸런싱 대상 서버 목록
+        * configuration을 통해 static 하게 설정 가능
+        * eureka 등을 기반으로 dynamic하게 설정 가능
+    * Rule - 요청을 보낼 서버를 선택하는 논리
+        * Round Robbin - 한 서버씩 돌아가며 전달
+        * Available Filtering - 에러가 많은 서버 제외
+        * weighted Response Time - 서버별 응답 시간에 따라 확률 조절
+    * Ping - 서버list가 살아있는지 체크하는논리
+        * static, dynamic 모두 가능
+    * Retry
+    * RestTemplate에 적용 가능
+* [[MSA] Spring Cloud Zuul 1.x - 개념편](https://sabarada.tistory.com/55?category=822738)
+    * 기본 Type 필터에는 PRE, ROUTING, POST, ERROR
+    * Filter들은 Chaining
+    * Filter 키워드
+        * Type : filter가 적용되는 시점(PRE, ROUTING, POST, ERROR).
+        * Execution Order : fileter가 적용되는 시점(Type) 안에서의 순서
+        * Criteria : Filter가 실행되는 조건
+        * Action : Filter가 실행될 때 수행되는 실질적인 로직
+* [[MSA] Spring Cloud Zuul 1.x - 실습편](https://sabarada.tistory.com/56?category=822738)
+* [기술 뉴스 #144 : 20-02-15](https://blog.outsider.ne.kr/1477?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+rss_outsider_dev+%28Outsider%27s+Dev+Story%29);
+     * Fe news
+     * Grafana의 어노테이션 API를 이용해서 슬랙에 메시지를 남기면 해당 시점에 어노테이션을 Grafana 대시보드 상에 표시할 수 있는 슬랙봇 memo를 만들어서 공개했다.
+* [Jackson 라이브러리 기본기능 정리 - json 직렬화와 역직렬화](https://pjh3749.tistory.com/281)
+     * @JsonAnyGetter
+         * 맵 필드를 풀어줌
+     * @JsonValue
+         * enum에서 getName 메서드에 @JsonValue를 넣어주어 이름을 통해 직렬화
+     * 커스텀 직렬화, 역직렬화
+         * @JsonSerialize, @JsonDeserialize
+     * 역직렬화
+         * @JsonCreator
+     * @JacksonInject
+         * @JacksonInject 는 json 데이터가 아닌 곳에서 값을 주입할 때 사용
+     * @JsonAnySetter
+         * 역직렬화 과정에 map에 담을때 유용
+     * @JsonAlias
+         * @JsonAlias는 역직렬화를 할 때 한 개 이상의 이름을 한 객체 필드에 매핑되게 설정
+     * @JsonAutoDetect
+         * @JsonAutoDetect를 이용하여 필드의 직렬화 대상을 지정
+         * ```@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)```
+* [타다 웹 프론트엔드의 모든 것](http://engineering.vcnc.co.kr/2020/01/introduce-tada-web-frontend/)
+* [Jackson custom serializer, deserializer 적용했던 사례 공유, LocalDateTime JSON 파싱하는 방법](https://jeong-pro.tistory.com/202);
+    * custom serializer(StdSerializer 상속)
+        * ```java 
+            package com.tistory.jeongpro.util; 
+            import java.io.IOException; 
+            import java.time.LocalDateTime; 
+            import java.time.format.DateTimeFormatter; 
+            import com.fasterxml.jackson.core.JsonGenerator; 
+            import com.fasterxml.jackson.databind.SerializerProvider; 
+            import com.fasterxml.jackson.databind.ser.std.StdSerializer; 
+
+            public class LocalDateTimeSerializer extends StdSerializer { 
+               protected LocalDateTimeSerializer(Class<LocalDateTime> t) { super(t); } 
+               public LocalDateTimeSerializer() { this(null); } /** * */ 
+               private static final long serialVersionUID = -1636482041003741854L; 
+               @Override public void serialize(LocalDateTime value, JsonGenerator gen, SerializerProvider provider) throws IOException {
+                  gen.writeString(value.format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS"))); 
+               } 
+            }
+         ```
+    * custom deserializer(StdDeserializer 상속)
+        * ``` java
+            package com.tistory.jeongpro.util; 
+            import java.io.IOException; 
+            import java.time.LocalDateTime;
+            import java.time.format.DateTimeFormatter; 
+            import com.fasterxml.jackson.core.JsonParser;
+            import com.fasterxml.jackson.core.JsonProcessingException; 
+            import com.fasterxml.jackson.databind.DeserializationContext; 
+            import com.fasterxml.jackson.databind.JsonNode;
+            import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
+            import com.tistory.jeongpro.domain.User; 
+   
+            public class UserDeserializer extends StdDeserializer { 
+               public UserDeserializer() { this(null); } 
+               protected UserDeserializer(Class<?> vc) { super(vc); } 
+               private static final long serialVersionUID = -7683857719562990174L;
+
+               @Override 
+               public User deserialize(JsonParser p, DeserializationContext ctxt) throws IOException, JsonProcessingException {   
+                  JsonNode jsonNode = p.getCodec().readTree(p); 
+                  long id = jsonNode.get("id").asLong(); 
+                  String createdString = jsonNode.get("created").asText(); 
+                  LocalDateTime created = LocalDateTime.parse(createdString, DateTimeFormatter.ISO_LOCAL_DATE_TIME);
+                  LocalDateTime modifiedCreated = LocalDateTime.of(created.getYear(), created.getMonth(), created.getDayOfMonth(), created.getHour(), created.getMinute()); 
+                  return new User(id, modifiedCreated); 
+               } 
+            }
+         ```
+    * Custom serializer, deserializer 모듈
+        * ```java
+            SimpleModule simpleModule = new SimpleModule(); 
+            simpleModule.addSerializer(LocalDateTime.class, new LocalDateTimeSerializer());          
+            simpleModule.addDeserializer(User.class, new UserDeserializer()); 
+            objectMapper.registerModule(simpleModule);
+          ```
+* [[MSA] Spring Cloud Sleuth와 Zipkin을 이용한 분산 시스템 Tracing_1](https://sabarada.tistory.com/43)
+    * [demo-order,5de772c409f727e933fc0d958149413e,33fc0d958149413e,false
+    * demo-order[project 이름]
+    * 5de772c409f727e933fc0d958149413e[TraceId]
+        * transaction을 추적하기 위한 마이크로서비스간의 공통된 UUID
+    * 33fc0d958149413e[SpanId]
+        * 마이크로서비스에서 부여되는 UUID
+    * false[exportable]
+        * exportable은 zipkin이나 다른 곳으로 결과값을 전송하는지 유무
+* [[MSA] Spring Cloud Sleuth와 Zipkin을 이용한 분산 시스템 Tracing_2](https://sabarada.tistory.com/44)
