@@ -40,7 +40,7 @@
         * ![image](https://user-images.githubusercontent.com/20143765/76483108-84bbf980-6459-11ea-81b7-cfed776d7e9d.png)
     * Spring Boot의 기본 오류 처리 - AbstractErrorController와 ErrorAttributes
         * BasicErrorController의 getErrorAttributes 메서드를 깊게 봐보자
-            * 상위클래스인 AbstractErrorController에 구현
+            * getErrorAttributes메서드는 상위클래스인 AbstractErrorController에 구현
                 * ![image](https://user-images.githubusercontent.com/20143765/76483115-87b6ea00-6459-11ea-80be-6360afe05364.png)
                 * ErrorAttributes 인터페이스의 getErrorAttributes를 호출(위임자 패턴)
                 * 별도로 ErrorAttributes를 등록하지 않았다면 Spring Boot는 DefaultErrorAttributes를 사용
