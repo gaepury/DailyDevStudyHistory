@@ -31,3 +31,40 @@
       * 바인딩 변수를 사용하여 instanceof 연산자를 extend
           * ![image](https://user-images.githubusercontent.com/20143765/76228341-efa3df80-6263-11ea-89a9-1038554d20e7.png)
 
+
+## 2020.03.12
+* [(Spring Boot)오류 처리에 대해](https://supawer0728.github.io/2019/04/04/spring-error-handling/)
+    * Spring Boot의 기본 오류 처리 - BasicErrorController
+        * AbstractErrorController를 상속
+        * BasicErrorController에서는 HTML 요청, 그 외의 요청을 나누어서 처리할 핸들러를 등록하고 getErrorAttributes를 통해 응답을 위한 모델을 생성
+        * ![image](https://user-images.githubusercontent.com/20143765/76483108-84bbf980-6459-11ea-81b7-cfed776d7e9d.png)
+    * Spring Boot의 기본 오류 처리 - AbstractErrorController와 ErrorAttributes
+        * BasicErrorController의 getErrorAttributes 메서드를 깊게 봐보자
+            * 상위클래스인 AbstractErrorController에 구현
+                * ![image](https://user-images.githubusercontent.com/20143765/76483115-87b6ea00-6459-11ea-80be-6360afe05364.png)
+                * ErrorAttributes 인터페이스의 getErrorAttributes를 호출(위임자 패턴)
+                * 별도로 ErrorAttributes를 등록하지 않았다면 Spring Boot는 DefaultErrorAttributes를 사용
+                * DefaultErrorAttributes
+                    * ![image](https://user-images.githubusercontent.com/20143765/76483119-8be30780-6459-11ea-9534-aba8d9a0f4d7.png)
+                        * timestamp, status, detail, path 매핑
+                    * ErrorAttributes에서 가져온 모델로 응답을 생성
+                    * ![image](https://user-images.githubusercontent.com/20143765/76483125-8f768e80-6459-11ea-8b9b-d44ab311cba9.png)
+    * 확장 포인트 - ErrorAttributes
+        * ![image](https://user-images.githubusercontent.com/20143765/76483133-92717f00-6459-11ea-9731-b1139ccb3022.png)
+    * HTML View 연계 - 404.html, 4xx.html
+        * 기본 경로 하위에 /error/{응답코드}로 view의 이름을 작성하는 경우 ErrorController에서 응답 코드에 맞게 해당 view로 응답을 내려준다.
+    * View를 가져오는 방법 - TemplateAvailabilityProvider
+    * 확장 포인트 - BasicErrorController
+        * 로그 추가하기
+        * ![image](https://user-images.githubusercontent.com/20143765/76483141-96050600-6459-11ea-93ef-7188735bc0b0.png)
+    * ErrorController에 대한 추가 설명
+        * flow
+            * 1. 서블릿 컨테이너(ex: 톰캣)에서 등록된 서블릿에서 요청을 처리하다가
+            * 2. 오류가 발생했는데
+            * 3. 해당 서블릿에서 처리하지 못하고
+            * 4. 서블릿 컨테이너까지 오류가 전파되었을 때, 서블릿 컨테이너가 오류를 처리하기 위해 특정 경로(server.error.path)로 해당 요청처리를 위임할 때 사용된다.
+            * ![image](https://user-images.githubusercontent.com/20143765/76483147-98fff680-6459-11ea-90f9-2c9ac5d846c7.png)
+                * 앞의 추가 설명에서 봤듯이 ErrorController가 동작하는 것은 요청을 처리해야할 Servlet에서 오류가 발생했으나 해당 Servlet에서 오류를 처리하지 않아서 Servlet Container까지 오류가 전파되었을 때(ServletException으로 래핑된다), Servlet Container가 ErrorController를 호출한다. 
+    * spring-mvc Exception 기반으로 오류 처리
+        * 위와 같은 과정을 @ExceptionHandler + @ControllerAdvice 로 처리가능
+        * ![image](https://user-images.githubusercontent.com/20143765/76483157-9c937d80-6459-11ea-91d2-40797109f39d.png)
