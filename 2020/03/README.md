@@ -32,7 +32,7 @@
           * ![image](https://user-images.githubusercontent.com/20143765/76228341-efa3df80-6263-11ea-89a9-1038554d20e7.png)
 
 
-## 2020.03.12
+## 2020.03.12(2개)
 * [(Spring Boot)오류 처리에 대해](https://supawer0728.github.io/2019/04/04/spring-error-handling/)
     * Spring Boot의 기본 오류 처리 - BasicErrorController
         * AbstractErrorController를 상속
@@ -68,3 +68,16 @@
     * spring-mvc Exception 기반으로 오류 처리
         * 위와 같은 과정을 @ExceptionHandler + @ControllerAdvice 로 처리가능
         * ![image](https://user-images.githubusercontent.com/20143765/76483157-9c937d80-6459-11ea-91d2-40797109f39d.png)
+* [Node CPU 점유율 최적화 경험기](https://hyperconnect.github.io/2020/02/11/Node-cpu-debug.html)
+  * Node Profiling
+      * node --prof index.js
+  * 벤치마킹
+      *  ab -k -c 50 -n 10000 "http://localhost:3000"
+  * Visualize CPU Usage
+      * Sunburst Graph나 Flame Graph를 주로 사용
+          * ![image](https://user-images.githubusercontent.com/20143765/76538324-7b1aac00-64c2-11ea-965b-72e232c8c30c.png)
+      * flamebearer 사용하여 프로파일링 로그를 Flame Graph로 그리기
+          * $ npm install -g flamebearer # flamebearer 설치
+          * $ node --prof-process --preprocess -j isolate*.log | flamebearer # 프로파일링 로그로 Flame graph 생성
+  * CPU 점유율 개선하기
+      * request마다 실행되던 i18next 클래스를 initialize 하는 함수를 singletone기반으로 변경
