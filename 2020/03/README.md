@@ -131,6 +131,22 @@
          * Apollo Graph Manager
      * 정적페이지 만들기 - HTML의 귀환
          * Jamstack
+     * Cloud Run - 가장 쉬운 컨테이너 배포 방법
+       * Cloud Run 배포하기
+           * Cloud Source Repository
+               * Git 저장소인데 뭔가 구글스러운(안 이쁜) UI
+               * 메인 저장소가 아니라 배포를 위한 저장소로 사용
+                 * origin - 기존 git 원격 저장소
+                 * google - cloud source repository
+       * Google Cloud Build
+           * Cloud Source Repository에 소스가 푸시되면 트리거 발생
+           * Dockerfile이 있으면 모든 게 자동화 - Commit ID로 도커 이미지를 빌드하고 Container Registry에 이미지를 저장
+       * Cloud Run
+           * 애플리케이션을 만들 때 Container Regsitry에 등록된 이미지를 선택
+           * 커스텀 도메인 연결은 도메인 관리자에서 CNAME만 추가하면 됨
+           * Google Cloud SQL(MySQL) 연동 가능
+           * HTTPS 기본 지원
+           * 사용한 만큼만 비용 발생
      * Kubernetes - EKS 도입
      * Terraform
 
