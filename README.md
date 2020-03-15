@@ -1,4 +1,4 @@
-# DevBlogReadHistory
+# DailyDevStudyHistory
 일단위로 Dev Blog 및 유튜브 본것 History 남기기 위한 레퍼지토리
 
 ### 년도 별 Read History
