@@ -81,3 +81,37 @@
           * $ node --prof-process --preprocess -j isolate*.log | flamebearer # 프로파일링 로그로 Flame graph 생성
   * CPU 점유율 개선하기
       * request마다 실행되던 i18next 클래스를 initialize 하는 함수를 singletone기반으로 변경
+
+---
+
+## 2020.03.13(1개)
+* [emotion을 활용한 크몽 프론트엔드 스타일링 시스템](https://brunch.co.kr/@kmongdev/17?fbclid=IwAR2tG_iLC1G4xA5dIf0FG_9KMhOfD9Lm-UBFsbzr5wWH6ktLd_91ysMlS44)
+    * Sass
+        * 중첩, 상위 선택자 참조등 편리한 문법, 변수, 함수, 상속등의 기능을 이용
+    * CSS Module
+        * 컴포넌트 단위로 캡슐화 
+    * CSS관리의 어려움
+        * Global Namespace
+        * Dependencies
+        * Dead Code Elimination
+        * Minification
+        * Sharing Constants
+        * Non-deterministic Resolution
+        * Isolation
+    * CSS IN JS
+        * emotion
+            * 특별한 기능이 없는 UI에 클래스 이름을 지어야하는 경우 emotion의 인라인 스타일로 해결 및 컴포넌트에 적용된 스타일 코드를 찾아다닐필요 없이 바로 확인 가능
+        * styled componets
+        
+## 2020.03.13(2개)
+ * [REST API를 버리고 Graph QL를 선택한 이유? (Why GraphQL is the future)](https://www.youtube.com/watch?v=1imQ1_aOQvU)
+    * Rest API보다 GraphQL 훨빠름. 코드도 훨 예쁨
+    * 리액트와 호환성이 쩔음, 라이브러리, 커뮤니티 지원도 있고 query만 만들면 됨
+    * 리덕스 대체 가능 with GraphQL + Apool로 조합
+* [웹 어셈블리는 자바스크립트의 무덤일까?](https://www.youtube.com/watch?v=KjgDxBLv0bM)
+    * Go , rust등으로 웹어셈블리로 컴파일, 웹어셈블리(바이너리 파일)을 브라우저에서 읽을수 있음
+    * 
+    * 웹어셈블리와 자바스크립트는 공존 가능
+        * 자바스크립트는 화려한 웹, 인터렉티브
+        * 웹어셈블리는 이미지 프로세싱등 리얼타임 작업
+        * ![image](https://user-images.githubusercontent.com/20143765/76697795-02446b80-66df-11ea-967e-b00bf109c84f.png)
