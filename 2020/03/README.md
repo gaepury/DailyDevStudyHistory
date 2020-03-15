@@ -110,8 +110,7 @@
     * 리덕스 대체 가능 with GraphQL + Apool로 조합
 * [웹 어셈블리는 자바스크립트의 무덤일까?](https://www.youtube.com/watch?v=KjgDxBLv0bM)
     * Go , rust등으로 웹어셈블리로 컴파일, 웹어셈블리(바이너리 파일)을 브라우저에서 읽을수 있음
-    * 
+    * ![image](https://user-images.githubusercontent.com/20143765/76697795-02446b80-66df-11ea-967e-b00bf109c84f.png)
     * 웹어셈블리와 자바스크립트는 공존 가능
         * 자바스크립트는 화려한 웹, 인터렉티브
         * 웹어셈블리는 이미지 프로세싱등 리얼타임 작업
-        * ![image](https://user-images.githubusercontent.com/20143765/76697795-02446b80-66df-11ea-967e-b00bf109c84f.png)
