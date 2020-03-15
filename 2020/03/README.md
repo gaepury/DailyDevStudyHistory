@@ -114,3 +114,23 @@
     * 웹어셈블리와 자바스크립트는 공존 가능
         * 자바스크립트는 화려한 웹, 인터렉티브
         * 웹어셈블리는 이미지 프로세싱등 리얼타임 작업
+        * [알아두면 유익한 2019 개발이야기](https://subicura.com/2020/01/07/2019-dev-summary.html?fbclid=IwAR06K4AvlHIX3nMh1D02Egqy_jVT6N7zgPteBhhJUfnrB0XtN7G9FHtiETA)
+            * 타입스크립트
+            * ESLint+Prettier
+            * Jest & Enzyme로 React 테스트하기(스냅샷 테스팅)
+            * Styled Component
+            * Atomic Design
+                * ![image](https://user-images.githubusercontent.com/20143765/76706678-bcae8f80-672c-11ea-91bb-7fd48d2e11c3.png)
+            * Storybook - 공통 컴포넌트 개발환경
+            * Ant Design - 어드민을 위한 React 프레임워크
+            * Next.js
+            * GraphQL(feat. hasura) 도입
+            * Apollo - 최고의 GraphQL 라이브러리
+                * Apollo Client
+                * Apollo Server
+                * Apollo Graph Manager
+            * 정적페이지 만들기 - HTML의 귀환
+                * Jamstack
+            * Kubernetes - EKS 도입
+            * Terraform
+
