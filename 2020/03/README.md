@@ -31,6 +31,7 @@
       * 바인딩 변수를 사용하여 instanceof 연산자를 extend
           * ![image](https://user-images.githubusercontent.com/20143765/76228341-efa3df80-6263-11ea-89a9-1038554d20e7.png)
 
+---
 
 ## 2020.03.12(2개)
 * [(Spring Boot)오류 처리에 대해](https://supawer0728.github.io/2019/04/04/spring-error-handling/)
@@ -103,6 +104,8 @@
             * 특별한 기능이 없는 UI에 클래스 이름을 지어야하는 경우 emotion의 인라인 스타일로 해결 및 컴포넌트에 적용된 스타일 코드를 찾아다닐필요 없이 바로 확인 가능
         * styled componets
         
+---
+
 ## 2020.03.13(2개)
  * [REST API를 버리고 Graph QL를 선택한 이유? (Why GraphQL is the future)](https://www.youtube.com/watch?v=1imQ1_aOQvU)
     * Rest API보다 GraphQL 훨빠름. 코드도 훨 예쁨
@@ -150,3 +153,28 @@
      * Kubernetes - EKS 도입
      * Terraform
 
+--- 
+## 2020.03.16(2개)
+ * [넷플릭스 성능 케이스스터디](https://kyu.io/%eb%84%b7%ed%94%8c%eb%a6%ad%ec%8a%a4-%ec%84%b1%eb%8a%a5-%ec%bc%80%ec%9d%b4%ec%8a%a4%ec%8a%a4%ed%84%b0%eb%94%94/#utm_source=rss&utm_medium=rss&utm_campaign=%25eb%2584%25b7%25ed%2594%258c%25eb%25a6%25ad%25ec%258a%25a4-%25ec%2584%25b1%25eb%258a%25a5-%25ec%25bc%2580%25ec%259d%25b4%25ec%258a%25a4%25ec%258a%25a4%25ed%2584%25b0%25eb%2594%2594)
+     * 자바스크립트를 더 적게 만들어 Time-to-Interactive 줄이기(React 제거)
+         * 첫 입력 지연(First Input Delay)이 빠르다
+             * 첫 입력 지연이란 사용자가 첫 동작을 시작한 순간부터 브라우저가 그 동작에 응답한 순간까지를 뜻한다.
+     * 이어지는 페이지에서 사용되는 React 미리 가져오기(Prefetch)
+     * 결론
+         * 리소르를 미리 가져오고 홈페이지의 클라이언트 코드를 최적화하여, 가입 과정의 Time-to-Interactive 매트릭스를 크게 개선 할 수 있었다. 브라우저에 포함된 API(link)와 XHR을 이용해 곧 방문할 페이지들을 미리 가져옴으로써, Time-to-Interactive를 30% 감소 시킬 수 있었다.
+     * 추가 성능 측정 도구들
+         * https://developers.google.com/web/fundamentals/performance/speed-tools/
+ * [(번역) 시작해요, 런타임 성능 분석!](https://yobi.navercorp.com/common_share/posts/1252)
+     * Performance 탭
+         * FPS, CPU, NET
+         * Network
+         * Frames
+         * interactions
+         * Timing
+             * FP(First Paint)
+             * FCP(First Contentful Paint)
+             * FMP(First Meaningful Paint)
+             * DCL(DOMContentLoaded Event)
+             * LCP(Largest Contentful Paint)
+             * L(Onload Event)
+         * Main
