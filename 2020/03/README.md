@@ -174,7 +174,13 @@
              * FP(First Paint)
              * FCP(First Contentful Paint)
              * FMP(First Meaningful Paint)
-             * DCL(DOMContentLoaded Event)
-             * LCP(Largest Contentful Paint)
-             * L(Onload Event)
+             - DCL(DOMContentLoaded Event)
+                - 렌더링의 과정중에 우리가 javascript등으로 DOM 컨트롤을 시작할수있는 부분은 DCL부터 
+                - HTML과 CSS에 대한 파싱이 끝나는 시점
+                - 렌더트리를 구축할 준비가 된 (DOM과 CSSOM이 완료된) 상황
+                - 제이쿼리 기준 - $(document).ready(…) 시점
+             - LCP(Largest Contentful Paint)
+             - L(Onload Event)
+                - HTML 상에 필요한 모든 리소스가 로드된 시점
+                - 제이쿼리 기준 - $(window).load(…)시점
          * Main
