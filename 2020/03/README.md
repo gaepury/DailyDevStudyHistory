@@ -259,3 +259,17 @@
                 * 불필요한 태그, 공백, 주석 사용 (최적화 전)
             * 간결한 CSS 선택자 사용
             * 압축(Minify)하여 사용하기
+
+
+## 2020.03.20
+* [Outsider`s 기술 뉴스 #146 : 20-03-15](https://blog.outsider.ne.kr/1479)
+* [Naver] NCC 가이드
+    * L4 Load Balancer와 Ingress
+        * Ingress: L7 Switching 역할, URL기반 라우팅
+    * 서비스 배포 전략
+       * Rolling Update
+       * Progressive 배포
+       * Blue/Green 배포
+    * weight 어노테이션
+        * NCC 클러스터는 같은 Service에 속한 Pod으로 분배되는 트래픽 비율을 weight로 관리할 수 있습니다. NCC 빌드배포 파이프라인에서도 Canary 배포 시 weight 설정을 사용하며, 배포 도중 Pod들에 적절히 weight 어노테이션을 달아줍니다. 그런데 팟이 재시작되거나 auto scaling 등으로 인해 새로 추가되는 경우에는 weight 어노테이션이 없어서 의도치 않은 트래픽이 새 pod으로 유입될 수 있습니다. 이를 막기 위해 모든 팟에 다음과 같은 어노테이션을 달 것을 권장합니다.
+    * canary 사용방법?
