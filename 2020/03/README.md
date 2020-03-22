@@ -305,3 +305,5 @@
             $
             ````
       * shell form 으로 실행해야만 변수 등이 대체(substitution)된다.
+  * 참고
+     * ![image](https://user-images.githubusercontent.com/20143765/77252352-ab1e3800-6c96-11ea-87ce-a890b62a7429.png)
