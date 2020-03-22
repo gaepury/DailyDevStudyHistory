@@ -264,12 +264,44 @@
 ## 2020.03.20
 * [Outsider`s 기술 뉴스 #146 : 20-03-15](https://blog.outsider.ne.kr/1479)
 * [Naver] NCC 가이드
-    * L4 Load Balancer와 Ingress
-        * Ingress: L7 Switching 역할, URL기반 라우팅
-    * 서비스 배포 전략
-       * Rolling Update
-       * Progressive 배포
-       * Blue/Green 배포
-    * weight 어노테이션
-        * NCC 클러스터는 같은 Service에 속한 Pod으로 분배되는 트래픽 비율을 weight로 관리할 수 있습니다. NCC 빌드배포 파이프라인에서도 Canary 배포 시 weight 설정을 사용하며, 배포 도중 Pod들에 적절히 weight 어노테이션을 달아줍니다. 그런데 팟이 재시작되거나 auto scaling 등으로 인해 새로 추가되는 경우에는 weight 어노테이션이 없어서 의도치 않은 트래픽이 새 pod으로 유입될 수 있습니다. 이를 막기 위해 모든 팟에 다음과 같은 어노테이션을 달 것을 권장합니다.
-    * canary 사용방법?
+  * L4 Load Balancer와 Ingress
+      * Ingress: L7 Switching 역할, URL기반 라우팅
+  * 서비스 배포 전략
+     * Rolling Update
+     * Progressive 배포
+     * Blue/Green 배포
+  * weight 어노테이션
+      * NCC 클러스터는 같은 Service에 속한 Pod으로 분배되는 트래픽 비율을 weight로 관리할 수 있습니다. NCC 빌드배포 파이프라인에서도 Canary 배포 시 weight 설정을 사용하며, 배포 도중 Pod들에 적절히 weight 어노테이션을 달아줍니다. 그런데 팟이 재시작되거나 auto scaling 등으로 인해 새로 추가되는 경우에는 weight 어노테이션이 없어서 의도치 않은 트래픽이 새 pod으로 유입될 수 있습니다. 이를 막기 위해 모든 팟에 다음과 같은 어노테이션을 달 것을 권장합니다.
+  * canary 사용방법?
+
+## 2020.03.22
+* [[Docker] RUN vs CMD vs ENTRYPOINT in Dockerfile](https://blog.leocat.kr/notes/2017/01/08/docker-run-vs-cmd-vs-entrypoint)
+  * RUN
+      * 새로운 레이어에서 명령어를 실행하고, 새로운 이미지를 생성한다. 보통 패키지 설치 등에 사용된다. e.g. apt-get
+  * CMD
+      * default 명령이나 파라미터를 설정한다. docker run 실행 시 실행할 커맨드를 주지 않으면 이 default 명령이 실행된다. 그리고 ENTRYPOINT의 파라미터를 설정할 수도 있다. CMD의 주용도는 컨테이너를 실행할 때 사용할 default를 설정하는 것이다.
+      * 3가지 형태
+          * CMD [“executable”,”param1”,”param2”] (exec form, this is the preferred form)
+          * CMD [“param1”,”param2”] (as default parameters to ENTRYPOINT)
+          * CMD command param1 param2 (shell form)
+      * CMD는 여러번 사용할 수 있지만 가장 마지막에 있는 CMD 딱 1개만 남게 된다. (override)
+  * ENTRYPOINT
+      * 컨테이너를 실행할 수 있게 설정한다.(docker run 실행 시 실행되는 명령이라고 생각해도 좋을 것 같다.)
+      * 2가지 형태
+          * ENTRYPOINT [“executable”, “param1”, “param2”] (exec form, preferred)
+          * ENTRYPOINT command param1 param2 (shell form)
+      * ENTRYPOINT + CMD Example
+          * ```
+            FROM ubuntu
+            ENTRYPOINT ["/bin/echo", "Hello"]
+            CMD ["world"]
+            ```
+          * CMD에서 설정한 default 파라미터가 ENTRYPOINT에서 사용된다. docker run 명령 실행 시 파라미터를 주면 CMD에서 설정한 파라미터는 사용되지 않는다.
+          * ```
+            $ docker run -it --rm <image-name>
+            Hello world
+            $ docker run -it --rm <image-name> ME
+            Hello ME
+            $
+            ````
+      * shell form 으로 실행해야만 변수 등이 대체(substitution)된다.
