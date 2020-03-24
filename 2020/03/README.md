@@ -106,7 +106,7 @@
         
 ---
 
-## 2020.03.13(2개)
+## 2020.03.13(3개)
  * [REST API를 버리고 Graph QL를 선택한 이유? (Why GraphQL is the future)](https://www.youtube.com/watch?v=1imQ1_aOQvU)
     * Rest API보다 GraphQL 훨빠름. 코드도 훨 예쁨
     * 리액트와 호환성이 쩔음, 라이브러리, 커뮤니티 지원도 있고 query만 만들면 됨
@@ -154,7 +154,7 @@
      * Terraform
 
 --- 
-## 2020.03.16(2개)
+## 2020.03.16(3개)
  * [넷플릭스 성능 케이스스터디](https://kyu.io/%eb%84%b7%ed%94%8c%eb%a6%ad%ec%8a%a4-%ec%84%b1%eb%8a%a5-%ec%bc%80%ec%9d%b4%ec%8a%a4%ec%8a%a4%ed%84%b0%eb%94%94/#utm_source=rss&utm_medium=rss&utm_campaign=%25eb%2584%25b7%25ed%2594%258c%25eb%25a6%25ad%25ec%258a%25a4-%25ec%2584%25b1%25eb%258a%25a5-%25ec%25bc%2580%25ec%259d%25b4%25ec%258a%25a4%25ec%258a%25a4%25ed%2584%25b0%25eb%2594%2594)
      * 자바스크립트를 더 적게 만들어 Time-to-Interactive 줄이기(React 제거)
          * 첫 입력 지연(First Input Delay)이 빠르다
@@ -261,7 +261,7 @@
             * 압축(Minify)하여 사용하기
 
 
-## 2020.03.20
+## 2020.03.20(2개)
 * [Outsider`s 기술 뉴스 #146 : 20-03-15](https://blog.outsider.ne.kr/1479)
 * [Naver] NCC 가이드
   * L4 Load Balancer와 Ingress
@@ -274,7 +274,8 @@
       * NCC 클러스터는 같은 Service에 속한 Pod으로 분배되는 트래픽 비율을 weight로 관리할 수 있습니다. NCC 빌드배포 파이프라인에서도 Canary 배포 시 weight 설정을 사용하며, 배포 도중 Pod들에 적절히 weight 어노테이션을 달아줍니다. 그런데 팟이 재시작되거나 auto scaling 등으로 인해 새로 추가되는 경우에는 weight 어노테이션이 없어서 의도치 않은 트래픽이 새 pod으로 유입될 수 있습니다. 이를 막기 위해 모든 팟에 다음과 같은 어노테이션을 달 것을 권장합니다.
   * canary 사용방법?
 
-## 2020.03.22
+--- 
+## 2020.03.22(1개)
 * [[Docker] RUN vs CMD vs ENTRYPOINT in Dockerfile](https://blog.leocat.kr/notes/2017/01/08/docker-run-vs-cmd-vs-entrypoint)
   * RUN
       * 새로운 레이어에서 명령어를 실행하고, 새로운 이미지를 생성한다. 보통 패키지 설치 등에 사용된다. e.g. apt-get
