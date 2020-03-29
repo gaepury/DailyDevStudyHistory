@@ -410,4 +410,13 @@
                  * 여러 가지 수치를 한 번에 볼 수 있는 대시보드 만들기
              * 장애 처리를 개선하는 방법
                  * 작업 사전 공유(매번 강조해도 지나치지 않습니다. 사소한 작업이라도 사전에 공유하면 장애 대응이 훨씬 수월합니다.)
-                           
+* [LINE 메시징 서버가 새해 트래픽을 대비하는 과정](https://engineering.linecorp.com/ko/blog/how-line-messaging-servers-prepare-for-new-year-traffic/);
+    * america를 사용하여 개선
+    * 컨넥션 재활용 => HTTP/2
+    * 점차적인 트래픽증가, 순간적인 트래픽 증가 모두 대응해야됨
+* [HMAC을 이용한 무결성 보장](https://jongmin92.github.io/2019/12/23/Programming/hmac/);
+    * Secret Key: 서버와 클라이언트가 함께 알고 있는 외부로 유출되어서는 안되는 값.
+    * Message: 클라이언트가 전송하는 요청의 전체(Header + Body)가 될 수도 있고, URL만 될 수도 있다.
+    * 만약 Message를 변경하지 않고, 중간에 Message를 취득한 공격자가 변조 없이 동일한 요청을 계속 보낸다면, Message를 변조하지 않았기 때문에 서버는 이를 유효한 요청으로 인식할 것이다. 이것을 Replay Attack이라고 하는데 이를 방지하기 위해서 MAC을 생성할 때 timestamp를 추가해서 사용하는 방법이 있다.
+    * 구조
+        * ![image](https://user-images.githubusercontent.com/20143765/77842399-9a0c8400-71cc-11ea-954e-61fdcac0ed2e.png)
