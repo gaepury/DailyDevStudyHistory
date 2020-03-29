@@ -419,4 +419,12 @@
     * Message: 클라이언트가 전송하는 요청의 전체(Header + Body)가 될 수도 있고, URL만 될 수도 있다.
     * 만약 Message를 변경하지 않고, 중간에 Message를 취득한 공격자가 변조 없이 동일한 요청을 계속 보낸다면, Message를 변조하지 않았기 때문에 서버는 이를 유효한 요청으로 인식할 것이다. 이것을 Replay Attack이라고 하는데 이를 방지하기 위해서 MAC을 생성할 때 timestamp를 추가해서 사용하는 방법이 있다.
     * 구조
-        * ![image](https://user-images.githubusercontent.com/20143765/77842399-9a0c8400-71cc-11ea-954e-61fdcac0ed2e.png)
+        * ![image](https://user-images.githubusercontent.com/20143765/77842399-9a0c8400-71cc-11ea-954e-61fdcac0ed2e.png) 
+* [Github Actions, Slack 연동하여 Gradle 빌드 결과받기](https://codeac.tistory.com/112);
+    * grable build GitHub actions
+        * ![image](https://user-images.githubusercontent.com/20143765/77842994-9d573e00-71d3-11ea-95ae-fbc2190cf6d7.png)
+    * Slack 메시지 전송
+        *  action-slack을 사용
+        * ![image](https://user-images.githubusercontent.com/20143765/77842997-a34d1f00-71d3-11ea-8399-504e3d3aafa5.png)
+
+                           
