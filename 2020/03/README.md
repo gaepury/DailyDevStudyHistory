@@ -482,5 +482,134 @@
     * Kong API 아키텍처
         * ![image](https://user-images.githubusercontent.com/20143765/77843229-1fe0fd00-71d6-11ea-8fab-a4ed80b84bad.png)
 
+* [SPA에서의 접근성에 대해 배운 것들](https://muchtrans.com/translations/what-i-ve-learned-about-accessibility-in-spas.ko.html)
+    * <div> & <span> 대신 <button> & <input> 사용하라
+    * SPA는 포커스와 스크롤 위치를 반드시 수동으로 다뤄야 한다
+    * 통합 테스트가 쉬워집니다
+        * 앱을 다시 디자인할 때 달라질 수도 있는 클래스나 스타일에 의존하기보다는, 동일함이 보장되는 의미(semantic)를 속성(여러 aria들)으로 가지는 쪽에 의존하는 낫다.(
+    * 포커스 관리의 미묘함
+        * 꼭 필요한 링크가 아니라면 tabindex 순서에서 제외시켜, 키보드 사용자가 Tab을 지나치게 많이 누르지 않도록 할 수도 있습니다.
+    * 자동 완성에 대한 접근성
+        *  aria-activedescendant
+    * 수동 및 자동화된 접근성 테스트
+        * https://developers.google.com/web/tools/chrome-devtools/accessibility/reference
+        * https://hacks.mozilla.org/2019/10/auditing-for-accessibility-problems-with-firefox-developer-tools/
+ 
+     * [[JavaScript] 메모리 관리와 가비지 컬렉션 동작 방식](https://eblee-repo.tistory.com/52)
+        * 참조-세기 (Reference-counting) 가비지 컬렉션(순환참조 문제)
+        * Mark-and-sweep 알고리즘(순환참조 문제 해결)
+    * [SpringRestDocs를 SpringBoot에 적용하기](https://taetaetae.github.io/2020/03/08/spring-rest-docs-in-spring-boot/);
+        * restdocs Dependency 추가
+            * ``` xml
+              <dependency>
+                <groupId>org.springframework.restdocs</groupId>
+                <artifactId>spring-restdocs-mockmvc</artifactId>
+                <scope>test</scope>
+              </dependency>
+              ```
+        * Test code작성
+            * ``` java
+              @WebMvcTest(BookController.class)
+              @AutoConfigureRestDocs // (1)
+              public class BookControllerTest {
 
+               @Autowired
+               private MockMvc mockMvc; // (2)
+
+               @Test
+               public void test_책을_조회하면_null이_아닌_객체를_리턴한다() throws Exception {
+                mockMvc.perform(get("/book/{id}", 1)
+                 .accept(MediaType.APPLICATION_JSON))
+                 .andDo(MockMvcResultHandlers.print())
+                 .andExpect(MockMvcResultMatchers.status().isOk())
+                 .andDo(document("book", // (3)
+                  pathParameters(
+                   parameterWithName("id").description("book unique id") // (4)
+                  ),
+                  responseFields(
+                   fieldWithPath("id").description("book unique id"),
+                   fieldWithPath("title").description("title"),
+                   fieldWithPath("author").description("author")
+                  )
+                 ))
+                 .andExpect(jsonPath("$.id", is(notNullValue()))) // (5)
+                 .andExpect(jsonPath("$.title", is(notNullValue())))
+                 .andExpect(jsonPath("$.author", is(notNullValue())));
+               }
+              }
+              ```              
+                * (1) Spring Boot 에서는 해당 어노테이션으로 여러줄에 걸쳐 설정해야 할 Spring Rest Docs 관련 설정을 아주 간단하게 해결할 수 있게 된다. (참고)
+                * (2) 공식 도큐먼트 에서는 4가지 방식을 말하고 있는데 이 포스팅 에서는 “MockMvc” 을 사용하고자 한다.
+                * (3) “book” 이라는 identifier 를 지정하면 해당 TestCase 가 수행될때 snippets 가 생성되는데 해당 identifier 묶음으로 생성이 된다.
+                * (4) request의 파라미터 필드, response의 필드의 설명을 적어줌으로써 이 정보를 가지고 snippets 가 생성이 되고 결과적으로 API 문서가 만들어 진다.
+                * (5) 필자가 가장 매력적이라 생각되는 부분. 이 부분에서 테스트를 동시에 함으로써 응답이 달라지거나 잘못된 응답이 내려올 경우 TestCase가 실패하게 되어 API문서 또한 생성되지 않게 된다.
+        * 빌드 플러그인 추가
+            * ``` xml
+              <build>
+               <plugins>
+                <plugin>
+                 <groupId>org.asciidoctor</groupId>
+                 <artifactId>asciidoctor-maven-plugin</artifactId>
+                 <version>1.5.8</version>
+                 <executions>
+                  <execution>
+                   <id>generate-docs</id>
+                   <phase>prepare-package</phase>
+                   <goals>
+                    <goal>process-asciidoc</goal>
+                   </goals>
+                   <configuration>
+                    <backend>html</backend>
+                    <doctype>book</doctype>
+                   </configuration>
+                  </execution>
+                 </executions>
+                 <dependencies>
+                  <dependency>
+                   <groupId>org.springframework.restdocs</groupId>
+                   <artifactId>spring-restdocs-asciidoctor</artifactId>
+                   <version>${spring-restdocs.version}</version>
+                  </dependency>
+                 </dependencies>
+                </plugin>
+               </plugins>
+              </build>
+              ```
+        *  src/main/ 하위에 asciidoc 이라는 폴더를 만들고 그 하위에 적당한 이름의 adoc 파일을 작성
+            * 문서의 뼈대 같은 구조를 잡아주는 작업 입니다.
+        * maven-resources-plugin을 활용하여 API서버를 띄우면 외부에서 URL 로 접근할 수 있도록 설정
+            * ``` xml
+              <build>
+               <plugins>
+                <plugin>
+                 <artifactId>maven-resources-plugin</artifactId>
+                 <version>2.7</version>
+                 <executions>
+                  <execution>
+                   <id>copy-resources</id>
+                   <phase>prepare-package</phase>
+                   <goals>
+                    <goal>copy-resources</goal>
+                   </goals>
+                   <configuration>
+                    <outputDirectory>
+                     ${project.build.outputDirectory}/static/docs
+                    </outputDirectory>
+                    <resources>
+                     <resource>
+                      <directory>
+                       ${project.build.directory}/generated-docs
+                      </directory>
+                     </resource>
+                    </resources>
+                   </configuration>
+                  </execution>
+                 </executions>
+                </plugin>
+               </plugins>
+              </build>
+              ```
+        * 참고
+            * [Spring REST Docs](https://cheese10yun.github.io/spring-rest-docs/)
+                           
                            
