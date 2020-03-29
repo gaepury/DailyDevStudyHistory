@@ -610,6 +610,8 @@
               </build>
               ```
         * 참고
-            * [Spring REST Docs](https://cheese10yun.github.io/spring-rest-docs/)
+            * [Spring REST Docs](https://cheese10yun.github.io/spring-rest-docs/)             
                            
-                           
+* [(Java) JVM 이해하기 - 더 자바, 코드를 조작하는 다양한 방법](https://jinseongsoft.tistory.com/205)
+    * ![image](https://user-images.githubusercontent.com/20143765/77843774-6127db80-71db-11ea-95ac-56cbd2c2b400.png)
+
