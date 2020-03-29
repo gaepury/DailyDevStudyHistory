@@ -378,7 +378,7 @@
  * [NPM에 React 모듈 배포하기](https://tech.peoplefund.co.kr/2019/11/01/react-module-publish-npm.html)
      * npm login, npm publish
  * [객체지향 설계의 5가지 원칙 S.O.L.I.D](https://sabarada.tistory.com/36);
- * LINE의 장애 보고와 후속 절차 문화
+ * [LINE의 장애 보고와 후속 절차 문화](https://engineering.linecorp.com/ko/blog/line-failure-reporting-and-follow-up-process-culture/)
      * 장애 처리 프로세스
          * 장애탐지
          * 장애전파
@@ -422,9 +422,43 @@
         * ![image](https://user-images.githubusercontent.com/20143765/77842399-9a0c8400-71cc-11ea-954e-61fdcac0ed2e.png) 
 * [Github Actions, Slack 연동하여 Gradle 빌드 결과받기](https://codeac.tistory.com/112);
     * grable build GitHub actions
-        * ![image](https://user-images.githubusercontent.com/20143765/77842994-9d573e00-71d3-11ea-95ae-fbc2190cf6d7.png)
+        * ```
+          name: build-test
+
+          on:
+            push:
+              branches:
+                - master
+
+          jobs:
+            build:
+              runs-on: ubuntu-latest
+              steps:
+              - uses: actions/checkout@v1
+
+              - name: Set up JDK 1.8
+                uses: actions/setup-java@v1
+                with:
+                  java-version: '1.8'
+                  java-package: jdk
+
+              - name: Change gradlew permissions
+                run: chmod +x ./gradlew
+
+              - name: Build with Gradle
+                run: ./gradlew build
+          ```    
     * Slack 메시지 전송
-        *  action-slack을 사용
-        * ![image](https://user-images.githubusercontent.com/20143765/77842997-a34d1f00-71d3-11ea-8399-504e3d3aafa5.png)
+        * action-slack을 사용
+        * ```
+          - name: action-slack
+            uses: 8398a7/action-slack@v2.6.0
+            with:
+              status: ${{job.status}}
+              author_name: <슬랙 챗봇 이름>
+            env:
+              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # required
+              SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} # required           
+           ```
 
                            
