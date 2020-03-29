@@ -340,3 +340,38 @@
         * 비밀번호, secrets와 API key들을 절대 누출하지 말고 configuration manager를 사용하십시오.
     * loaders
         * node.js 서버 설정파일을 작은 모듈들로 분리하여 독립적으로 로드할 수 있게 하십시오.
+ * [조금 더 괜찮은 Rest Template 1부 - Retryable](https://taetaetae.github.io/2020/03/22/better-rest-template-1-retryable/)
+     * Spring-Retry dependency 추가
+     * ```java
+       @EnableRetry
+       @Configuration
+       public class RetryableRestTemplateConfiguration {
+
+        @Bean
+        public RestTemplate retryableRestTemplate() {
+         SimpleClientHttpRequestFactory clientHttpRequestFactory = new SimpleClientHttpRequestFactory(); // 1
+         clientHttpRequestFactory.setReadTimeout(2000);
+         clientHttpRequestFactory.setConnectTimeout(500);
+
+         RestTemplate restTemplate = new RestTemplate(clientHttpRequestFactory) {
+          @Override
+          @Retryable(value = RestClientException.class, maxAttempts = 3, backoff = @Backoff(delay = 1000)) // 2
+          public <T> ResponseEntity<T> exchange(URI url, HttpMethod method, HttpEntity<?> requestEntity, Class<T> responseType)
+           throws RestClientException {
+           return super.exchange(url, method, requestEntity, responseType); 
+          }
+
+          @Recover
+          public <T> ResponseEntity<String> exchangeRecover(RestClientException e) {
+           return ResponseEntity.badRequest().body("bad request T.T"); // 3
+          }
+         };
+
+         return restTemplate;
+        }
+       }
+       ```
+         1. SimpleClientHttpRequestFactory 를 만들고 각 타임아웃을 설정해준 다음 RestTemplate 파라미터로 넘겨준다.
+         2. 사용하는 곳에서 exchange 메소드를 이용할 것이므로 해당 메소드를 오버라이드 해준다. 먼저 해당 메소드에서 “RestClientException”이 발생할 경우 Retry 로직을 수행한다고 정해주고, 최대 시도는 3번, backoff 설정중 delay를 1000ms(1초)로 지정해서 재시도가 진행되도록 해준다.
+         3. 2 에서 지정한 재시도가 끝나면 (재시도를 전부 다 하면) 해당 메소드를 수행하게 되어있고, 임의로 응답에 지정한 문구를 넘겨준다.
+
