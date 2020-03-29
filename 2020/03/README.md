@@ -331,4 +331,12 @@
 ## 2020.03.29
 * [Spark로 알아보는 빅데이터 처리](https://www.slideshare.net/JoenggyuLenKim/spark-152302106?fbclid=IwAR3v4e-sB91lCj8UUJtqtzN7TulqTHUH_z8yhPb4aJ890JwmP_o3woKCEQQ)
    * ![image](https://user-images.githubusercontent.com/20143765/77840389-f28a5400-71c1-11ea-9ca3-74caeb9debdc.png)
-
+* [견고한 node.js 프로젝트 설계하기](https://velog.io/@hopsprings2/%EA%B2%AC%EA%B3%A0%ED%95%9C-node.js-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90-%EC%84%A4%EA%B3%84%ED%95%98%EA%B8%B0)
+    * ![image](https://user-images.githubusercontent.com/20143765/77840691-329f0600-71c5-11ea-93a6-3f28781744b6.png)
+        * https://github.com/santiq/bulletproof-nodejs/tree/master/src
+    * 백그라운드 작업을 할 때는 PubSub 패턴을 사용하고 이벤트를 발생 시키십시오.
+    * config
+        * donenv(npm package): .env 파일을 로드하여 안에 있는 값들을 node.js의 process.env 객체에 대입
+        * 비밀번호, secrets와 API key들을 절대 누출하지 말고 configuration manager를 사용하십시오.
+    * loaders
+        * node.js 서버 설정파일을 작은 모듈들로 분리하여 독립적으로 로드할 수 있게 하십시오.
