@@ -308,3 +308,27 @@
       * shell form 으로 실행해야만 변수 등이 대체(substitution)된다.
   * 참고
      * ![image](https://user-images.githubusercontent.com/20143765/77252352-ab1e3800-6c96-11ea-87ce-a890b62a7429.png)
+ 
+ ---
+ 
+ ## 2020.03.23(2개)
+ * [이미지 및 동영상의 지연 로딩](https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video)
+    * Src: 자리표시자
+    * Data-src: 실제 링크
+    * Intersection Observer 이용방식(호환성이 약함, 성능 좋음.)
+        * ![image](https://user-images.githubusercontent.com/20143765/77840368-b22ad600-71c1-11ea-8d84-4c14d40f1be5.png)
+    * 이벤트 핸들러 사용(호환성이 가장 좋은 방식
+        * ![image](https://user-images.githubusercontent.com/20143765/77840373-bc4cd480-71c1-11ea-9163-13b1de9cd70c.png)
+    * lazy native 사용: ```<img loading="lazy">```
+* [웹 폰트 사용과 최적화의 최근 동향](https://d2.naver.com/helloworld/4969726);
+    * Woff2는 압축된 형태
+    * 브라우저의 렌더링 차단 처리 방식
+        * 렌더링 방식은 Internet Explorer 계열 브라우저의 처리 방식과 그 외 최근 브라우저의 처리 방식으로 나눌 수 있다. Internet Explorer 계열 브라우저는 FOUT 방식(Flash Of Unstyled Text)으로 렌더링 차단을 처리하고, 그 외의 브라우저는 FOIT 방식(Flash Of Invisible Text)으로 렌더링 차단을 처리
+        
+        
+---
+
+## 2020.03.29
+* [Spark로 알아보는 빅데이터 처리](https://www.slideshare.net/JoenggyuLenKim/spark-152302106?fbclid=IwAR3v4e-sB91lCj8UUJtqtzN7TulqTHUH_z8yhPb4aJ890JwmP_o3woKCEQQ)
+   * ![image](https://user-images.githubusercontent.com/20143765/77840389-f28a5400-71c1-11ea-9ca3-74caeb9debdc.png)
+
