@@ -1,4 +1,4 @@
-## 2020.04.12(14개)
+## 2020.04.12(24개)
 * [Outsider`s 기술 뉴스 #146 : 20-04-01](https://blog.outsider.ne.kr/1480?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+rss_outsider_dev+%28Outsider%27s+Dev+Story%29)
 * [React Production Performance Monitoring](https://kentcdodds.com/blog/react-production-performance-monitoring)
     * React의 Profiler API를 이용해서 프로덕션 사이트에서 React의 성능을 측정해서 매트릭을 Grafana 등 백엔드로 전송하는 방법을 소개
@@ -101,7 +101,7 @@
             * 결과는 에디킴만 보냄.
     * subscriber를 직접받아서 하는방법도 있지만 비추천
         * onSubscribe, onNext, onComplete, onError를 모두 직접 구현해야함
-* [Project Reactor 5. Data Processing](https://brunch.co.kr/@springboot/156)
+* [Project Reactor 6. Data Processing](https://brunch.co.kr/@springboot/156)
     * Filtering method: filter, take, skip, repeat 등
     * Converting method: map, flatmap, zip등
     
@@ -301,7 +301,7 @@
         *  해당 조건을 충족하지 않는 데이터가 나올 때까지 묶어서 Flux를 만든다. 조건을 충족하지 않는 데이터로 시작하거나 연속해서 데이터가 조건을 충족하지 않으면 빈 윈도우를 생성한다.
     * Flux 대신 List로 묶기: buffer류 메서드
         * window류 메서드가 Flux로 묶는다면 buffer류 메서드는 Collection으로 묶는다.
-* [스프링 리액터 시작하기 10 - 로깅, 체크포인트](https://javacan.tistory.com/entry/Reactor-Start-10-logging-checkpoint);
+* [스프링 리액터 시작하기 10 - 로깅, 체크포인트](https://javacan.tistory.com/entry/Reactor-Start-10-logging-checkpoint)
     * 로깅: log()
         *  .log(null, Level.FINE) // java.util.logging.Level 타입
             * FINE은 DEBUG레벨
