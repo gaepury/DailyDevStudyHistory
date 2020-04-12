@@ -1,4 +1,4 @@
-## 2020.04.12(10개)
+## 2020.04.12(14개)
 * [Outsider`s 기술 뉴스 #146 : 20-04-01](https://blog.outsider.ne.kr/1480?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+rss_outsider_dev+%28Outsider%27s+Dev+Story%29)
 * [React Production Performance Monitoring](https://kentcdodds.com/blog/react-production-performance-monitoring)
     * React의 Profiler API를 이용해서 프로덕션 사이트에서 React의 성능을 측정해서 매트릭을 Grafana 등 백엔드로 전송하는 방법을 소개
@@ -79,8 +79,6 @@
     * Advanced Configuration mode
         * DelegatingWebFluxConfiguration을 import(자세한것은 링크 참고)
 
----
-
 * [사용하면서 알게 된 Reactor, 예제 코드로 살펴보기](https://tech.kakao.com/2018/05/29/reactor-programming/);
     * 바구니 속 과일 종류(중복 없이) 및 각 종류별 개수 나누기 예제
     * subscribeOn, publishOn
@@ -91,3 +89,21 @@
             * connect(), publish(), autoConnect(), refCount()
     * 디버깅 활성화
         * Hooks.onOperatorDebug();
+* [Project Reactor 4. Flux, Mono](https://brunch.co.kr/@springboot/154)
+    * Mono Lifecycle
+        * ![image](https://user-images.githubusercontent.com/20143765/79065317-61030200-7cea-11ea-8d18-d5abafa621ac.png)
+* [Project Reactor 5. Subscriber](https://brunch.co.kr/@springboot/155)
+    * subscribe 메서드들
+        * ![image](https://user-images.githubusercontent.com/20143765/79065320-66604c80-7cea-11ea-98db-2be05dd963c2.png)
+    * Back pressure
+        * subscribe(consumer, errorConsumer, completeConsumer, subscriptionConsumber)
+        * ![image](https://user-images.githubusercontent.com/20143765/79065323-6b250080-7cea-11ea-8635-6e073de6f6e0.png)
+            * 결과는 에디킴만 보냄.
+    * subscriber를 직접받아서 하는방법도 있지만 비추천
+        * onSubscribe, onNext, onComplete, onError를 모두 직접 구현해야함
+* [Project Reactor 5. Data Processing](https://brunch.co.kr/@springboot/156)
+    * Filtering method: filter, take, skip, repeat 등
+    * Converting method: map, flatmap, zip등
+    
+---
+
