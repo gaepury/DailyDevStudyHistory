@@ -104,11 +104,20 @@
 * [Project Reactor 5. Data Processing](https://brunch.co.kr/@springboot/156)
     * Filtering method: filter, take, skip, repeat 등
     * Converting method: map, flatmap, zip등
-
+* [스프링 리액터 시작하기 1 - 리액티브 스트림 Flux Mono Subscriber](https://javacan.tistory.com/entry/Reactor-Start-1-RS-Flux-Mono-Subscriber);
+    * 
+* [스프링 리액터 시작하기 2 - 시퀀스 생성 just, generate](https://javacan.tistory.com/entry/Reactor-Start-2-RS-just-generate);
+    * 
+* [스프링 리액터 시작하기 3 - 시퀀스 생성 create, stream](https://javacan.tistory.com/entry/Reactor-Start-3-RS-create-stream);
+    * 
+* [스프링 리액터 시작하기 4 - 시퀀스 변환 기초](https://javacan.tistory.com/entry/Reactor-Start-4-tbasic-ransformation);
+    * 
+* [스프링 리액터 시작하기 5 - 에러 처리](https://javacan.tistory.com/entry/Reactor-Start-5-error-handling);
+    * 
 * [스프링 리액터 시작하기 6 - 쓰레드 스케줄링](https://javacan.tistory.com/entry/Reactor-Start-6-Thread-Scheduling);
     * publishOn을 이용한 신호 처리 쓰레드 스케줄링
         * publishOn() 메서드를 이용하면 next, complete, error신호를 별도 쓰레드로 처리할 수 있다
-        * ```
+        * ``` java
            Flux.range(1, 6)
            .publishOn(Schedulers.newElastic("PUB1"), 2)
            .map(i -> {
@@ -142,7 +151,7 @@
              * publishOn()에 지정한 스케줄러는 다음 publishOn()을 설정할 때까지 적용
     * subscribeOn을 이용한 구독 처리 쓰레드 스케줄링
         * subscribeOn()을 사용하면 Subscriber가 시퀀스에 대한 request 신호를 별도 스케줄러로 처리한다.
-        * ```
+        * ``` java
           CountDownLatch latch = new CountDownLatch(1);
           Flux.range(1, 6)
            .log() // 보다 상세한 로그 출력 위함
@@ -174,7 +183,7 @@
           ```
             * subscribeOn()으로 지정한 스케줄러는 시퀀스의 request 요청 처리뿐만 아니라 첫 번째 publishOn() 이전까지의 신호 처리를 실행한다. 따라서 위 코드를 실행하면 Flux.range()가 생성한 시퀀스의 신호 발생뿐만 아니라 map() 실행, Subscriber의 next, complete 신호 처리를 "SUB" 스케줄러가 실행한다.
     * subscribeOn() + publishOn() 조합
-        * ```
+        * ``` java
           CountDownLatch latch = new CountDownLatch(1);
           Flux.range(1, 6)
                  .log()
@@ -259,7 +268,7 @@
             * FINE은 DEBUG레벨
     * 체크포인트
         * 어떤 시점에 익셉션이 발생했는지 찾을때 도움
-        ```
+        ``` java
         Flux.just(1, 2, 4, -1, 5, 6)
                .map(x -> x + 1)
                .checkpoint("MAP1")
