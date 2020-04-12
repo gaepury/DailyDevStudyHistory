@@ -104,22 +104,24 @@
 * [Project Reactor 5. Data Processing](https://brunch.co.kr/@springboot/156)
     * Filtering method: filter, take, skip, repeat 등
     * Converting method: map, flatmap, zip등
-* [스프링 리액터 시작하기 1 - 리액티브 스트림 Flux Mono Subscriber](https://javacan.tistory.com/entry/Reactor-Start-1-RS-Flux-Mono-Subscriber);
+    
+* [스프링 리액터 시작하기 1 - 리액티브 스트림 Flux Mono Subscriber](https://javacan.tistory.com/entry/Reactor-Start-1-RS-Flux-Mono-Subscriber)
     * 콜드 시퀀스 vs 핫 시퀀스
         * 시퀀스는 구독 시점부터 데이터를 새로 생성하는 콜드(cold) 시퀀스와 구독자 수에 상관없이 데이터를 생성하는 핫(hot) 시퀀스로 나뉜다.
-* [스프링 리액터 시작하기 2 - 시퀀스 생성 just, generate](https://javacan.tistory.com/entry/Reactor-Start-2-RS-just-generate);
+* [스프링 리액터 시작하기 2 - 시퀀스 생성 just, generate](https://javacan.tistory.com/entry/Reactor-Start-2-RS-just-generate)
     * Flux.just(), Mono.just()로 만들기
     * Flux.range()로 정수 생성하기
     * Flux.generate() 메서드로 Flux 만들기
-        * Flux<T> generate(Callable<S> stateSupplier, BiFunction<S, SynchronousSink<T>, S> generator)
-        * Flux<T> generate(Callable<S> stateSupplier, BiFunction<S, SynchronousSink<T>, S> generator, Consumer<? super S> stateConsumer)
-            * stateSupplier는 값을 생성할 때 사용할 최초 상태이다. BiFunction 타입의 generator는 인자로 상태와 SynchronousSink를 입력받아 결과로 다음 상태를 리턴하는 함수
-* [스프링 리액터 시작하기 3 - 시퀀스 생성 create, stream](https://javacan.tistory.com/entry/Reactor-Start-3-RS-create-stream);
+       * Flux<T> generate(Callable<S> stateSupplier, BiFunction<S, SynchronousSink<T>, S> generator)
+       * Flux<T> generate(Callable<S> stateSupplier, BiFunction<S, SynchronousSink<T>, S> generator, Consumer<? super S> stateConsumer)
+          * stateSupplier는 값을 생성할 때 사용할 최초 상태이다. BiFunction 타입의 generator는 인자로 상태와 SynchronousSink를 입력받아 결과로 다음 상태를 리턴하는 함수
+
+* [스프링 리액터 시작하기 3 - 시퀀스 생성 create, stream](https://javacan.tistory.com/entry/Reactor-Start-3-RS-create-stream)
     * Flux.create()를 이용한 pull 방식 메시지 생성
         * Flux.generate()와의 차이점은 Flux.generate()의 경우 한 번에 한 개의 next 신호만 발생할 수 있었던 데 비해 Flux.create()는 한 번에 한 개 이상의 next() 신호를 발생할 수 있다는 점
     * Flux.create()를 이용한 push 방식 메시지 생성
     * Flux.fromStream(), Flux.fromIterable()을 이용한 Flux 생성
-* [스프링 리액터 시작하기 4 - 시퀀스 변환 기초](https://javacan.tistory.com/entry/Reactor-Start-4-tbasic-ransformation);
+* [스프링 리액터 시작하기 4 - 시퀀스 변환 기초](https://javacan.tistory.com/entry/Reactor-Start-4-tbasic-ransformation)
     * Flux기반
     * map, flatmap, filter
     * 빈 시퀀스인 경우 기본 값 사용하기: defaultIfEmpty
@@ -134,7 +136,7 @@
         * 발생한 개수를 맞춰서 쌍을 만드는 zipWith()와 달리 combineLatest()는 가장 최근의 데이터를 쌍으로 만든다. 다음은 그 차이를 보여준다.
     * 지정한 개수/시간에 해당하는 데이터만 유지: take, takeLast
     * 지정한 개수/시간만큼 데이터 거르기: skip, skipLast
-* [스프링 리액터 시작하기 5 - 에러 처리](https://javacan.tistory.com/entry/Reactor-Start-5-error-handling);
+* [스프링 리액터 시작하기 5 - 에러 처리](https://javacan.tistory.com/entry/Reactor-Start-5-error-handling)
     * subscribe의 errorConsumer 이용
     * 에러 발생하면 기본 값 사용하기: onErrorReturn
         * Flux<T> onErrorReturn(Predicate<? super Throwable> predicate, T fallbackValue)
@@ -151,7 +153,7 @@
             * 2. 컴페니언 Flux가 뭐든 발생하면 재시도가 일어난다.
             * 3. 컴페니언 Flux가 종료되면 재시도를 하지 않고 원본 시퀀스 역시 종료된다.
             * 4. 컴페니언 Flux가 에러를 발생하면 재시도를 하지 않고 컴페니언 Flux가 발생한 에러를 전파한다.
-* [스프링 리액터 시작하기 6 - 쓰레드 스케줄링](https://javacan.tistory.com/entry/Reactor-Start-6-Thread-Scheduling);
+* [스프링 리액터 시작하기 6 - 쓰레드 스케줄링](https://javacan.tistory.com/entry/Reactor-Start-6-Thread-Scheduling)
     * publishOn을 이용한 신호 처리 쓰레드 스케줄링
         * publishOn() 메서드를 이용하면 next, complete, error신호를 별도 쓰레드로 처리할 수 있다
         * ``` java
@@ -277,11 +279,11 @@
             * newParallel(String name, int parallelism)
             * newParallel(String name, int parallelism, boolean daemon)
     * 일정 주기로 tick 발생: Flux.interval
-* [스프링 리액터 시작하기 7 - 병렬 실행](https://javacan.tistory.com/entry/Reactor-Start-7-Parallel);
+* [스프링 리액터 시작하기 7 - 병렬 실행](https://javacan.tistory.com/entry/Reactor-Start-7-Parallel)
     * FLux parallel()과 runOn()으로 Flux 병렬 처리하기
     * Mono Mono.zip()으로 병렬 처리하기
         * Mono의 구독 처리 쓰레드를 병렬 스케줄러로 실행하고 Mono.zip() 메서드를 이용해서 Mono를 묶으면 각 Mono를 병렬로 처리
-* [스프링 리액터 시작하기 8 - 모으기(aggregation)](https://javacan.tistory.com/entry/Reactor-Start-8-Aggregation);
+* [스프링 리액터 시작하기 8 - 모으기(aggregation)](https://javacan.tistory.com/entry/Reactor-Start-8-Aggregation)
     * List 콜렉션으로 모으기: collectList()
     * Map 콜렉션으로 모으기: collectMap()
     * Map의 값을 콜렉션으로 모으기: collectMultiMap()
@@ -291,7 +293,7 @@
         * 리턴 타입이 Flux인 것을 제외하면 reduce()와 동일
     * 데이터 조건 검사
         * all()이나 any()
-* [스프링 리액터 시작하기 9 - 묶어서 처리하기(window buffer)](https://javacan.tistory.com/entry/Reactor-Start-9-window-buffer);
+* [스프링 리액터 시작하기 9 - 묶어서 처리하기(window buffer)](https://javacan.tistory.com/entry/Reactor-Start-9-window-buffer)
     * 일정 개수로 묶어서 Flux 만들기: window(int), window(int, int)
     * 일정 시간 간격으로 묶어서 Flux 만들기: window(Duration), window(Duration, Duration)
     * 특정 조건에 다다를 때가지 묶어서 Flux 만들기: windowUntil(Predicate)
