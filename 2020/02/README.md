@@ -107,7 +107,14 @@
 * [캐시의 원리와 제어방법](https://feel5ny.github.io/2019/10/05/HTTP_007-2/)
     * 캐시 재검사 시 가장 유용한 2가지 조건부 요청 헤더
         * If-Modified-Since: 날짜 재검사
+           * reqeust 헤더
+           * 서버에게 리소스가 특정 날짜 이후로 변경된 경우에만 요청한 본문을 보내달라고 한다.
+           * 만약 문서가 주어진 날짜 이후에 변경되지 않았다면, 조건은(If-Modified-Since) 거짓이고 서버는 304 Not Modified 응답메세지를 클라에게 돌려준다.
+           * If-Modified-Since 헤더는 Last-Modified 헤더와 함께 동작
         * If-None-Match: 엔터티 태그(ETag) 재검사
+           * request 헤더
+           * 캐시 된 태그가 서버에 있는 문서의 태그와 다를 때만 요청을 처리한다.
+           * If-None-Match 헤더는 ETag 헤더와 함께 동작
     * 언제 엔터티 태그를 사용하고 언제 Last-Modified 일시를 사용하는가
         * HTTP/1.1 클라는 만약 서버가 엔터티 태그를 반환했다면, 반드시 엔터티 태그 검사기를 사용해야 한다.
         * Last-Modified 값만을 반환했다면 클라는 If-Modified-Since 검사를 사용할 수 있다.
