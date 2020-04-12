@@ -112,8 +112,8 @@
     * Flux.just(), Mono.just()로 만들기
     * Flux.range()로 정수 생성하기
     * Flux.generate() 메서드로 Flux 만들기
-       * Flux<T> generate(Callable<S> stateSupplier, BiFunction<S, SynchronousSink<T>, S> generator)
-       * Flux<T> generate(Callable<S> stateSupplier, BiFunction<S, SynchronousSink<T>, S> generator, Consumer<? super S> stateConsumer)
+       * `Flux<T> generate(Callable<S> stateSupplier, BiFunction<S, SynchronousSink<T>, S> generator)`
+       * `Flux<T> generate(Callable<S> stateSupplier, BiFunction<S, SynchronousSink<T>, S> generator, Consumer<? super S> stateConsumer)`
           * stateSupplier는 값을 생성할 때 사용할 최초 상태이다. BiFunction 타입의 generator는 인자로 상태와 SynchronousSink를 입력받아 결과로 다음 상태를 리턴하는 함수
 
 * [스프링 리액터 시작하기 3 - 시퀀스 생성 create, stream](https://javacan.tistory.com/entry/Reactor-Start-3-RS-create-stream)
@@ -139,14 +139,14 @@
 * [스프링 리액터 시작하기 5 - 에러 처리](https://javacan.tistory.com/entry/Reactor-Start-5-error-handling)
     * subscribe의 errorConsumer 이용
     * 에러 발생하면 기본 값 사용하기: onErrorReturn
-        * Flux<T> onErrorReturn(Predicate<? super Throwable> predicate, T fallbackValue)
-        * <E extends Throwable> Flux<T> onErrorReturn(Class<E> type, T fallbackValue)
+        * `Flux<T> onErrorReturn(Predicate<? super Throwable> predicate, T fallbackValue)`
+        * `<E extends Throwable> Flux<T> onErrorReturn(Class<E> type, T fallbackValue)`
     * 에러 발생하면 다른 신호(시퀀스)나 다른 에러로 대체하기: onErrorResume
-        * Function<? super Throwable, ? extends Publisher<? extends T>> :
+        * `Function<? super Throwable, ? extends Publisher<? extends T>> :`
     * 에러를 다른 에러로 변환하기: onErrorMap
     * 재시도하기: retry
     * 재시도하기: retryWhen
-        * retryWhen(Function< Flux<Throwable>,  ? extends Publisher<?> > whenFactory)
+        * `retryWhen(Function< Flux<Throwable>,  ? extends Publisher<?> > whenFactory)`
         * whenFactory 함수에 전달되는 Flux<Throwable>은 원본 시퀀스의 익셉션과 연관되어 있으므로 이를 컴페니언(companion) Flux라고 부른다.
         * whenFactory 함수는 재시도 조건에 맞게 변환한 컴페니언 Flux를 리턴한다. 이 변환한 컴페니언 Flux가 재시도 여부를 결정하는데 그 과정은 다음과 같다.
             * 1. 에러가 발생할 때마다 에러가 컴페니언 Flux로 전달된다.
