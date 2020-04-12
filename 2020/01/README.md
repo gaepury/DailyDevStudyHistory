@@ -1,3 +1,5 @@
+## 1월 블로그 총 본개수: 16개
+
 ## 2020.01.04(10개)
 * [[Outsider`s blog] 2019년 회고](https://blog.outsider.ne.kr/1472?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+rss_outsider_dev+%28Outsider%27s+Dev+Story%29)
 * [Spring BootJunit5 테스트 (백기선님 인프런 강의)](https://wedul.site/647)
@@ -116,6 +118,3 @@
 ---
 ## 2020.01.31(1개)
 * [The Top 50 100+ Developer Tools 2019](https://stackshare.io/posts/top-developer-tools-2019?fbclid=IwAR0rK_brgT-adFNcTB0RJy9_bbf8JjPV-tcLhXMfMv4GNNEPwvLScgsZ1_0#languages)
-
-
-## 1월 블로그 총 본개수: 16개
