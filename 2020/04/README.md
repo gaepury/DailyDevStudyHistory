@@ -61,4 +61,20 @@
             * Rendering: view resolution과 관련된 API를 제공한다. 관련 문서 참고
             * Model, Map: 요청의 model에 이 attributes를 추가로 더한다.
             * 기타: 기타 리턴 값은 model attribtue에 추가로 더한다.
-
+* [Spring WebFlux - Config](https://dreamchaser3.tistory.com/15)
+    * WebFluxConfigurer interface 구현
+    * Conversion, formatting
+        * addFormatters method overide(자세한것은 링크 참고)
+    * Content Type Resolvers
+        * query parameter-based 방식을 사용가능(디폴트는 accept header)
+        * configureContentTypeResolver method override(자세한것은 링크 참고)
+    * HTTP message codecs
+        * configureHttpMessageCodecs method override (자세한것은 링크 참고)
+    * View Resolvers
+        * configureViewResolvers method override(자세한것은 링크 참고)
+    * Static Resources
+        * addResourceHandlers method overide(자세한것은 링크 참고)
+    * Path Matching
+        * configurePathMatch method overide(자세한것은 링크 참고)
+    * Advanced Configuration mode
+        * DelegatingWebFluxConfiguration을 import(자세한것은 링크 참고)
