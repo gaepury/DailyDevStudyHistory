@@ -105,15 +105,52 @@
     * Filtering method: filter, take, skip, repeat 등
     * Converting method: map, flatmap, zip등
 * [스프링 리액터 시작하기 1 - 리액티브 스트림 Flux Mono Subscriber](https://javacan.tistory.com/entry/Reactor-Start-1-RS-Flux-Mono-Subscriber);
-    * 
+    * 콜드 시퀀스 vs 핫 시퀀스
+        * 시퀀스는 구독 시점부터 데이터를 새로 생성하는 콜드(cold) 시퀀스와 구독자 수에 상관없이 데이터를 생성하는 핫(hot) 시퀀스로 나뉜다.
 * [스프링 리액터 시작하기 2 - 시퀀스 생성 just, generate](https://javacan.tistory.com/entry/Reactor-Start-2-RS-just-generate);
-    * 
+    * Flux.just(), Mono.just()로 만들기
+    * Flux.range()로 정수 생성하기
+    * Flux.generate() 메서드로 Flux 만들기
+        * Flux<T> generate(Callable<S> stateSupplier, BiFunction<S, SynchronousSink<T>, S> generator)
+        * Flux<T> generate(Callable<S> stateSupplier, BiFunction<S, SynchronousSink<T>, S> generator, Consumer<? super S> stateConsumer)
+            * stateSupplier는 값을 생성할 때 사용할 최초 상태이다. BiFunction 타입의 generator는 인자로 상태와 SynchronousSink를 입력받아 결과로 다음 상태를 리턴하는 함수
 * [스프링 리액터 시작하기 3 - 시퀀스 생성 create, stream](https://javacan.tistory.com/entry/Reactor-Start-3-RS-create-stream);
-    * 
+    * Flux.create()를 이용한 pull 방식 메시지 생성
+        * Flux.generate()와의 차이점은 Flux.generate()의 경우 한 번에 한 개의 next 신호만 발생할 수 있었던 데 비해 Flux.create()는 한 번에 한 개 이상의 next() 신호를 발생할 수 있다는 점
+    * Flux.create()를 이용한 push 방식 메시지 생성
+    * Flux.fromStream(), Flux.fromIterable()을 이용한 Flux 생성
 * [스프링 리액터 시작하기 4 - 시퀀스 변환 기초](https://javacan.tistory.com/entry/Reactor-Start-4-tbasic-ransformation);
-    * 
+    * Flux기반
+    * map, flatmap, filter
+    * 빈 시퀀스인 경우 기본 값 사용하기: defaultIfEmpty
+    * 빈 시퀀스인 경우 다른 시퀀스 사용하기: switchIfEmpty
+    * 특정 값으로 시작하는 시퀀스로 변환: startWith
+    * 특정 값으로 끝나는 시퀀스로 변환: concatWithValues
+    * 시퀀스 순서대로 연결: cancatWith
+    * 시퀀스 발생 순서대로 섞기: mergeWith
+        * 시퀀스의 연결 순서가 아니라 시퀀스가 발생하는 데이터 순서대로 섞고 싶다면 mergeWith()를 사용
+    * 시퀀스 묶기: zipWith
+    * 시퀀스 묶기: combineLatest
+        * 발생한 개수를 맞춰서 쌍을 만드는 zipWith()와 달리 combineLatest()는 가장 최근의 데이터를 쌍으로 만든다. 다음은 그 차이를 보여준다.
+    * 지정한 개수/시간에 해당하는 데이터만 유지: take, takeLast
+    * 지정한 개수/시간만큼 데이터 거르기: skip, skipLast
 * [스프링 리액터 시작하기 5 - 에러 처리](https://javacan.tistory.com/entry/Reactor-Start-5-error-handling);
-    * 
+    * subscribe의 errorConsumer 이용
+    * 에러 발생하면 기본 값 사용하기: onErrorReturn
+        * Flux<T> onErrorReturn(Predicate<? super Throwable> predicate, T fallbackValue)
+        * <E extends Throwable> Flux<T> onErrorReturn(Class<E> type, T fallbackValue)
+    * 에러 발생하면 다른 신호(시퀀스)나 다른 에러로 대체하기: onErrorResume
+        * Function<? super Throwable, ? extends Publisher<? extends T>> :
+    * 에러를 다른 에러로 변환하기: onErrorMap
+    * 재시도하기: retry
+    * 재시도하기: retryWhen
+        * retryWhen(Function< Flux<Throwable>,  ? extends Publisher<?> > whenFactory)
+        * whenFactory 함수에 전달되는 Flux<Throwable>은 원본 시퀀스의 익셉션과 연관되어 있으므로 이를 컴페니언(companion) Flux라고 부른다.
+        * whenFactory 함수는 재시도 조건에 맞게 변환한 컴페니언 Flux를 리턴한다. 이 변환한 컴페니언 Flux가 재시도 여부를 결정하는데 그 과정은 다음과 같다.
+            * 1. 에러가 발생할 때마다 에러가 컴페니언 Flux로 전달된다.
+            * 2. 컴페니언 Flux가 뭐든 발생하면 재시도가 일어난다.
+            * 3. 컴페니언 Flux가 종료되면 재시도를 하지 않고 원본 시퀀스 역시 종료된다.
+            * 4. 컴페니언 Flux가 에러를 발생하면 재시도를 하지 않고 컴페니언 Flux가 발생한 에러를 전파한다.
 * [스프링 리액터 시작하기 6 - 쓰레드 스케줄링](https://javacan.tistory.com/entry/Reactor-Start-6-Thread-Scheduling);
     * publishOn을 이용한 신호 처리 쓰레드 스케줄링
         * publishOn() 메서드를 이용하면 next, complete, error신호를 별도 쓰레드로 처리할 수 있다
