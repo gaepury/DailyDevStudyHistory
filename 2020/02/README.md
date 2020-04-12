@@ -105,6 +105,20 @@
         * RetryTemplate
 * [캐시의 개념과 장점](https://feel5ny.github.io/2019/09/30/HTTP_007-1/#topology)
 * [캐시의 원리와 제어방법](https://feel5ny.github.io/2019/10/05/HTTP_007-2/)
+    * 캐시 처리 단계
+       - 단계1: 요청받기
+          - 네트워크 커넥션에서의 활동을 감지하고,들어오는 데이터를 읽어들인다.
+       - 단계2: 파싱
+          - 요청 메세지를 여러 부분으로 파싱하여 헤더 부분을 조작하기 쉬운 자료 구조에 담는다.
+       - 단계3: 검색
+          - URL을 알아내고 그에 해당하는 로컬 사본이 있는지 검사한다.
+       - 단계4: 신선도 검사
+          - HTTP는 캐시가 일정 기간 동안 서버 문서의 사본을 보유할 수 있도록 해준다.
+       - 단계5: 응답 생성
+          - 캐시 된 응답을 원서버에서 온 것처럼 보이게 하고 싶기 때문에 캐시는 캐시 된 서버 응답 헤더를 토대로 응답 헤더를 생성한다.
+       - 단계6: 전송
+       - 단계7: 로깅
+       - ![image](https://user-images.githubusercontent.com/20143765/79060496-909d1480-7cc0-11ea-8d6d-380aaa84be32.png)
     * 캐시 재검사 시 가장 유용한 2가지 조건부 요청 헤더
         * If-Modified-Since: 날짜 재검사
            * reqeust 헤더
@@ -119,6 +133,14 @@
         * HTTP/1.1 클라는 만약 서버가 엔터티 태그를 반환했다면, 반드시 엔터티 태그 검사기를 사용해야 한다.
         * Last-Modified 값만을 반환했다면 클라는 If-Modified-Since 검사를 사용할 수 있다.
         * 만약 HTTP/1.1 캐시나 서버가 If-Modified-Since와 엔터티 태그, 조건부 헤더를 모두 받았다면, 요청의 모든 조건부 헤더 필드의 조건에 부합해야 200을 반환해야 한다.
+    * 캐시 제어
+       * 아래는 HTTP는 문서가 얼마나 오랫동안 캐시될 수 있게 할 것인지, 서버가 설정할 수 있는 여러 가지 방법이다. 
+          * Cache-control: no-cache
+          * Cache-control: no-store
+          * Cache-control: must-revalidate
+          * Cache-Control: max-age=<seconds>
+          * Cache-control: s-maxage=<seconds>
+          * Expires 날짜 헤더를 응답에 첨부할 수 있다.
 * [Google Code review Guide](https://wiki.lucashan.space/code-review/01.intro.html#_1-code%EB%A5%BC-%EB%A6%AC%EB%B7%B0%ED%95%98%EB%8A%94-%EC%82%AC%EB%9E%8C%EB%93%A4%EC%9D%80-%EC%96%B4%EB%96%A4%EA%B2%83%EC%9D%84-%EC%A4%91%EC%A0%90%EC%A0%81%EC%9C%BC%EB%A1%9C-%EC%82%B4%ED%8E%B4%EC%95%BC%ED%95%98%EB%8A%94%EA%B0%80)
     * Code를 리뷰하는 사람들은 어떤것을 중점적으로 살펴야하는가
         * 디자인(Design): 코드가 잘 설계되어 있고 시스템에 적합한가?
