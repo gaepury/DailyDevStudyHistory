@@ -104,6 +104,170 @@
 * [Project Reactor 5. Data Processing](https://brunch.co.kr/@springboot/156)
     * Filtering method: filter, take, skip, repeat 등
     * Converting method: map, flatmap, zip등
-    
+
+* [스프링 리액터 시작하기 6 - 쓰레드 스케줄링](https://javacan.tistory.com/entry/Reactor-Start-6-Thread-Scheduling);
+    * publishOn을 이용한 신호 처리 쓰레드 스케줄링
+        * publishOn() 메서드를 이용하면 next, complete, error신호를 별도 쓰레드로 처리할 수 있다
+        * ```
+           Flux.range(1, 6)
+           .publishOn(Schedulers.newElastic("PUB1"), 2)
+           .map(i -> {
+               logger.info("map 1: {} + 10", i);
+               return i + 10;
+           })
+           .publishOn(Schedulers.newElastic("PUB2"))
+           .map(i -> {
+               logger.info("map 2: {} + 10", i);
+               return i + 10;
+           })
+           .subscribe(new BaseSubscriber<Integer>() {
+               @Override
+               protected void hookOnSubscribe(Subscription subscription) {
+                   logger.info("hookOnSubscribe");
+                   requestUnbounded();
+               }
+
+               @Override
+               protected void hookOnNext(Integer value) {
+                   logger.info("hookOnNext: " + value);
+               }
+
+               @Override
+               protected void hookOnComplete() {
+                   logger.info("hookOnComplete");
+                   latch.countDown();
+               }
+           });
+           ```
+             * publishOn()에 지정한 스케줄러는 다음 publishOn()을 설정할 때까지 적용
+    * subscribeOn을 이용한 구독 처리 쓰레드 스케줄링
+        * subscribeOn()을 사용하면 Subscriber가 시퀀스에 대한 request 신호를 별도 스케줄러로 처리한다.
+        * ```
+          CountDownLatch latch = new CountDownLatch(1);
+          Flux.range(1, 6)
+           .log() // 보다 상세한 로그 출력 위함
+           .subscribeOn(Schedulers.newElastic("SUB"))
+           .map(i -> {
+               logger.info("map: {} + 10", i);
+               return i + 10;
+           })
+           .subscribe(new BaseSubscriber<Integer>() {
+               @Override
+               protected void hookOnSubscribe(Subscription subscription) {
+                   logger.info("hookOnSubscribe"); // main thread
+                   request(1);
+               }
+
+               @Override
+               protected void hookOnNext(Integer value) {
+                   logger.info("hookOnNext: " + value); // SUB 쓰레드
+                   request(1);
+               }
+
+               @Override
+               protected void hookOnComplete() {
+                   logger.info("hookOnComplete"); // SUB 쓰레드
+                   latch.countDown();
+               }
+           });
+          latch.await();
+          ```
+            * subscribeOn()으로 지정한 스케줄러는 시퀀스의 request 요청 처리뿐만 아니라 첫 번째 publishOn() 이전까지의 신호 처리를 실행한다. 따라서 위 코드를 실행하면 Flux.range()가 생성한 시퀀스의 신호 발생뿐만 아니라 map() 실행, Subscriber의 next, complete 신호 처리를 "SUB" 스케줄러가 실행한다.
+    * subscribeOn() + publishOn() 조합
+        * ```
+          CountDownLatch latch = new CountDownLatch(1);
+          Flux.range(1, 6)
+                 .log()
+                 .subscribeOn(Schedulers.newElastic("SUB"))
+                 .map(i -> {
+                     logger.info("map1: " + i + " --> " + (i + 20));
+                     return i + 20;
+                 })
+                 .map(i -> {
+                     logger.info("mapBySub: " + i + " --> " + (i + 100));
+                     return i + 100;
+                 })
+                 .publishOn(Schedulers.newElastic("PUB1"), 2)
+                 .map(i -> {
+                     logger.info("mapByPub1: " + i + " --> " + (i + 1000));
+                     return i + 1000;
+                 })
+                 .publishOn(Schedulers.newElastic("PUB2"), 2)
+                 .subscribe(new BaseSubscriber<Integer>() {
+                     @Override
+                     protected void hookOnSubscribe(Subscription subscription) {
+                         logger.info("hookOnSubscribe");
+                         request(1);
+                     }
+
+                     @Override
+                     protected void hookOnNext(Integer value) {
+                         logger.info("hookOnNext: " + value);
+                         request(1);
+                     }
+
+                     @Override
+                     protected void hookOnComplete() {
+                         logger.info("hookOnComplete");
+                         latch.countDown();
+                     }
+                 });
+          latch.await();
+          ```
+    * 실행결과
+        * ![image](https://user-images.githubusercontent.com/20143765/79065892-a7f2f680-7cee-11ea-93d4-94d44e0ebacb.png)
+    * 스케줄러 종류
+        * Schedulers.immediate() : 현재 쓰레드에서 실행한다.
+        * Schedulers.single() : 쓰레드가 한 개인 쓰레드 풀을 이용해서 실행한다. 즉 한 쓰레드를 공유한다.
+        * Schedulers.elastic() : 쓰레드 풀을 이용해서 실행한다. 블로킹 IO를 리액터로 처리할 때 적합하다. 쓰레드가 필요하면 새로 생성하고 일정 시간(기본 60초) 이상 유휴 상태인 쓰레드는 제거한다. 데몬 쓰레드를 생성한다.
+        * Schedulers.parallel() : 고정 크기 쓰레드 풀을 이용해서 실행한다. 병렬 작업에 적합하다.
+        * 스레드풀 생성 메서드
+            * newSingle(String name)
+            * newSingle(String name, boolean daemon)
+            * newElastic(String name)
+            * newElastic(String name, int ttlSeconds)
+            * newElastic(String name, int ttlSeconds, boolean daemon)
+            * newParallel(String name)
+            * newParallel(String name, int parallelism)
+            * newParallel(String name, int parallelism, boolean daemon)
+    * 일정 주기로 tick 발생: Flux.interval
+* [스프링 리액터 시작하기 7 - 병렬 실행](https://javacan.tistory.com/entry/Reactor-Start-7-Parallel);
+    * FLux parallel()과 runOn()으로 Flux 병렬 처리하기
+    * Mono Mono.zip()으로 병렬 처리하기
+        * Mono의 구독 처리 쓰레드를 병렬 스케줄러로 실행하고 Mono.zip() 메서드를 이용해서 Mono를 묶으면 각 Mono를 병렬로 처리
+* [스프링 리액터 시작하기 8 - 모으기(aggregation)](https://javacan.tistory.com/entry/Reactor-Start-8-Aggregation);
+    * List 콜렉션으로 모으기: collectList()
+    * Map 콜렉션으로 모으기: collectMap()
+    * Map의 값을 콜렉션으로 모으기: collectMultiMap()
+    * 개수 새기: count()
+    * 누적 하기: reduce()
+    * 누적하면서 값 생성하기: scan()
+        * 리턴 타입이 Flux인 것을 제외하면 reduce()와 동일
+    * 데이터 조건 검사
+        * all()이나 any()
+* [스프링 리액터 시작하기 9 - 묶어서 처리하기(window buffer)](https://javacan.tistory.com/entry/Reactor-Start-9-window-buffer);
+    * 일정 개수로 묶어서 Flux 만들기: window(int), window(int, int)
+    * 일정 시간 간격으로 묶어서 Flux 만들기: window(Duration), window(Duration, Duration)
+    * 특정 조건에 다다를 때가지 묶어서 Flux 만들기: windowUntil(Predicate)
+    * 특정 조건을 충족하는 동안 묶어서 Flux 만들기: windowWhile(Predicate)
+        *  해당 조건을 충족하지 않는 데이터가 나올 때까지 묶어서 Flux를 만든다. 조건을 충족하지 않는 데이터로 시작하거나 연속해서 데이터가 조건을 충족하지 않으면 빈 윈도우를 생성한다.
+    * Flux 대신 List로 묶기: buffer류 메서드
+        * window류 메서드가 Flux로 묶는다면 buffer류 메서드는 Collection으로 묶는다.
+* [스프링 리액터 시작하기 10 - 로깅, 체크포인트](https://javacan.tistory.com/entry/Reactor-Start-10-logging-checkpoint);
+    * 로깅: log()
+        *  .log(null, Level.FINE) // java.util.logging.Level 타입
+            * FINE은 DEBUG레벨
+    * 체크포인트
+        * 어떤 시점에 익셉션이 발생했는지 찾을때 도움
+        ```
+        Flux.just(1, 2, 4, -1, 5, 6)
+               .map(x -> x + 1)
+               .checkpoint("MAP1")
+               .map(x -> 10 / x) // 원본 데이터가 -1인 경우 x는 0이 되어 익셉션이 발생
+               .checkpoint("MAP2")
+               .subscribe(
+                       x -> System.out.println("next: " + x),
+                       err -> err.printStackTrace());
+        ```
 ---
 
