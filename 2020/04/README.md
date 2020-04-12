@@ -80,3 +80,14 @@
         * DelegatingWebFluxConfiguration을 import(자세한것은 링크 참고)
 
 ---
+
+* [사용하면서 알게 된 Reactor, 예제 코드로 살펴보기](https://tech.kakao.com/2018/05/29/reactor-programming/);
+    * 바구니 속 과일 종류(중복 없이) 및 각 종류별 개수 나누기 예제
+    * subscribeOn, publishOn
+    * Schedulers.parallel() 사용
+    * basket당 하나의 스트림만 공유하며 과일종류와 개수 뽑아내기
+        * Hot, cold
+        * Connectable Flux
+            * connect(), publish(), autoConnect(), refCount()
+    * 디버깅 활성화
+        * Hooks.onOperatorDebug();
