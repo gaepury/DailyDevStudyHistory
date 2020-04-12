@@ -1,3 +1,5 @@
+## 3월 블로그 총 본개수: 32개
+
 ## 2020.03.09(3개)
 * [Outsider`s 기술 뉴스 #145 : 20-03-02](https://blog.outsider.ne.kr/1478?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+rss_outsider_dev+%28Outsider%27s+Dev+Story%29)
   * [Redux template for Create-React-App](https://github.com/reduxjs/cra-template-redux/releases/tag/v1.0.0)
@@ -624,3 +626,4 @@
             * 환경변수 구분하여 각각 서버로 띄움
     * padEnd
         * 문자열을 인자로 주어진 길이만큼 맞춰서 리턴
+
