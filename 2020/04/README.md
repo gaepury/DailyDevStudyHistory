@@ -1,4 +1,4 @@
-## 2020.04.12
+## 2020.04.12(10개)
 * [Outsider`s 기술 뉴스 #146 : 20-04-01](https://blog.outsider.ne.kr/1480?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+rss_outsider_dev+%28Outsider%27s+Dev+Story%29)
 * [React Production Performance Monitoring](https://kentcdodds.com/blog/react-production-performance-monitoring)
     * React의 Profiler API를 이용해서 프로덕션 사이트에서 React의 성능을 측정해서 매트릭을 Grafana 등 백엔드로 전송하는 방법을 소개
@@ -78,3 +78,5 @@
         * configurePathMatch method overide(자세한것은 링크 참고)
     * Advanced Configuration mode
         * DelegatingWebFluxConfiguration을 import(자세한것은 링크 참고)
+
+---
