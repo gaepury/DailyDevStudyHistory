@@ -286,3 +286,5 @@
     * false[exportable]
         * exportable은 zipkin이나 다른 곳으로 결과값을 전송하는지 유무
 * [[MSA] Spring Cloud Sleuth와 Zipkin을 이용한 분산 시스템 Tracing_2](https://sabarada.tistory.com/44)
+
+## 2월 블로그 총 본개수: 30개
