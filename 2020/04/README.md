@@ -320,5 +320,16 @@
         
 * [Reactor 언제 어떤 Operator를 써야 할까?](https://luvstudy.tistory.com/100)
    * 메서드 참고시 
+* 웹플럭스 개인 공부
+   * filter vs filterWhen
+      * filterWhen은 안에 mono를 넣을수 있다.
+   * justOrEmpty
+      * 값이 있을 수도 있고 없을 수도 있는 Mono를 생성할 때에는 justOrEmpty() 메서드를 사용
+   * defaultIfEmpty, switchIfEmpty
+      * defaultIfEmpty는 값을 인자로
+      * switchIfEmpty는 스위치할 모노를 인자로
+   * Combine nullable mono?
+   * then은 조립단계에서 호출됨.
+
 ---
 
