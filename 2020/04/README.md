@@ -333,3 +333,69 @@
 
 ---
 
+## 2020.04.23
+* [GoF DesignPatterns](http://vincehuston.org/dp/)
+    * Creational patterns
+        * Abstract Factory
+        * Builder
+        * Factory Method 
+        * Prototype
+        * Singleton
+    * Structural patterns
+        * Adapter
+        * Bridge
+        * Composite
+        * Decorator
+        * Facade
+        * Flyweight
+        * Proxy
+    * Behavioral patterns
+        * Chain of Responsibility
+        * Command
+        * Interpreter
+        * Iterator
+        * Mediator
+        * Memento
+        * Observer
+        * State
+        * Strategy
+        * Template Method
+        * Visitor
+    * Design Class Diagram
+        * http://vincehuston.org/dp/all_uml.html
+    * GoF Structure Similarities 분류
+        * Left-Right symbol = wrapper/wrappee or delegation or "has a" relationship
+            * Adapter Pattern
+            * Facade
+            * Proxy
+            * ![image](https://user-images.githubusercontent.com/20143765/80094665-9e487900-85a1-11ea-8411-4507a7f1b1a0.png   
+        * Up-Down symbol = inheritance hierarchy (promote interface to a base class and bury implementation alternatives in derived classes)
+            * Strategy
+            * Factory Method
+            * Visitor
+            * ![image](https://user-images.githubusercontent.com/20143765/80094669-a1436980-85a1-11ea-95a0-dca278fccd20.png)
+        * Category: a wrapper wraps an inheritance hierarchy
+            * Builder
+            * State
+            * Bridge
+            * Observer
+            * ![image](https://user-images.githubusercontent.com/20143765/80094675-a56f8700-85a1-11ea-84b3-2ba0ff6ea69f.png)
+        * Category: recursive composition
+            * Composite
+            * Decorator
+            * Chain of Responsebility
+            * Interpreter
+            * ![image](https://user-images.githubusercontent.com/20143765/80094682-a9030e00-85a1-11ea-8231-1c9cd1787cd4.png)
+        * Cloud symbol = promote X to "full object status"
+            * Command
+            * Iterator
+            * Mediator
+            * Memento
+            * Prototype
+            * ![image](https://user-images.githubusercontent.com/20143765/80094695-ad2f2b80-85a1-11ea-96f2-9dadfb85e19e.png)
+        * Category: miscellaneous 
+            * Abstract Factory
+            * Template Method
+            * FlyWeight
+            * Singleton
+            * ![image](https://user-images.githubusercontent.com/20143765/80094738-bd470b00-85a1-11ea-8ce8-975a711d0dd7.png)
