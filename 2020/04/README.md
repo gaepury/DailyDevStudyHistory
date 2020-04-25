@@ -333,7 +333,7 @@
 
 ---
 
-## 2020.04.23
+## 2020.04.23(1개)
 * [GoF DesignPatterns](http://vincehuston.org/dp/)
     * Creational patterns
         * Abstract Factory
@@ -403,8 +403,8 @@
 
 ---
 
-## 2020.04.25
-- 서버리스 사용사례 개인 공부 
+## 2020.04.25(2개)
+- 서버리스 Lambda 사용사례 개인 공부 
    - 유연한 설정 관리
    - 유지보수 하기 힘든 의존성 높은 비즈니스 로직 및 시스템에서 분리가능한 모듈을 작성
    - 다양한 플랫폼 콜백 연결
@@ -417,4 +417,6 @@
 	   - 프로젝트 README.md 에 lambda url 삽입
    - ElasticSearch의 쿼리 결과를 메트릭 형태로 가공하여 프로메테우스 등으로 수집
      - 임의의 메트릭을 주기적으로 가공하고 수집할 수 있음
+* [Tawk.to 서비스 적용 및 알아보기](https://goodgid.github.io/Tawk-to/)
+    * 유저랑 블로거와 Live 채팅 기능
 	
