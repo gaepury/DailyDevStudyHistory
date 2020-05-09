@@ -1,3 +1,6 @@
+## 3월 블로그 총 본개수: 29개
+
+
 ## 2020.04.12(25개)
 * [Outsider`s 기술 뉴스 #146 : 20-04-01](https://blog.outsider.ne.kr/1480?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+rss_outsider_dev+%28Outsider%27s+Dev+Story%29)
 * [React Production Performance Monitoring](https://kentcdodds.com/blog/react-production-performance-monitoring)
@@ -420,3 +423,5 @@
 * [Tawk.to 서비스 적용 및 알아보기](https://goodgid.github.io/Tawk-to/)
     * 유저랑 블로거와 Live 채팅 기능
 	
+## 2020.04.31(1개)
+* [딥러닝 웹서비스 개발 도전기](https://medium.com/@inerplat/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9B%B9%EC%84%9C%EB%B9%84%EC%8A%A4-%EA%B0%9C%EB%B0%9C-%EB%8F%84%EC%A0%84%EA%B8%B0-e9ca38d53c1b)
