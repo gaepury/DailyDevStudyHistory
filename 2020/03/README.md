@@ -485,7 +485,7 @@
         * ![image](https://user-images.githubusercontent.com/20143765/77843229-1fe0fd00-71d6-11ea-8fab-a4ed80b84bad.png)
 
 * [SPA에서의 접근성에 대해 배운 것들](https://muchtrans.com/translations/what-i-ve-learned-about-accessibility-in-spas.ko.html)
-    * <div> & <span> 대신 <button> & <input> 사용하라
+    * ``<div>`` & ``<span>`` 대신 ``<button>`` & ``<input>`` 사용하라
     * SPA는 포커스와 스크롤 위치를 반드시 수동으로 다뤄야 한다
     * 통합 테스트가 쉬워집니다
         * 앱을 다시 디자인할 때 달라질 수도 있는 클래스나 스타일에 의존하기보다는, 동일함이 보장되는 의미(semantic)를 속성(여러 aria들)으로 가지는 쪽에 의존하는 낫다.(
