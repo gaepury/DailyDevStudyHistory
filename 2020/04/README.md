@@ -2,6 +2,7 @@
 
 
 ## 2020.04.12(25개)
+### Dev Blog
 * [Outsider`s 기술 뉴스 #146 : 20-04-01](https://blog.outsider.ne.kr/1480?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+rss_outsider_dev+%28Outsider%27s+Dev+Story%29)
 * [React Production Performance Monitoring](https://kentcdodds.com/blog/react-production-performance-monitoring)
     * React의 Profiler API를 이용해서 프로덕션 사이트에서 React의 성능을 측정해서 매트릭을 Grafana 등 백엔드로 전송하는 방법을 소개
@@ -407,6 +408,7 @@
 ---
 
 ## 2020.04.25(2개)
+### Dev Blog
 - 서버리스 Lambda 사용사례 개인 공부 
    - 유연한 설정 관리
    - 유지보수 하기 힘든 의존성 높은 비즈니스 로직 및 시스템에서 분리가능한 모듈을 작성
