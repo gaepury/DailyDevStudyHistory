@@ -37,7 +37,7 @@
 ---
 
 ## 2020.03.12(2개)
-### Dev Blog
+### 업무 관련 Study
 * [(Spring Boot)오류 처리에 대해](https://supawer0728.github.io/2019/04/04/spring-error-handling/)
     * Spring Boot의 기본 오류 처리 - BasicErrorController
         * AbstractErrorController를 상속
@@ -73,6 +73,7 @@
     * spring-mvc Exception 기반으로 오류 처리
         * 위와 같은 과정을 @ExceptionHandler + @ControllerAdvice 로 처리가능
         * ![image](https://user-images.githubusercontent.com/20143765/76483157-9c937d80-6459-11ea-91d2-40797109f39d.png)
+### Dev Blog
 * [Node CPU 점유율 최적화 경험기](https://hyperconnect.github.io/2020/02/11/Node-cpu-debug.html)
   * Node Profiling
       * node --prof index.js
