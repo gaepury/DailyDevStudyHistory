@@ -338,6 +338,7 @@
 ---
 
 ## 2020.04.23(1개)
+### Dev Blog
 * [GoF DesignPatterns](http://vincehuston.org/dp/)
     * Creational patterns
         * Abstract Factory
@@ -426,4 +427,5 @@
     * 유저랑 블로거와 Live 채팅 기능
 	
 ## 2020.04.31(1개)
+### Dev Blog
 * [딥러닝 웹서비스 개발 도전기](https://medium.com/@inerplat/%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%9B%B9%EC%84%9C%EB%B9%84%EC%8A%A4-%EA%B0%9C%EB%B0%9C-%EB%8F%84%EC%A0%84%EA%B8%B0-e9ca38d53c1b)
