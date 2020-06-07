@@ -161,7 +161,7 @@
 
 --- 
 ## 2020.03.16(3개)
-### FE 성능 
+### FE 성능 업무 관련 
  * [넷플릭스 성능 케이스스터디](https://kyu.io/%eb%84%b7%ed%94%8c%eb%a6%ad%ec%8a%a4-%ec%84%b1%eb%8a%a5-%ec%bc%80%ec%9d%b4%ec%8a%a4%ec%8a%a4%ed%84%b0%eb%94%94/#utm_source=rss&utm_medium=rss&utm_campaign=%25eb%2584%25b7%25ed%2594%258c%25eb%25a6%25ad%25ec%258a%25a4-%25ec%2584%25b1%25eb%258a%25a5-%25ec%25bc%2580%25ec%259d%25b4%25ec%258a%25a4%25ec%258a%25a4%25ed%2584%25b0%25eb%2594%2594)
      * 자바스크립트를 더 적게 만들어 Time-to-Interactive 줄이기(React 제거)
          * 첫 입력 지연(First Input Delay)이 빠르다
