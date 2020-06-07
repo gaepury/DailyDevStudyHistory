@@ -1,6 +1,7 @@
 ## 3월 블로그 총 본개수: 32개
 
 ## 2020.03.09(3개)
+### Dev Blog
 * [Outsider`s 기술 뉴스 #145 : 20-03-02](https://blog.outsider.ne.kr/1478?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+rss_outsider_dev+%28Outsider%27s+Dev+Story%29)
   * [Redux template for Create-React-App](https://github.com/reduxjs/cra-template-redux/releases/tag/v1.0.0)
      
@@ -36,6 +37,7 @@
 ---
 
 ## 2020.03.12(2개)
+### Dev Blog
 * [(Spring Boot)오류 처리에 대해](https://supawer0728.github.io/2019/04/04/spring-error-handling/)
     * Spring Boot의 기본 오류 처리 - BasicErrorController
         * AbstractErrorController를 상속
@@ -88,6 +90,7 @@
 ---
 
 ## 2020.03.13(1개)
+### Dev Blog
 * [emotion을 활용한 크몽 프론트엔드 스타일링 시스템](https://brunch.co.kr/@kmongdev/17?fbclid=IwAR2tG_iLC1G4xA5dIf0FG_9KMhOfD9Lm-UBFsbzr5wWH6ktLd_91ysMlS44)
     * Sass
         * 중첩, 상위 선택자 참조등 편리한 문법, 변수, 함수, 상속등의 기능을 이용
@@ -109,6 +112,7 @@
 ---
 
 ## 2020.03.13(3개)
+### Dev Blog
  * [REST API를 버리고 Graph QL를 선택한 이유? (Why GraphQL is the future)](https://www.youtube.com/watch?v=1imQ1_aOQvU)
     * Rest API보다 GraphQL 훨빠름. 코드도 훨 예쁨
     * 리액트와 호환성이 쩔음, 라이브러리, 커뮤니티 지원도 있고 query만 만들면 됨
@@ -157,6 +161,7 @@
 
 --- 
 ## 2020.03.16(3개)
+### FE 성능 
  * [넷플릭스 성능 케이스스터디](https://kyu.io/%eb%84%b7%ed%94%8c%eb%a6%ad%ec%8a%a4-%ec%84%b1%eb%8a%a5-%ec%bc%80%ec%9d%b4%ec%8a%a4%ec%8a%a4%ed%84%b0%eb%94%94/#utm_source=rss&utm_medium=rss&utm_campaign=%25eb%2584%25b7%25ed%2594%258c%25eb%25a6%25ad%25ec%258a%25a4-%25ec%2584%25b1%25eb%258a%25a5-%25ec%25bc%2580%25ec%259d%25b4%25ec%258a%25a4%25ec%258a%25a4%25ed%2584%25b0%25eb%2594%2594)
      * 자바스크립트를 더 적게 만들어 Time-to-Interactive 줄이기(React 제거)
          * 첫 입력 지연(First Input Delay)이 빠르다
@@ -264,7 +269,9 @@
 
 
 ## 2020.03.20(2개)
+### Dev Blog
 * [Outsider`s 기술 뉴스 #146 : 20-03-15](https://blog.outsider.ne.kr/1479)
+### 업무 관련 Study
 * [Naver] NCC 가이드
   * L4 Load Balancer와 Ingress
       * Ingress: L7 Switching 역할, URL기반 라우팅
@@ -314,6 +321,7 @@
  ---
  
  ## 2020.03.23(2개)
+ ### 업무 관련 리서치
  * [이미지 및 동영상의 지연 로딩](https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video)
     * Src: 자리표시자
     * Data-src: 실제 링크
@@ -331,6 +339,7 @@
 ---
 
 ## 2020.03.29(15개)
+### Dev Blog
 * [Spark로 알아보는 빅데이터 처리](https://www.slideshare.net/JoenggyuLenKim/spark-152302106?fbclid=IwAR3v4e-sB91lCj8UUJtqtzN7TulqTHUH_z8yhPb4aJ890JwmP_o3woKCEQQ)
    * ![image](https://user-images.githubusercontent.com/20143765/77840389-f28a5400-71c1-11ea-9ca3-74caeb9debdc.png)
 * [견고한 node.js 프로젝트 설계하기](https://velog.io/@hopsprings2/%EA%B2%AC%EA%B3%A0%ED%95%9C-node.js-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90-%EC%84%A4%EA%B3%84%ED%95%98%EA%B8%B0)
