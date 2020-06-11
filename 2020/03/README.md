@@ -172,7 +172,7 @@
          * 리소르를 미리 가져오고 홈페이지의 클라이언트 코드를 최적화하여, 가입 과정의 Time-to-Interactive 매트릭스를 크게 개선 할 수 있었다. 브라우저에 포함된 API(link)와 XHR을 이용해 곧 방문할 페이지들을 미리 가져옴으로써, Time-to-Interactive를 30% 감소 시킬 수 있었다.
      * 추가 성능 측정 도구들
          * https://developers.google.com/web/fundamentals/performance/speed-tools/
- * [(번역) 시작해요, 런타임 성능 분석!](https://yobi.navercorp.com/common_share/posts/1252)
+ * [[Naver] (번역) 시작해요, 런타임 성능 분석!](https://yobi.navercorp.com/common_share/posts/1252)
      * Performance 탭
          * FPS, CPU, NET
          * Network
