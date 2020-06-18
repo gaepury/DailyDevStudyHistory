@@ -71,7 +71,10 @@
          ```
        * Redux 에서는 액션 객체에는 어떤 액션인지 알려주는 type 필드가 꼭 있어야 하지만, useReducer 에서 사용하는 액션 객체는 꼭 type 를 지니고 있을 필요가 없습니다. 심지어, 객체가 아니라 문자열이나, 숫자여도 상관이 없습니다.
    * useMemo
-       * 컴포넌트 내부에서 발생하는 연산을 최적화
+       * why useMemo 사용?
+         - render 될 때마다 function 실행 불필요
+         - 사용하는 props, state 가 변경 됐을 때만 function 실행
+         * 컴포넌트 내부에서 발생하는 연산을 최적화
        * ``` javascript 
          import React, { useState, useMemo } from 'react';
 
