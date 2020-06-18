@@ -72,7 +72,7 @@
 * useMemo
     * 컴포넌트 내부에서 발생하는 연산을 최적화
     * ``` javascript 
-      import React, { useState } from 'react';
+      import React, { useState, useMemo } from 'react';
 
       const getAverage = numbers => {
         console.log('평균값 계산중..');
@@ -94,6 +94,8 @@
           setNumber('');
         };
 
+        const avg = useMemo(() => getAverage(list), [list]);
+
         return (
           <div>
             <input value={number} onChange={onChange} />
@@ -104,7 +106,7 @@
               ))}
             </ul>
             <div>
-              <b>평균 값:</b> {getAverage(list)}
+              <b>평균 값:</b> {avg}
             </div>
           </div>
         );
