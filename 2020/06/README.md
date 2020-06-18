@@ -207,3 +207,23 @@
       - https://reactjs.org/docs/hooks-faq.html#is-it-safe-to-omit-functions-from-the-list-of-dependencies
       ![image](https://user-images.githubusercontent.com/20143765/85001773-0d4fe180-b18f-11ea-9102-ee427ad65aca.png)
 
+### 프론트 성능 Study
+- [라이트하우스 6.0에서 바뀐 성능 지표변화](https://ui.toast.com/weekly-pick/ko_20200528/?fbclid=IwAR1M5is-eYx4wyhOngnX06tDmucRe8i2GVkuERjPfaIRZWgyg3KCPDEWR74)
+   - FMP(First Meaningful Paint)가 없어지고 LCP(Largest Contentful Paint)
+      - FMP의 문제: 의미 있는 렌더링이라는 것이 개발자마다, 프로젝트 소유주에 따라, 서비스에서 중요하게 생각하는 것에 따라서 모두 달라질 수 있다. FMP가 알려주는 숫자가 빠르다고 하더라도 사용자는 페이지가 느리다고 느낄 수 있는 것이다. 이러한 불일치는 FMP가 성능 지표로 사용되기는 부적합하며 대체할 수 있는 새로운 지표가 필요한 이유다.
+   - LCP
+      - 페이지가 로딩되는 동안 가장 큰 영역이 렌더링 되는 시점을 성능 지표로 삼는다. 화면에서 가장 큰 엘리먼트가 그려지는 시점이 얼마나 빠른지를 나타내는 성적이며 FMP보다 더 정확한 기준이다.
+      - 페이지 로딩 중에 가장 큰 컨텐츠는 계속 바뀔 수 있다
+      - LCP에 해당하는 Element
+         - img 엘리먼트
+         - svg 내부의 image 엘리먼트
+         - video 엘리먼트
+         - 백그라운드 이미지가 있는 엘리먼트
+         - 텍스트를 포함하는 블록 레벨 엘리먼트
+      - LCP 기준에서 빠른 페이지의 가이드는 페이지 로딩 시작부터 2.5초 이내에 가장 큰 컨텐츠가 렌더링 되는 것
+         - ![image](https://user-images.githubusercontent.com/20143765/85015518-0f23a000-b1a3-11ea-80cd-80d9eecf641d.png)
+
+   - CLS(Cumulative Layout Shift)
+       - CLS는 컨텐츠가 화면에서 얼마나 많이 움직이는지를 수치화 지표다. 이 지표는 사용자 중심의 성능 지표로서 컨텐츠가 화면에서 이리저리 움직이는 것이 불편을 초래할 수 있기 때문에 제공하는 자료
+   - TBT(Total Blocking Time)
+      - TBT는 페이지 로딩 중 반응성이 얼마나 좋은가를 나타낸다. 로딩 중에도 사용자의 입력에 잘 반응하는 페이지와 그렇지 않은 페이지는 사용자 입장에서 성능을 좌우하는 중요 기준이 된다. 이 기준은 입력 반응성이 떨어질 정도로 메인 스레드가 멈추는 시간을 누적한 값이다
