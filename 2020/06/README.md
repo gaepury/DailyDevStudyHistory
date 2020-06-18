@@ -196,4 +196,10 @@
       - useEffect는 비동기식으로 동작해 성능상으로 이점이 있습니다. 하지만 비동기식으로 동작하기 때문에 브라우저가 화면을 그리는중에도 동작할 수 있어, 화면의 불일치나 화면이 깨지는등의 문제가 발생한다면 useLayoutEffect훅의 사용을 고려해야합니다. 일반적으로 useEffect를 우선 사용하되, 문제 발생시에 useLayoutEffect를 고려하면 됩니다.
    - useDebugValue 
       - 커스텀 훅 디버
-   
+- [Naver] React 인싸들이 사용하는 React Hooks -[x] 쇼핑웹 적용
+   - React Hooks 안전하게 사용하기
+      1. Hooks 실행순서는 모든 render 에서 동일해야 함
+   - 사용자 정의 function 사용 React 공식 가이드
+      - https://reactjs.org/docs/hooks-faq.html#is-it-safe-to-omit-functions-from-the-list-of-dependencies
+      ![image](https://user-images.githubusercontent.com/20143765/85001773-0d4fe180-b18f-11ea-9102-ee427ad65aca.png)
+
