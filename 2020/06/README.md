@@ -7,8 +7,8 @@
 - React 인싸들이 사용하는 React Hooks -[x] 쇼핑웹 적용
 - BFF를 위한 React Apollo GraphQL 개발 경험 - 장바구니 전환기
 
-## 2020.06.18
-### hooks Study(5개)
+## 2020.06.18(5개)
+### hooks Study
 - [리액트의 Hooks 완벽 정복하기](https://velog.io/@velopert/react-hooks#23-%EB%92%B7%EC%A0%95%EB%A6%AC-%ED%95%98%EA%B8%B0)
    * useEffect
        * 마운트 될 때만 실행하고 싶을 때(componentDidMount)
