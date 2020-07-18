@@ -15,3 +15,4 @@
    - [2월 블로그](https://github.com/gaepury/DevBlogReadHistory/blob/master/2020/02) 총 본개수: 30개
    - [3월 블로그](https://github.com/gaepury/DevBlogReadHistory/blob/master/2020/03) 총 본개수: 32개
    - [4월 블로그](https://github.com/gaepury/DevBlogReadHistory/blob/master/2020/04) 총 본개수: 29개
+   - [6월 블로그](https://github.com/gaepury/DevBlogReadHistory/blob/master/2020/06) 총 본개수: 9개
