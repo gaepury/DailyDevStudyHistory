@@ -1,5 +1,6 @@
+## 6월 블로그 총 본개수: 9개
 
-## 2020.06.07
+## 2020.06.07(4개)
 ### 사내 엔지니어링 데이 Study
 - 최신 FE기술을 활용한 React 컴포넌트 개발, best practice를 찾아나가는 여정. (with Apollo, Hooks)
 - FE개발자의 모바일 블로그 SSR 적용기 - 어서와, SSR은 처음이지?
@@ -7,7 +8,7 @@
 - BFF를 위한 React Apollo GraphQL 개발 경험 - 장바구니 전환기
 
 ## 2020.06.18
-### hooks Study
+### hooks Study(5개)
 - [리액트의 Hooks 완벽 정복하기](https://velog.io/@velopert/react-hooks#23-%EB%92%B7%EC%A0%95%EB%A6%AC-%ED%95%98%EA%B8%B0)
    * useEffect
        * 마운트 될 때만 실행하고 싶을 때(componentDidMount)
