@@ -1,8 +1,5 @@
 
-## 4월 블로그 총 본개수: 29개
-
-
-## 2021.03.21(25개)
+## 2021.03.21(2개)
 ### Dev Blog
 * [Outsider`s 기술 뉴스 #170 : 21-03-15](https://blog.outsider.ne.kr/1536)
 * naver/fe-news
