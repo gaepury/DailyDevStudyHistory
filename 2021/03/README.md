@@ -11,6 +11,8 @@
         * +false => 0
         * Array 생성
             * [], new Array(), Array()
+        * ![Uploading image.png…]()
+           * ‘221'  
         * this in Arrow function  => undefined
         * arguments in Arrow function => arguments is not defined
         * typeof array => ‘object'
