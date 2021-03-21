@@ -11,7 +11,7 @@
         * +false => 0
         * Array 생성
             * [], new Array(), Array()
-        * ![Uploading image.png…]()
+        * ![image](https://user-images.githubusercontent.com/20143765/111894613-89919100-8a4f-11eb-9b9c-afc70f9f13a1.png)
            * ‘221'  
         * this in Arrow function  => undefined
         * arguments in Arrow function => arguments is not defined
